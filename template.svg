@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg viewBox="0 0 %width% %height%"  version="1.2" height="%height%" width="auto" xmlns="http://www.w3.org/2000/svg" >
+    <defs>
+        <style>
+            .moon {
+                fill: white;
+                stroke: black;
+            }
+            .moonOrbit {
+                fill: transparent;
+                stroke: #999;
+            }
+        </style>
+        <style type="text/css"><![CDATA[%style%]]></style>
+    </defs>
+    %substance%
+</svg>

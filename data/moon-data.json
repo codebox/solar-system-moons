@@ -1,6 +1,7 @@
 [
   {
     "planet" : "Earth",
+    "radius" : 6371,
     "moons" : [
       {
         "name": "The Moon",
@@ -13,6 +14,7 @@
   },
   {
     "planet" : "Mars",
+    "radius" : 3390,
     "moons" : [
       {
         "name": "Phobos",
@@ -32,6 +34,7 @@
   },
   {
     "planet": "Jupiter",
+    "radius" : 69911,
     "moons" : [
       {
         "name": "Io",
@@ -590,6 +593,7 @@
   },
   {
     "planet": "Saturn",
+    "radius" : 58232,
     "moons": [
       {
         "name": "Mimas",
@@ -1162,6 +1166,7 @@
   },
   {
     "planet": "Uranus",
+    "radius" : 25362,
     "moons": [
       {
         "name": "Ariel",
@@ -1356,6 +1361,7 @@
   },
   {
     "planet": "Neptune",
+    "radius" : 24622,
     "moons": [
       {
         "name": "Triton",
