@@ -9,6 +9,9 @@ class Svg:
     def add_circle(self, x, y, r, css_class):
         self.content.append(u'<circle cx="{}" cy="{}" r="{}" class="{}"/>'.format(x, y, r, css_class))
 
+    def add_circle_arc(self, start_x, start_y, end_x, end_y, r, large_angle, sweep, css_class):
+        self.content.append(u'<path d="M {} {} A {} {} 0 {} {} {} {}" class="{}"/>'.format(start_x, start_y, r, r, 1 if large_angle else 0, 1 if sweep else 0, end_x, end_y, css_class))
+
     def add_rectangle(self, x, y, w, h, css_class):
         self.content.append(u'<rect x="{}" y="{}" width="{}" height="{}" class="{}"/>'.format(x, y, w, h, css_class))
 
