@@ -9,7 +9,7 @@ def get_planet_data():
         return json.load(f)
 
 planet_data = get_planet_data()
-processed_planet_data = process_data(planet_data)
+processed_planet_data = process_data(planet_data)[2:3]
 svg = Svg()
 svg_wrapper = SvgWrapper(svg)
 svg_wrapper.render(processed_planet_data)

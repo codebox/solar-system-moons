@@ -3,8 +3,8 @@ import math
 MOON_SCALED_RADIUS_MIN = 0
 MOON_SCALED_RADIUS_MAX = 0.02
 
-MOON_SCALED_DISTANCE_MIN = 0.1
-MOON_SCALED_DISTANCE_MAX = 0.9
+MOON_SCALED_DISTANCE_MIN = 0.05
+MOON_SCALED_DISTANCE_MAX = 1.2
 
 def process_data(planet_data):
     moon_radii = [moon['radius'] for planet in planet_data for moon in planet['moons']]
@@ -16,6 +16,7 @@ def process_data(planet_data):
     min_moon_distance = min(moon_distances)
     max_moon_distance = max(moon_distances)
     scale_distance = _build_rescale(min_moon_distance, max_moon_distance, MOON_SCALED_DISTANCE_MIN, MOON_SCALED_DISTANCE_MAX)
+    print(moon_distances, min_moon_distance, max_moon_distance, scale_distance(min_moon_distance), scale_distance(max_moon_distance))
 
     processed = []
     for planet in planet_data:
