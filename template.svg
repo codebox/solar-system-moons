@@ -8,7 +8,11 @@
             }
             .moonOrbit {
                 fill: transparent;
-                stroke: #999;
+                stroke: #eee;
+            }
+            .planetBox {
+            fill: white;
+            stroke: black;
             }
         </style>
         <style type="text/css"><![CDATA[%style%]]></style>

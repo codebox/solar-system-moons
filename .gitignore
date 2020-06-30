@@ -2,3 +2,4 @@
 .idea
 *.pyc
 ENV
+moons.svg
