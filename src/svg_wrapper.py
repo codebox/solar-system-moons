@@ -20,6 +20,11 @@ class SvgWrapper:
             self._add_planet_box(box_x, box_y, box_width, box_height, data[planet_index])
 
     def save(self, out_file):
+        self.svg.add_substitutions({
+            'height': HEIGHT,
+            'width': WIDTH
+        })
+
         self.svg.save(out_file)
 
     def _add_planet_box(self, x, y, w, h, planet):
