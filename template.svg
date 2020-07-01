@@ -8,20 +8,23 @@
             text {
                 font-family: 'Open Sans Condensed', sans-serif;
             }
+            .boxTitle {
+                font-size: 28px;
+            }
             .moon {
                 fill: white;
                 stroke: black;
             }
-            .moonOrbit {
-                fill: transparent;
-                stroke: #bb6b1933;
-            }
-            .moonOrbitArc {
+            .moonOrbitInner {
                 fill: transparent;
                 stroke: #bb6b19;
             }
+            .moonOrbitOuter {
+                fill: transparent;
+                stroke: #bb6b1933;
+            }
             .planetBox {
-                fill: white;
+                fill: transparent;
                 stroke: black;
                 stroke-width: 2px;
             }
@@ -32,6 +35,6 @@
         </style>
         <style type="text/css"><![CDATA[%style%]]></style>
     </defs>
-    <text x="50%" y="50px" text-anchor="middle" class="mainTitle">Jupiter</text>
+
     %substance%
 </svg>

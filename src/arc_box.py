@@ -1,0 +1,45 @@
+import math
+
+
+class ArcBox:
+    def __init__(self, title, x, y, w, h, cx, x_margin, y_margin):
+        self.title = title
+        self.x = x
+        self.y = y
+        self.w = w
+        self.h = h
+        self.cx = cx
+        self.x_margin = x_margin
+        self.y_margin = y_margin
+        self.arcs = []
+
+    def add_arc(self, radius):
+        self.arcs.append(radius)
+
+    def render(self, svg):
+        self._render_outer(svg)
+        self._render_inner(svg)
+        self._render_rectangle(svg)
+        self._render_title(svg)
+
+    def _render_outer(self, svg):
+        clip_path_id = 'clip_outer_' + self.title
+        svg.add_clip_path(self.x, self.y, self.w, self.h, clip_path_id)
+
+        for radius in self.arcs:
+            svg.add_circle(self.x + self.cx, self.y + self.h/2, radius, 'moonOrbitOuter', clip_path_id)
+
+    def _render_inner(self, svg):
+        clip_path_id = 'clip_inner_' + self.title
+        svg.add_clip_path(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, clip_path_id)
+
+        for radius in self.arcs:
+            svg.add_circle(self.x + self.cx, self.y + self.h/2, radius, 'moonOrbitInner', clip_path_id)
+
+    def _render_rectangle(self, svg):
+        svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, 'planetBox')
+
+    def _render_title(self, svg):
+        svg.add_text(self.y + self.y_margin/2, self.title)
+
+
