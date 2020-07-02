@@ -49,6 +49,22 @@
             .textPath {
                 fill: transparent;
             }
+            .radiusBoxPlanetDisc {
+                stroke: black;
+                fill-opacity: 0.5;
+            }
+            .radiusBoxPlanetDisc.Jupiter {
+                fill: #bb7900;
+            }
+            .radiusBoxPlanetDisc.Saturn {
+                fill: #bda603;
+            }
+            .radiusBoxPlanetDisc.Uranus {
+                fill: #129e37;
+            }
+            .radiusBoxPlanetDisc.Neptune {
+                fill: #126a9e;
+            }
         </style>
         <style type="text/css"><![CDATA[%style%]]></style>
     </defs>

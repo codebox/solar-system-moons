@@ -6,7 +6,7 @@ MOON_SCALED_DISTANCE_MAX = 1
 
 def process_data(planet_data):
     max_moon_distance = max([moon['orbit'] for moon in planet_data['moons']])
-    scale_distance = _build_rescale(0, max_moon_distance, MOON_SCALED_DISTANCE_MIN, MOON_SCALED_DISTANCE_MAX)
+    scale_distance = build_rescale(0, max_moon_distance, MOON_SCALED_DISTANCE_MIN, MOON_SCALED_DISTANCE_MAX)
 
     moons = []
     for moon in planet_data['moons']:
@@ -25,7 +25,7 @@ def process_data(planet_data):
     }
 
 
-def _build_rescale(orig_min, orig_max, scaled_min, scaled_max):
+def build_rescale(orig_min, orig_max, scaled_min, scaled_max):
     #return _build_log_rescale(orig_min, orig_max, scaled_min, scaled_max)
     return _build_linear_rescale(orig_min, orig_max, scaled_min, scaled_max)
 

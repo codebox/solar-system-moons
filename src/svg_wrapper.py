@@ -25,7 +25,7 @@ class SvgWrapper:
 
         self._render_title(planet_name)
         self._render_orbit_box(planet_name, planet_radius, moons)
-        self._render_radius_box(data['moons'])
+        self._render_radius_box(planet_name, planet_radius, data['moons'])
 
     def _render_title(self, planet_name):
         self.svg.add_text(TITLE_Y, planet_name)
@@ -43,13 +43,14 @@ class SvgWrapper:
 
         orbit_box.render(self.svg)
 
-    def _render_radius_box(self, moons):
+    def _render_radius_box(self, planet_name, planet_radius, moons):
         box_x = X_MARGIN
         box_y = RADIUS_BOX_Y
         box_width = WIDTH - 2 * X_MARGIN
         box_height = RADIUS_BOX_HEIGHT
 
-        radius_box = RadiusBox(box_x, box_y, box_width, box_height, BOX_X_MARGIN, BOX_Y_MARGIN)
+        radius_box = RadiusBox(planet_name, box_x, box_y, box_width, box_height, BOX_X_MARGIN, BOX_Y_MARGIN)
+        radius_box.set_planet_radius(planet_radius)
         radius_box.add_moons(moons)
 
         radius_box.render(self.svg)
