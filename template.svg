@@ -15,16 +15,16 @@
                 fill: transparent;
                 stroke-width: 1px;
             }
-            .moonOrbit.Jupiter {
+            .moonOrbit.Jupiter, .planetRadiusFiller.Jupiter {
                 stroke: #bb7900;
             }
-            .moonOrbit.Saturn {
+            .moonOrbit.Saturn, .planetRadiusFiller.Saturn {
                 stroke: #bda603;
             }
-            .moonOrbit.Uranus {
+            .moonOrbit.Uranus, .planetRadiusFiller.Uranus {
                 stroke: #129e37;
             }
-            .moonOrbit.Neptune {
+            .moonOrbit.Neptune, .planetRadiusFiller.Neptune {
                 stroke: #126a9e;
             }
             .moonOrbit.moonOrbitOuter {
@@ -74,6 +74,9 @@
             }
             .radiusBoxMoon {
                 stroke: black;
+                fill: white;
+            }
+            .planetRadiusFiller {
                 fill: transparent;
             }
         </style>

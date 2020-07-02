@@ -33,10 +33,11 @@ class RadiusBox:
         svg.add_clip_path(self.x, self.y, self.w, self.h, OUTER_CLIP_PATH_ID)
 
         self._render_planet(svg, rescale)
+        self._render_box_filler(svg, rescale)
         self._render_moons(svg, rescale)
+        self._render_box(svg)
         self._render_names(svg)
         self._render_radius_values(svg)
-        self._render_box(svg)
 
     def _render_planet(self, svg, rescale):
         scaled_planet_radius = rescale(self.planet_radius)
@@ -63,3 +64,11 @@ class RadiusBox:
 
     def _render_box(self, svg):
         svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, 'radiusBox')
+
+    def _render_box_filler(self, svg, rescale):
+        scaled_planet_radius = rescale(self.planet_radius)
+        planet_cx = self.x + self.x_margin + PLANET_DISC_SEGMENT_WIDTH - scaled_planet_radius
+        planet_cy = self.y + self.h / 2
+        for i in range(int(self.w)):
+            svg.add_circle(planet_cx, planet_cy, i + scaled_planet_radius, 'planetRadiusFiller ' + self.title, INNER_CLIP_PATH_ID, True)
+
