@@ -9,28 +9,38 @@
                 font-family: 'Open Sans Condensed', sans-serif;
             }
             .boxTitle {
-                font-size: 28px;
+                font-size: 30px;
             }
-            .moon {
-                fill: white;
-                stroke: black;
-            }
-            .moonOrbitInner {
+            .moonOrbit {
                 fill: transparent;
-                stroke: #bb6b19;
+                stroke-width: 1px;
             }
-            .moonOrbitOuter {
-                fill: transparent;
-                stroke: #bb6b1933;
+            .moonOrbit.Jupiter {
+                stroke: #e39c58;
+            }
+            .moonOrbit.moonOrbitOuter {
+                stroke-opacity: 0.3;
+            }
+            .moonOrbit.moonOrbitInner {
+                stroke-opacity: 1;
             }
             .planetBox {
                 fill: transparent;
-                stroke: black;
-                stroke-width: 2px;
             }
-            .planetDisc {
-                fill: #bb6b1933;
-                stroke: #bb6b19;
+            .planetBox {
+                stroke: black;
+                stroke-width: 1px;
+            }
+            .planetDiscOuter {
+                fill: white;
+                stroke: black;
+            }
+            .planetDiscInner {
+                fill: white;
+                stroke: white;
+            }
+            .textPath {
+                fill: transparent;
             }
         </style>
         <style type="text/css"><![CDATA[%style%]]></style>

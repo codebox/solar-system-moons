@@ -1,45 +1,34 @@
 import math
 
-MOON_SCALED_RADIUS_MIN = 0
-MOON_SCALED_RADIUS_MAX = 0.02
+MOON_SCALED_DISTANCE_MIN = 0
+MOON_SCALED_DISTANCE_MAX = 1
 
-MOON_SCALED_DISTANCE_MIN = 0.05
-MOON_SCALED_DISTANCE_MAX = 1.2
 
 def process_data(planet_data):
-    moon_radii = [moon['radius'] for planet in planet_data for moon in planet['moons']]
-    min_moon_radius = min(moon_radii)
-    max_moon_radius = max(moon_radii)
-    scale_radius = _build_rescale(min_moon_radius, max_moon_radius, MOON_SCALED_RADIUS_MIN, MOON_SCALED_RADIUS_MAX)
+    max_moon_distance = max([moon['orbit'] for moon in planet_data['moons']])
+    scale_distance = _build_rescale(0, max_moon_distance, MOON_SCALED_DISTANCE_MIN, MOON_SCALED_DISTANCE_MAX)
 
-    moon_distances = [moon['orbit'] for planet in planet_data for moon in planet['moons']]
-    min_moon_distance = min(moon_distances)
-    max_moon_distance = max(moon_distances)
-    scale_distance = _build_rescale(min_moon_distance, max_moon_distance, MOON_SCALED_DISTANCE_MIN, MOON_SCALED_DISTANCE_MAX)
-    print(moon_distances, min_moon_distance, max_moon_distance, scale_distance(min_moon_distance), scale_distance(max_moon_distance))
-
-    processed = []
-    for planet in planet_data:
-        moons = []
-        for moon in planet['moons']:
-            moons.append({
-                'x': scale_distance(moon['orbit']),
-                'r': scale_radius(moon['radius'])
-            })
-
-        processed.append({
-            'planet': {
-                'name': planet['planet'],
-                'radius': scale_radius(planet['radius'])
-            },
-            'moons': moons
+    moons = []
+    for moon in planet_data['moons']:
+        moons.append({
+            'name': moon['name'],
+            'orbit': scale_distance(moon['orbit']),
+            'radius': scale_distance(moon['radius'])
         })
 
-    return processed
+    return {
+        'planet': {
+            'name': planet_data['planet'],
+            'radius': scale_distance(planet_data['radius'])
+        },
+        'moons': moons
+    }
+
 
 def _build_rescale(orig_min, orig_max, scaled_min, scaled_max):
-    # return _build_log_rescale(orig_min, orig_max, scaled_min, scaled_max)
+    #return _build_log_rescale(orig_min, orig_max, scaled_min, scaled_max)
     return _build_linear_rescale(orig_min, orig_max, scaled_min, scaled_max)
+
 
 def _build_log_rescale(orig_min, orig_max, scaled_min, scaled_max):
     log_min = math.log(1+orig_min)
@@ -51,6 +40,7 @@ def _build_log_rescale(orig_min, orig_max, scaled_min, scaled_max):
         return scaled_min + scaled_range * (log_value - log_min)/(log_max - log_min)
 
     return log_rescale
+
 
 def _build_linear_rescale(orig_min, orig_max, scaled_min, scaled_max):
     scaled_range = scaled_max - scaled_min

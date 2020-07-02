@@ -1,4 +1,4 @@
-import codecs
+import codecs, random
 
 class Svg:
     def __init__(self):
@@ -6,8 +6,10 @@ class Svg:
         self.styles = []
         self.content = []
 
-    def add_circle(self, x, y, r, css_class, clip_path):
-        self.content.append(u'<circle cx="{}" cy="{}" r="{}" class="{}" clip-path="url(#{})"/>'.format(x, y, r, css_class, clip_path))
+    def add_circle(self, x, y, r, css_class, clip_path, randomise_opacity=False):
+        self.content.append(u'<circle cx="{}" cy="{}" r="{}" class="{}" clip-path="url(#{})" {}/>'.format(
+            x, y, r, css_class, clip_path, 'style="stroke-opacity: {}"'.format(0.1 + random.random()/10) if randomise_opacity else ''
+        ))
 
     def add_rectangle(self, x, y, w, h, css_class):
         self.content.append(u'<rect x="{}" y="{}" width="{}" height="{}" class="{}"/>'.format(x, y, w, h, css_class))
