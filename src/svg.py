@@ -31,8 +31,8 @@ class Svg:
         with codecs.open(out_file, 'w', 'utf-8') as f:
             f.write(part1)
             for style in self.styles:
-                f.write(style)
+                f.write(style + '\n')
             f.write(part2)
             for content in self.content:
-                f.write(content)
+                f.write(content + '\n')
             f.write(part3)

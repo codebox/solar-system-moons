@@ -47,8 +47,9 @@ class OrbitBox:
 
     def _render_planet(self, svg):
         clip_path_id = self._get_inner_clip_path()
-        svg.add_circle(self.x + self.cx, self.y + self.h/2, self.planet_radius, 'planetDiscOuter', clip_path_id)
-        svg.add_circle(self.x + self.cx, self.y + self.h/2, self.planet_radius - 1, 'planetDiscInner', '')
+        planet_radius = max(self.planet_radius, 2)
+        svg.add_circle(self.x + self.cx, self.y + self.h/2, planet_radius, 'planetDiscOuter', clip_path_id)
+        svg.add_circle(self.x + self.cx, self.y + self.h/2, planet_radius - 1, 'planetDiscInner', '')
 
     def _get_inner_clip_path(self):
         return 'clip_inner_' + self.title
