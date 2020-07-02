@@ -16,7 +16,16 @@
                 stroke-width: 1px;
             }
             .moonOrbit.Jupiter {
-                stroke: #e39c58;
+                stroke: #bb7900;
+            }
+            .moonOrbit.Saturn {
+                stroke: #bda603;
+            }
+            .moonOrbit.Uranus {
+                stroke: #129e37;
+            }
+            .moonOrbit.Neptune {
+                stroke: #126a9e;
             }
             .moonOrbit.moonOrbitOuter {
                 stroke-opacity: 0.3;
