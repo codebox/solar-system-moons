@@ -7,8 +7,8 @@ X_MARGIN=50
 TITLE_Y=70
 ORBIT_BOX_Y=100
 ORBIT_BOX_HEIGHT=400
-RADIUS_BOX_Y=550
-RADIUS_BOX_HEIGHT=300
+RADIUS_BOX_Y=500
+RADIUS_BOX_HEIGHT=400
 BOX_Y_SEPARATION=30
 BOX_X_MARGIN=40
 BOX_Y_MARGIN=80
@@ -49,7 +49,7 @@ class SvgWrapper:
         box_width = WIDTH - 2 * X_MARGIN
         box_height = RADIUS_BOX_HEIGHT
 
-        radius_box = RadiusBox(box_x, box_y, box_width, box_height)
+        radius_box = RadiusBox(box_x, box_y, box_width, box_height, BOX_X_MARGIN, BOX_Y_MARGIN)
         radius_box.add_moons(moons)
 
         radius_box.render(self.svg)

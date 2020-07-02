@@ -33,10 +33,8 @@
             .moonOrbit.moonOrbitInner {
                 stroke-opacity: 1;
             }
-            .planetBox {
+            .planetBox, .radiusBox {
                 fill: transparent;
-            }
-            .planetBox {
                 stroke: black;
                 stroke-width: 1px;
             }
