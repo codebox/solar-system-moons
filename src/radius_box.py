@@ -1,7 +1,8 @@
 from data_processor import build_rescale
 
 PLANET_DISC_SEGMENT_WIDTH=40
-CLIP_PATH_ID = 'radiusBoxClip'
+INNER_CLIP_PATH_ID = 'radiusBoxClipInner'
+OUTER_CLIP_PATH_ID = 'radiusBoxClipOuter'
 DISC_SEPARATION=20
 
 class RadiusBox:
@@ -23,12 +24,13 @@ class RadiusBox:
         self.planet_radius = radius
 
     def render(self, svg):
-        total_moon_radii = sum(map(lambda m: m['radius'], self.moons))
+        total_moon_diameters = sum(map(lambda m: m['radius'] * 2, self.moons))
         space_for_moons = self.w - 2 * self.x_margin - PLANET_DISC_SEGMENT_WIDTH - (1 + len(self.moons)) * DISC_SEPARATION
 
-        rescale = build_rescale(0, 1, 0, space_for_moons / total_moon_radii)
+        rescale = build_rescale(0, 1, 0, space_for_moons / total_moon_diameters)
 
-        svg.add_clip_path(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, CLIP_PATH_ID)
+        svg.add_clip_path(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, INNER_CLIP_PATH_ID)
+        svg.add_clip_path(self.x, self.y, self.w, self.h, OUTER_CLIP_PATH_ID)
 
         self._render_planet(svg, rescale)
         self._render_moons(svg, rescale)
@@ -39,11 +41,19 @@ class RadiusBox:
     def _render_planet(self, svg, rescale):
         scaled_planet_radius = rescale(self.planet_radius)
         planet_cx = self.x + self.x_margin + PLANET_DISC_SEGMENT_WIDTH - scaled_planet_radius
-        planet_cy = self.y + self.y_margin + self.h / 2
-        svg.add_circle(planet_cx, planet_cy, scaled_planet_radius, 'radiusBoxPlanetDisc ' + self.title, CLIP_PATH_ID)
+        planet_cy = self.y + self.h / 2
+        svg.add_circle(planet_cx, planet_cy, scaled_planet_radius, 'radiusBoxPlanetDisc radiusBoxPlanetDiscInner ' + self.title, INNER_CLIP_PATH_ID)
+        svg.add_circle(planet_cx, planet_cy, scaled_planet_radius, 'radiusBoxPlanetDisc radiusBoxPlanetDiscOuter ' + self.title, OUTER_CLIP_PATH_ID)
 
     def _render_moons(self, svg, rescale):
-        pass
+        current_x = self.x + self.x_margin + PLANET_DISC_SEGMENT_WIDTH
+        cy = self.y + self.h/2
+        for moon in self.moons:
+            radius = max(1, rescale(moon['radius']))
+            cx = current_x + DISC_SEPARATION + radius
+            svg.add_circle(cx, cy, radius, 'radiusBoxMoon radiusBoxMoonInner ' + self.title, INNER_CLIP_PATH_ID)
+            svg.add_circle(cx, cy, radius, 'radiusBoxMoon radiusBoxMoonOuter ' + self.title, OUTER_CLIP_PATH_ID)
+            current_x = cx + radius
 
     def _render_names(self, svg):
         pass

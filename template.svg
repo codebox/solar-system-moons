@@ -53,17 +53,28 @@
                 stroke: black;
                 fill-opacity: 0.5;
             }
-            .radiusBoxPlanetDisc.Jupiter {
+            .radiusBoxPlanetDiscOuter {
+                fill: transparent;
+                stroke-opacity: 0.3;
+            }
+            .radiusBoxPlanetDiscInner.Jupiter {
                 fill: #bb7900;
             }
-            .radiusBoxPlanetDisc.Saturn {
+            .radiusBoxPlanetDiscInner.Saturn {
                 fill: #bda603;
             }
-            .radiusBoxPlanetDisc.Uranus {
+            .radiusBoxPlanetDiscInner.Uranus {
                 fill: #129e37;
             }
-            .radiusBoxPlanetDisc.Neptune {
+            .radiusBoxPlanetDiscInner.Neptune {
                 fill: #126a9e;
+            }
+            .radiusBoxMoonOuter {
+                stroke-opacity: 0.3;
+            }
+            .radiusBoxMoon {
+                stroke: black;
+                fill: transparent;
             }
         </style>
         <style type="text/css"><![CDATA[%style%]]></style>
