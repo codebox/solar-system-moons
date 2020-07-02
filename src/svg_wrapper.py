@@ -38,9 +38,8 @@ class SvgWrapper:
 
         orbit_box = OrbitBox(planet_name, box_x, box_y, box_width, box_height, BOX_X_MARGIN, BOX_X_MARGIN, BOX_Y_MARGIN)
 
-        orbit_box.set_planet_radius(planet_radius * box_width)
-        for moon in moons:
-            orbit_box.add_moon_orbit(moon['orbit'] * box_width)
+        orbit_box.set_planet_radius(planet_radius)
+        orbit_box.add_moon_orbits(map(lambda m: m['orbit'], moons))
 
         orbit_box.render(self.svg)
 
@@ -51,7 +50,7 @@ class SvgWrapper:
         box_height = RADIUS_BOX_HEIGHT
 
         radius_box = RadiusBox(box_x, box_y, box_width, box_height)
-        [radius_box.add_moon_radius(moon['radius']) for moon in moons]
+        radius_box.add_moons(moons)
 
         radius_box.render(self.svg)
 

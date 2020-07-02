@@ -12,11 +12,11 @@ class OrbitBox:
         self.moon_orbits = []
         self.planet_radius = 0
 
-    def add_moon_orbit(self, radius):
-        self.moon_orbits.append(radius)
+    def add_moon_orbits(self, radii):
+        self.moon_orbits = list(map(lambda r: r * self.w, radii))
 
     def set_planet_radius(self, radius):
-        self.planet_radius = radius
+        self.planet_radius = radius * self.w
 
     def render(self, svg):
         self._render_outer(svg)
