@@ -1,3 +1,4 @@
+import math
 
 class OrbitBox:
     def __init__(self, title, x, y, w, h, cx, x_margin, y_margin):
@@ -9,11 +10,14 @@ class OrbitBox:
         self.cx = cx
         self.x_margin = x_margin
         self.y_margin = y_margin
-        self.moon_orbits = []
+        self.moons = []
         self.planet_radius = 0
 
-    def add_moon_orbits(self, radii):
-        self.moon_orbits = list(map(lambda r: r * (self.w - 2 * self.x_margin), radii))
+    def _scale_radius(self, radius):
+        return radius * (self.w - 2 * self.x_margin)
+
+    def add_moons(self, moons):
+        self.moons = moons
 
     def set_planet_radius(self, radius):
         self.planet_radius = radius * self.w
@@ -23,20 +27,21 @@ class OrbitBox:
         self._render_inner(svg)
         self._render_rectangle(svg)
         self._render_planet(svg)
+        self._render_labels(svg)
 
     def _render_outer(self, svg):
         clip_path_id = self._get_outer_clip_path()
         svg.add_clip_path(self.x, self.y, self.w, self.h, clip_path_id)
 
-        for radius in self.moon_orbits:
-            svg.add_circle(self.x + self.cx, self.y + self.h/2, radius, 'moonOrbit moonOrbitOuter ' + self.title, clip_path_id)
+        for moon in self.moons:
+            svg.add_circle(self.x + self.cx, self.y + self.h/2, self._scale_radius(moon['orbit']), 'moonOrbit moonOrbitOuter ' + self.title, clip_path_id)
 
     def _render_inner(self, svg):
         clip_path_id = self._get_inner_clip_path()
         svg.add_clip_path(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, clip_path_id)
 
-        for radius in self.moon_orbits:
-            svg.add_circle(self.x + self.cx, self.y + self.h/2, radius, 'moonOrbit moonOrbitInner ' + self.title, clip_path_id)
+        for moon in self.moons:
+            svg.add_circle(self.x + self.cx, self.y + self.h/2, self._scale_radius(moon['orbit']), 'moonOrbit moonOrbitInner ' + self.title, clip_path_id)
 
     def _render_rectangle(self, svg):
         clip_path_id = self._get_inner_clip_path()
@@ -56,3 +61,18 @@ class OrbitBox:
 
     def _get_outer_clip_path(self):
         return 'clip_outer_' + self.title
+
+    def _render_labels(self, svg):
+        MIN_SEPARATION = 15
+        for (i, moon) in enumerate(self.moons):
+            prev_r = self._scale_radius(self.moons[i-1]['orbit']) if i > 0 else 0
+            this_r = self._scale_radius(self.moons[i]['orbit'])
+            next_r = self._scale_radius(self.moons[i+1]['orbit']) if i < len(self.moons) - 1 else math.inf
+
+            if next_r - this_r > MIN_SEPARATION:
+                svg.add_circle_text(self.x + self.cx, self.y + self.h/2, this_r + 12, 'moonOrbitLabel ' + self.title, '{}'.format(moon['name']))
+
+    def _get_text_length(self, text):
+        return len(text) * 5
+
+

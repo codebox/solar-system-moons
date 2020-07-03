@@ -13,7 +13,8 @@ def process_data(planet_data):
         moons.append({
             'name': moon['name'],
             'orbit': scale_distance(moon['orbit']),
-            'radius': scale_distance(moon['radius'])
+            'radius': scale_distance(moon['radius']),
+            'original': moon
         })
 
     return {

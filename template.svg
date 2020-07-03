@@ -57,16 +57,16 @@
                 fill: transparent;
                 stroke-opacity: 0.3;
             }
-            .radiusBoxPlanetDiscInner.Jupiter {
+            .radiusBoxPlanetDiscInner.Jupiter, .moonOrbitLabel.Jupiter  {
                 fill: #bb7900;
             }
-            .radiusBoxPlanetDiscInner.Saturn {
+            .radiusBoxPlanetDiscInner.Saturn, .moonOrbitLabel.Saturn  {
                 fill: #bda603;
             }
-            .radiusBoxPlanetDiscInner.Uranus {
+            .radiusBoxPlanetDiscInner.Uranus, .moonOrbitLabel.Uranus  {
                 fill: #129e37;
             }
-            .radiusBoxPlanetDiscInner.Neptune {
+            .radiusBoxPlanetDiscInner.Neptune, .moonOrbitLabel.Neptune  {
                 fill: #126a9e;
             }
             .radiusBoxMoonOuter {
@@ -83,8 +83,12 @@
                 stroke: grey;
                 stroke-opacity: 0.4;
             }
+            .moonOrbitLabel {
+                font-size: 12px;
+            }
         </style>
         <style type="text/css"><![CDATA[%style%]]></style>
+        %defs%
     </defs>
 
     %substance%
