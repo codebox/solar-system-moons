@@ -79,6 +79,10 @@
             .planetRadiusFiller {
                 fill: transparent;
             }
+            .radiusBoxMoonVertical {
+                stroke: grey;
+                stroke-opacity: 0.4;
+            }
         </style>
         <style type="text/css"><![CDATA[%style%]]></style>
     </defs>

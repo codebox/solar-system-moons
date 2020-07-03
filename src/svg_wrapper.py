@@ -23,7 +23,7 @@ class SvgWrapper:
         planet_radius = data['planet']['radius']
         moons = data['moons']
 
-        self._render_title(planet_name)
+        self._render_title('The Moons of {}'.format(planet_name))
         self._render_orbit_box(planet_name, planet_radius, moons)
         self._render_radius_box(planet_name, planet_radius, data['moons'])
 

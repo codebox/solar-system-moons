@@ -14,6 +14,9 @@ class Svg:
     def add_rectangle(self, x, y, w, h, css_class):
         self.content.append(u'<rect x="{}" y="{}" width="{}" height="{}" class="{}"/>'.format(x, y, w, h, css_class))
 
+    def add_line(self, x1, y1, x2, y2, css_class):
+        self.content.append(u'<line x1="{}" y1="{}" x2="{}" y2="{}" class="{}"/>'.format(x1, y1, x2, y2, css_class))
+
     def add_clip_path(self, x, y, w, h, id):
         self.content.append(u'<clipPath id="{}"><rect x="{}" y="{}" width="{}" height="{}"/></clipPath>'.format(id, x, y, w, h))
 

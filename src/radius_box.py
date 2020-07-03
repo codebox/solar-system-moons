@@ -54,7 +54,10 @@ class RadiusBox:
             cx = current_x + DISC_SEPARATION + radius
             svg.add_circle(cx, cy, radius, 'radiusBoxMoon radiusBoxMoonInner ' + self.title, INNER_CLIP_PATH_ID)
             svg.add_circle(cx, cy, radius, 'radiusBoxMoon radiusBoxMoonOuter ' + self.title, OUTER_CLIP_PATH_ID)
-            current_x = cx + radius
+            if radius < (self.h - 2 * self.y_margin)/2:
+                # svg.add_line(cx, self.y + self.y_margin, cx, cy - radius, 'radiusBoxMoonVertical')
+                svg.add_line(cx, self.y + self.h - self.y_margin, cx, cy + radius, 'radiusBoxMoonVertical')
+            current_x = cx + radius - 2
 
     def _render_names(self, svg):
         pass

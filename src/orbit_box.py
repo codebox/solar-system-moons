@@ -13,7 +13,7 @@ class OrbitBox:
         self.planet_radius = 0
 
     def add_moon_orbits(self, radii):
-        self.moon_orbits = list(map(lambda r: r * self.w, radii))
+        self.moon_orbits = list(map(lambda r: r * (self.w - 2 * self.x_margin), radii))
 
     def set_planet_radius(self, radius):
         self.planet_radius = radius * self.w
