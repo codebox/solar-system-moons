@@ -57,17 +57,20 @@
                 fill: transparent;
                 stroke-opacity: 0.3;
             }
-            .radiusBoxPlanetDiscInner.Jupiter, .moonOrbitLabel.Jupiter  {
+            .radiusBoxPlanetDiscInner.Jupiter, .moonOrbitLabel.Jupiter, .radiusBoxMoonName.Jupiter {
                 fill: #bb7900;
             }
-            .radiusBoxPlanetDiscInner.Saturn, .moonOrbitLabel.Saturn  {
+            .radiusBoxPlanetDiscInner.Saturn, .moonOrbitLabel.Saturn, .radiusBoxMoonName.Saturn {
                 fill: #bda603;
             }
-            .radiusBoxPlanetDiscInner.Uranus, .moonOrbitLabel.Uranus  {
+            .radiusBoxPlanetDiscInner.Uranus, .moonOrbitLabel.Uranus, .radiusBoxMoonName.Uranus {
                 fill: #129e37;
             }
-            .radiusBoxPlanetDiscInner.Neptune, .moonOrbitLabel.Neptune  {
+            .radiusBoxPlanetDiscInner.Neptune, .moonOrbitLabel.Neptune, .radiusBoxMoonName.Neptune {
                 fill: #126a9e;
+            }
+            .radiusBoxMoonName, .moonOrbitLabel {
+                fill: black ! important;
             }
             .radiusBoxMoonOuter {
                 stroke-opacity: 0.3;
@@ -83,7 +86,7 @@
                 stroke: grey;
                 stroke-opacity: 0.4;
             }
-            .moonOrbitLabel {
+            .moonOrbitLabel, .radiusBoxMoonName {
                 font-size: 12px;
             }
         </style>

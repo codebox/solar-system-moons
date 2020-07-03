@@ -3,7 +3,10 @@ from data_processor import build_rescale
 PLANET_DISC_SEGMENT_WIDTH=40
 INNER_CLIP_PATH_ID = 'radiusBoxClipInner'
 OUTER_CLIP_PATH_ID = 'radiusBoxClipOuter'
-DISC_SEPARATION=20
+DISC_SEPARATION = 20
+TEXT_CENTERING_OFFSET = 3
+TEXT_TO_DISC_SEPARATION = 5
+
 
 class RadiusBox:
     def __init__(self, title, x, y, w, h, x_margin, y_margin):
@@ -54,9 +57,12 @@ class RadiusBox:
             cx = current_x + DISC_SEPARATION + radius
             svg.add_circle(cx, cy, radius, 'radiusBoxMoon radiusBoxMoonInner ' + self.title, INNER_CLIP_PATH_ID)
             svg.add_circle(cx, cy, radius, 'radiusBoxMoon radiusBoxMoonOuter ' + self.title, OUTER_CLIP_PATH_ID)
-            if radius < (self.h - 2 * self.y_margin)/2:
-                # svg.add_line(cx, self.y + self.y_margin, cx, cy - radius, 'radiusBoxMoonVertical')
-                svg.add_line(cx, self.y + self.h - self.y_margin, cx, cy + radius, 'radiusBoxMoonVertical')
+            moon_radius = '{:,} km'.format(int(moon['original']['radius']))
+            if self.h/2 - self.y_margin - radius > 40:
+                svg.add_line_text(cx + TEXT_CENTERING_OFFSET, self.y + self.h - self.y_margin, cx + TEXT_CENTERING_OFFSET, cy + radius + TEXT_TO_DISC_SEPARATION, 'radiusBoxMoonName ' + self.title, moon['name'])
+                svg.add_line_text(cx + TEXT_CENTERING_OFFSET, cy - radius - TEXT_TO_DISC_SEPARATION, cx + TEXT_CENTERING_OFFSET, self.y + self.y_margin, 'radiusBoxMoonName ' + self.title, moon_radius, 'start', '0%')
+            else:
+                svg.add_line_text(cx + TEXT_CENTERING_OFFSET, self.y + self.h, cx + TEXT_CENTERING_OFFSET, self.y, 'radiusBoxMoonName ' + self.title, '{} - {}'.format(moon['name'], moon_radius), 'middle', '50%')
             current_x = cx + radius - 2
 
     def _render_names(self, svg):
