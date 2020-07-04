@@ -9,7 +9,7 @@
                 font-family: 'Open Sans Condensed', sans-serif;
             }
             .boxTitle {
-                font-size: 30px;
+                font-size: 36px;
             }
             .moonOrbit {
                 fill: transparent;
@@ -98,10 +98,6 @@
             }
             .rotationAxisLineBottom {
                 stroke: #999;
-            }
-            .rotationAxisEllipse {
-                fill: transparent;
-                stroke: grey;
             }
             .rotationAxisLatitude {
                 fill: transparent;

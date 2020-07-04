@@ -87,14 +87,6 @@ class RotationBox:
 
         svg.add_circle_text(cx, cy, r + 30, 'rotationDiscText', title, 3 * math.pi / 2, math.pi/2)
 
-        # draw upper polar ellipse
-        svg.add_ellipse(
-            cx + math.sin(angle) * 0.9 * line_length / 2,
-            cy - math.cos(angle) * 0.9 * line_length / 2,
-            ellipse_major_axis, ellipse_minor_axis, angle, 'rotationAxisEllipse'
-        )
-
-
     def _render_rectangle(self, svg):
         svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, 'planetBox ' + self.title)
 
