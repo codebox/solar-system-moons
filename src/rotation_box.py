@@ -1,6 +1,6 @@
 import math, random
 
-DISC_SEPARATION = 30
+DISC_SEPARATION = 50
 DISC_RADIUS=30
 
 class RotationBox:
@@ -30,13 +30,13 @@ class RotationBox:
         y = self.y + self.y_margin + DISC_SEPARATION/2 + DISC_RADIUS
 
         for (i, moon) in enumerate(self.moons):
-            self._render_disc(svg, x, y, DISC_RADIUS, math.pi * random.random() / 5)
+            self._render_disc(svg, x, y, DISC_RADIUS, math.pi * random.random() / 5, moon['name'])
             x += DISC_SEPARATION + 2 * DISC_RADIUS
             if (i+1) % moons_per_row == 0:
                 x = init_x
                 y += DISC_SEPARATION + 2 * DISC_RADIUS
 
-    def _render_disc(self, svg, cx, cy, r, angle):
+    def _render_disc(self, svg, cx, cy, r, angle, title):
         line_length = r * 3
         line_overlap = r / 5
         ellipse_major_axis = r * 0.4
@@ -59,7 +59,7 @@ class RotationBox:
         x_head = cx - line_overlap * math.sin(angle)
         y_head = cy + line_overlap * math.cos(angle)
         arrow_line_length = r/4
-        arrow_line_angle = math.pi/8
+        arrow_line_angle = math.pi/6
         x2_upper = x_head + arrow_line_length * math.cos(angle + arrow_line_angle)
         y2_upper = y_head + arrow_line_length * math.sin(angle + arrow_line_angle)
         x2_lower = x_head + arrow_line_length * math.cos(angle - arrow_line_angle)
@@ -85,6 +85,8 @@ class RotationBox:
 
         # draw outer circle
         svg.add_circle(cx, cy, r, 'rotationDisc ' + self.title, '')
+
+        svg.add_circle_text(cx, cy, r + 20, 'rotationDiscText', title, 3 * math.pi / 2, math.pi/2)
 
         # draw upper polar ellipse
         svg.add_ellipse(

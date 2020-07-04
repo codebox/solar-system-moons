@@ -36,9 +36,9 @@ class Svg:
     def _get_line_path(self, x1, y1, x2, y2):
         return 'M {} {} L {} {}'.format(x1, y1, x2, y2)
 
-    def add_circle_text(self, x, y, r, css_class, text):
+    def add_circle_text(self, x, y, r, css_class, text, start_angle=0, end_angle=math.pi):
         path_id = 'p{}_{}_{}'.format(x, y, r)
-        path_d = self._get_circle_arc_path(x, y, r, 0,  math.pi)
+        path_d = self._get_circle_arc_path(x, y, r, start_angle, end_angle)
         self.defs.append('<path id="{}" d="{}" />'.format(path_id, path_d))
         self.content.append('<text class="{}"><textPath href="#{}" text-anchor="middle" startOffset="50%">{}</textPath></text>'.format(css_class, path_id, text))
 
