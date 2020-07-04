@@ -41,553 +41,711 @@
                 "radius": 21.5,
                 "orbit": 128000.0,
                 "period": 0.295,
-                "year": 1979
+                "year": 1979,
+                "inclination": "0.06",
+                "eccentricity": "0.0002"
             },
             {
                 "name": "Adrastea",
                 "radius": 8.2,
                 "orbit": 129000.0,
                 "period": 0.298,
-                "year": 1979
+                "year": 1979,
+                "inclination": "0.03",
+                "eccentricity": "0.0015"
             },
             {
                 "name": "Amalthea",
                 "radius": 83.5,
                 "orbit": 181400.0,
                 "period": 0.498,
-                "year": 1892
+                "year": 1892,
+                "inclination": "0.40",
+                "eccentricity": "0.003"
             },
             {
                 "name": "Thebe",
                 "radius": 49.3,
                 "orbit": 221900.0,
                 "period": 0.675,
-                "year": 1979
+                "year": 1979,
+                "inclination": "0.8",
+                "eccentricity": "0.018"
             },
             {
                 "name": "Io",
                 "radius": 1818.1,
                 "orbit": 421800.0,
                 "period": 1.769,
-                "year": 1610
+                "year": 1610,
+                "inclination": "0.04",
+                "eccentricity": "0.004"
             },
             {
                 "name": "Europa",
                 "radius": 1560.7,
                 "orbit": 671100.0,
                 "period": 3.551,
-                "year": 1610
+                "year": 1610,
+                "inclination": "0.47",
+                "eccentricity": "0.009"
             },
             {
                 "name": "Ganymede",
                 "radius": 2634.1,
                 "orbit": 1070400.0,
                 "period": 7.155,
-                "year": 1610
+                "year": 1610,
+                "inclination": "0.18",
+                "eccentricity": "0.001"
             },
             {
                 "name": "Callisto",
                 "radius": 2408.4,
                 "orbit": 1882700.0,
                 "period": 16.69,
-                "year": 1610
+                "year": 1610,
+                "inclination": "0.19",
+                "eccentricity": "0.007"
             },
             {
                 "name": "Themisto",
                 "radius": 4.0,
                 "orbit": 7284000.0,
                 "period": 130.02,
-                "year": 1975
+                "year": 1975,
+                "inclination": "45.67",
+                "eccentricity": "0.242"
             },
             {
                 "name": "Leda",
                 "radius": 10.0,
                 "orbit": 11165000.0,
                 "period": 240.92,
-                "year": 1974
+                "year": 1974,
+                "inclination": "27.47",
+                "eccentricity": "0.164"
             },
             {
                 "name": "Ersa",
                 "radius": 1.5,
                 "orbit": 11453004.0,
                 "period": 250.4,
-                "year": 2018
+                "year": 2018,
+                "inclination": "30.61",
+                "eccentricity": "0.094"
             },
             {
                 "name": "Himalia",
                 "radius": 67.0,
                 "orbit": 11461000.0,
                 "period": 250.56,
-                "year": 1904
+                "year": 1904,
+                "inclination": "27.63",
+                "eccentricity": "0.162"
             },
             {
                 "name": "Pandia",
                 "radius": 1.0,
                 "orbit": 11494801.0,
                 "period": 251.8,
-                "year": 2017
+                "year": 2017,
+                "inclination": "28.15",
+                "eccentricity": "0.180"
             },
             {
                 "name": "Lysithea",
                 "radius": 18.0,
                 "orbit": 11717000.0,
                 "period": 259.2,
-                "year": 1938
+                "year": 1938,
+                "inclination": "27.35",
+                "eccentricity": "0.112"
             },
             {
                 "name": "Elara",
                 "radius": 43.0,
                 "orbit": 11741000.0,
                 "period": 259.64,
-                "year": 1905
+                "year": 1905,
+                "inclination": "24.77",
+                "eccentricity": "0.217"
             },
             {
                 "name": "Dia",
                 "radius": 2.0,
                 "orbit": 12570000.0,
                 "period": 287.93,
-                "year": 2000
+                "year": 2000,
+                "inclination": "28.2",
+                "eccentricity": "0.248"
             },
             {
                 "name": "Carpo",
                 "radius": 1.5,
                 "orbit": 17058000.0,
                 "period": 456.3,
-                "year": 2003
+                "year": 2003,
+                "inclination": "51.4",
+                "eccentricity": "0.430"
             },
             {
                 "name": "S/2003 J 12",
                 "radius": 0.5,
                 "orbit": 17833000.0,
                 "period": 489.72,
-                "year": 2003
+                "year": 2003,
+                "inclination": "145.8",
+                "eccentricity": "0.376"
             },
             {
                 "name": "Valetudo",
                 "radius": 0.5,
                 "orbit": 18928095.0,
                 "period": 532.0,
-                "year": 2016
+                "year": 2016,
+                "inclination": "34.0",
+                "eccentricity": "0.222"
             },
             {
                 "name": "Euporie",
                 "radius": 1.0,
                 "orbit": 19304000.0,
                 "period": 550.74,
-                "year": 2001
+                "year": 2001,
+                "inclination": "147.0",
+                "eccentricity": "0.156"
             },
             {
                 "name": "S/2011 J 1",
                 "radius": 0.5,
                 "orbit": 20155290.0,
                 "period": 580.7,
-                "year": 2011
+                "year": 2011,
+                "inclination": "162.8",
+                "eccentricity": "0.296"
             },
             {
                 "name": "Eupheme",
                 "radius": 1.0,
                 "orbit": 20224000.0,
                 "period": 583.88,
-                "year": 2003
+                "year": 2003,
+                "inclination": "143.7",
+                "eccentricity": "0.241"
             },
             {
                 "name": "S/2010 J 2",
                 "radius": 0.5,
                 "orbit": 20307150.0,
                 "period": 588.1,
-                "year": 2010
+                "year": 2010,
+                "inclination": "150.4",
+                "eccentricity": "0.307"
             },
             {
                 "name": "S/2003 J 18",
                 "radius": 1.0,
                 "orbit": 20426000.0,
                 "period": 596.58,
-                "year": 2003
+                "year": 2003,
+                "inclination": "146.5",
+                "eccentricity": "0.119"
             },
             {
                 "name": "S/2017 J 7",
                 "radius": 1.0,
                 "orbit": 20571458.0,
                 "period": 602.8,
-                "year": 2017
+                "year": 2017,
+                "inclination": "143.4",
+                "eccentricity": "0.215"
             },
             {
                 "name": "S/2016 J 1",
                 "radius": 3.0,
                 "orbit": 20595480.0,
                 "period": 602.7,
-                "year": 2016
+                "year": 2016,
+                "inclination": "139.8",
+                "eccentricity": "0.141"
             },
             {
                 "name": "S/2017 J 3",
                 "radius": 1.0,
                 "orbit": 20639315.0,
                 "period": 605.8,
-                "year": 2017
+                "year": 2017,
+                "inclination": "147.9",
+                "eccentricity": "0.148"
             },
             {
                 "name": "Orthosie",
                 "radius": 1.0,
                 "orbit": 20720000.0,
                 "period": 622.56,
-                "year": 2001
+                "year": 2001,
+                "inclination": "145.9",
+                "eccentricity": "0.281"
             },
             {
                 "name": "Euanthe",
                 "radius": 1.5,
                 "orbit": 20797000.0,
                 "period": 620.49,
-                "year": 2001
+                "year": 2001,
+                "inclination": "148.9",
+                "eccentricity": "0.232"
             },
             {
                 "name": "Harpalyke",
                 "radius": 2.2,
                 "orbit": 20858000.0,
                 "period": 623.32,
-                "year": 2000
+                "year": 2000,
+                "inclination": "148.7",
+                "eccentricity": "0.227"
             },
             {
                 "name": "Praxidike",
                 "radius": 3.4,
                 "orbit": 20908000.0,
                 "period": 625.39,
-                "year": 2000
+                "year": 2000,
+                "inclination": "148.7",
+                "eccentricity": "0.220"
             },
             {
                 "name": "Thyone",
                 "radius": 2.0,
                 "orbit": 20939000.0,
                 "period": 627.21,
-                "year": 2001
+                "year": 2001,
+                "inclination": "148.5",
+                "eccentricity": "0.229"
             },
             {
                 "name": "S/2003 J 16",
                 "radius": 1.0,
                 "orbit": 20956000.0,
                 "period": 616.33,
-                "year": 2003
+                "year": 2003,
+                "inclination": "148.6",
+                "eccentricity": "0.270"
             },
             {
                 "name": "Mneme",
                 "radius": 1.0,
                 "orbit": 21035000.0,
                 "period": 620.04,
-                "year": 2003
+                "year": 2003,
+                "inclination": "148.6",
+                "eccentricity": "0.227"
             },
             {
                 "name": "Iocaste",
                 "radius": 2.6,
                 "orbit": 21060000.0,
                 "period": 631.6,
-                "year": 2000
+                "year": 2000,
+                "inclination": "159.7",
+                "eccentricity": "0.218"
             },
             {
                 "name": "Helike",
                 "radius": 2.0,
                 "orbit": 21069000.0,
                 "period": 626.32,
-                "year": 2003
+                "year": 2003,
+                "inclination": "154.8",
+                "eccentricity": "0.156"
             },
             {
                 "name": "Hermippe",
                 "radius": 2.0,
                 "orbit": 21131000.0,
                 "period": 633.9,
-                "year": 2001
+                "year": 2001,
+                "inclination": "150.7",
+                "eccentricity": "0.210"
             },
             {
                 "name": "Thelxinoe",
                 "radius": 1.0,
                 "orbit": 21164000.0,
                 "period": 628.09,
-                "year": 2003
+                "year": 2003,
+                "inclination": "151.4",
+                "eccentricity": "0.221"
             },
             {
                 "name": "Ananke",
                 "radius": 14.0,
                 "orbit": 21276000.0,
                 "period": 629.77,
-                "year": 1951
+                "year": 1951,
+                "inclination": "148.9",
+                "eccentricity": "0.244"
             },
             {
                 "name": "S/2017 J 9",
                 "radius": 1.0,
                 "orbit": 21429955.0,
                 "period": 640.9,
-                "year": 2017
+                "year": 2017,
+                "inclination": "152.7",
+                "eccentricity": "0.229"
             },
             {
                 "name": "S/2017 J 6",
                 "radius": 1.0,
                 "orbit": 22394682.0,
                 "period": 684.7,
-                "year": 2017
+                "year": 2017,
+                "inclination": "155.2",
+                "eccentricity": "0.557"
             },
             {
                 "name": "Philophrosyne",
                 "radius": 1.0,
                 "orbit": 22630000.0,
                 "period": 689.77,
-                "year": 2003
+                "year": 2003,
+                "inclination": "140.8",
+                "eccentricity": "0.110"
             },
             {
                 "name": "Eurydome",
                 "radius": 1.5,
                 "orbit": 22865000.0,
                 "period": 717.33,
-                "year": 2001
+                "year": 2001,
+                "inclination": "150.3",
+                "eccentricity": "0.276"
             },
             {
                 "name": "Herse",
                 "radius": 1.0,
                 "orbit": 22983000.0,
                 "period": 714.51,
-                "year": 2003
+                "year": 2003,
+                "inclination": "164.2",
+                "eccentricity": "0.200"
             },
             {
                 "name": "Pasithee",
                 "radius": 1.0,
                 "orbit": 23004000.0,
                 "period": 719.44,
-                "year": 2001
+                "year": 2001,
+                "inclination": "165.4",
+                "eccentricity": "0.288"
             },
             {
                 "name": "S/2003 J 10",
                 "radius": 1.0,
                 "orbit": 23044000.0,
                 "period": 716.25,
-                "year": 2003
+                "year": 2003,
+                "inclination": "164.1",
+                "eccentricity": "0.214"
             },
             {
                 "name": "Chaldene",
                 "radius": 1.9,
                 "orbit": 23100000.0,
                 "period": 723.72,
-                "year": 2000
+                "year": 2000,
+                "inclination": "165.4",
+                "eccentricity": "0.238"
             },
             {
                 "name": "Isonoe",
                 "radius": 1.9,
                 "orbit": 23155000.0,
                 "period": 726.23,
-                "year": 2000
+                "year": 2000,
+                "inclination": "165.0",
+                "eccentricity": "0.261"
             },
             {
                 "name": "S/2017 J 5",
                 "radius": 1.0,
                 "orbit": 23169389.0,
                 "period": 720.5,
-                "year": 2017
+                "year": 2017,
+                "inclination": "164.3",
+                "eccentricity": "0.284"
             },
             {
                 "name": "S/2017 J 8",
                 "radius": 0.5,
                 "orbit": 23174446.0,
                 "period": 720.7,
-                "year": 2017
+                "year": 2017,
+                "inclination": "164.7",
+                "eccentricity": "0.312"
             },
             {
                 "name": "Erinome",
                 "radius": 1.6,
                 "orbit": 23196000.0,
                 "period": 728.46,
-                "year": 2000
+                "year": 2000,
+                "inclination": "164.9",
+                "eccentricity": "0.270"
             },
             {
                 "name": "Kale",
                 "radius": 1.0,
                 "orbit": 23217000.0,
                 "period": 729.47,
-                "year": 2001
+                "year": 2001,
+                "inclination": "165.0",
+                "eccentricity": "0.260"
             },
             {
                 "name": "Aitne",
                 "radius": 1.5,
                 "orbit": 23229000.0,
                 "period": 730.18,
-                "year": 2001
+                "year": 2001,
+                "inclination": "165.1",
+                "eccentricity": "0.264"
             },
             {
                 "name": "S/2017 J 2",
                 "radius": 1.0,
                 "orbit": 23240957.0,
                 "period": 723.8,
-                "year": 2017
+                "year": 2017,
+                "inclination": "166.4",
+                "eccentricity": "0.236"
             },
             {
                 "name": "Taygete",
                 "radius": 2.5,
                 "orbit": 23280000.0,
                 "period": 732.41,
-                "year": 2000
+                "year": 2000,
+                "inclination": "165.2",
+                "eccentricity": "0.251"
             },
             {
                 "name": "Kallichore",
                 "radius": 1.0,
                 "orbit": 23288000.0,
                 "period": 728.73,
-                "year": 2003
+                "year": 2003,
+                "inclination": "165.5",
+                "eccentricity": "0.264"
             },
             {
                 "name": "S/2010 J 1",
                 "radius": 1.0,
                 "orbit": 23314335.0,
                 "period": 723.2,
-                "year": 2010
+                "year": 2010,
+                "inclination": "163.2",
+                "eccentricity": "0.320"
             },
             {
                 "name": "Eukelade",
                 "radius": 2.0,
                 "orbit": 23328000.0,
                 "period": 730.47,
-                "year": 2003
+                "year": 2003,
+                "inclination": "165.5",
+                "eccentricity": "0.272"
             },
             {
                 "name": "S/2011 J 2",
                 "radius": 0.5,
                 "orbit": 23329710.0,
                 "period": 726.8,
-                "year": 2011
+                "year": 2011,
+                "inclination": "151.9",
+                "eccentricity": "0.387"
             },
             {
                 "name": "Arche",
                 "radius": 1.5,
                 "orbit": 23355000.0,
                 "period": 731.95,
-                "year": 2002
+                "year": 2002,
+                "inclination": "165.0",
+                "eccentricity": "0.259"
             },
             {
                 "name": "S/2003 J 9",
                 "radius": 0.5,
                 "orbit": 23388000.0,
                 "period": 733.3,
-                "year": 2003
+                "year": 2003,
+                "inclination": "164.5",
+                "eccentricity": "0.269"
             },
             {
                 "name": "Carme",
                 "radius": 23.0,
                 "orbit": 23404000.0,
                 "period": 734.17,
-                "year": 1938
+                "year": 1938,
+                "inclination": "164.9",
+                "eccentricity": "0.253"
             },
             {
                 "name": "Kalyke",
                 "radius": 2.6,
                 "orbit": 23483000.0,
                 "period": 742.06,
-                "year": 2000
+                "year": 2000,
+                "inclination": "165.2",
+                "eccentricity": "0.243"
             },
             {
                 "name": "S/2017 J 1",
                 "radius": 2.0,
                 "orbit": 23483978.0,
                 "period": 734.2,
-                "year": 2017
+                "year": 2017,
+                "inclination": "149.2",
+                "eccentricity": "0.397"
             },
             {
                 "name": "Sponde",
                 "radius": 1.0,
                 "orbit": 23487000.0,
                 "period": 748.34,
-                "year": 2001
+                "year": 2001,
+                "inclination": "151.0",
+                "eccentricity": "0.312"
             },
             {
                 "name": "Megaclite",
                 "radius": 2.7,
                 "orbit": 23493000.0,
                 "period": 752.86,
-                "year": 2000
+                "year": 2000,
+                "inclination": "152.8",
+                "eccentricity": "0.421"
             },
             {
                 "name": "Eirene",
                 "radius": 2.0,
                 "orbit": 23498000.0,
                 "period": 738.74,
-                "year": 2003
+                "year": 2003,
+                "inclination": "165.0",
+                "eccentricity": "0.210"
             },
             {
                 "name": "S/2003 J 19",
                 "radius": 1.0,
                 "orbit": 23535000.0,
                 "period": 740.43,
-                "year": 2003
+                "year": 2003,
+                "inclination": "162.9",
+                "eccentricity": "0.334"
             },
             {
                 "name": "S/2003 J 23",
                 "radius": 1.0,
                 "orbit": 23566000.0,
                 "period": 732.45,
-                "year": 2004
+                "year": 2004,
+                "inclination": "149.2",
+                "eccentricity": "0.309"
             },
             {
                 "name": "Hegemone",
                 "radius": 1.5,
                 "orbit": 23577000.0,
                 "period": 739.88,
-                "year": 2003
+                "year": 2003,
+                "inclination": "155.2",
+                "eccentricity": "0.328"
             },
             {
                 "name": "Pasiphae",
                 "radius": 30.0,
                 "orbit": 23624000.0,
                 "period": 743.63,
-                "year": 1908
+                "year": 1908,
+                "inclination": "151.4",
+                "eccentricity": "0.409"
             },
             {
                 "name": "Cyllene",
                 "radius": 1.0,
                 "orbit": 23809000.0,
                 "period": 752.0,
-                "year": 2003
+                "year": 2003,
+                "inclination": "149.3",
+                "eccentricity": "0.319"
             },
             {
                 "name": "S/2003 J 4",
                 "radius": 1.0,
                 "orbit": 23933000.0,
                 "period": 755.26,
-                "year": 2003
+                "year": 2003,
+                "inclination": "144.9",
+                "eccentricity": "0.204"
             },
             {
                 "name": "Sinope",
                 "radius": 19.0,
                 "orbit": 23939000.0,
                 "period": 758.9,
-                "year": 1914
+                "year": 1914,
+                "inclination": "158.1",
+                "eccentricity": "0.250"
             },
             {
                 "name": "Aoede",
                 "radius": 2.0,
                 "orbit": 23980000.0,
                 "period": 761.5,
-                "year": 2003
+                "year": 2003,
+                "inclination": "158.3",
+                "eccentricity": "0.432"
             },
             {
                 "name": "Autonoe",
                 "radius": 2.0,
                 "orbit": 24046000.0,
                 "period": 760.95,
-                "year": 2001
+                "year": 2001,
+                "inclination": "152.9",
+                "eccentricity": "0.334"
             },
             {
                 "name": "Callirrhoe",
                 "radius": 4.3,
                 "orbit": 24103000.0,
                 "period": 758.77,
-                "year": 2000
+                "year": 2000,
+                "inclination": "147.1",
+                "eccentricity": "0.283"
             },
             {
                 "name": "Kore",
                 "radius": 1.0,
                 "orbit": 24543000.0,
                 "period": 779.17,
-                "year": 2003
+                "year": 2003,
+                "inclination": "152.4",
+                "eccentricity": "0.325"
             },
             {
                 "name": "S/2003 J 2",
                 "radius": 1.0,
                 "orbit": 28455000.0,
                 "period": 981.55,
-                "year": 2003
+                "year": 2003,
+                "inclination": "151.8",
+                "eccentricity": "0.380"
             }
         ]
     },
