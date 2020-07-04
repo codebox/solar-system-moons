@@ -1,0 +1,105 @@
+import math, random
+
+DISC_SEPARATION = 30
+DISC_RADIUS=30
+
+class RotationBox:
+    def __init__(self, title, x, y, w, h, x_margin, y_margin):
+        self.title = title
+        self.x = x
+        self.y = y
+        self.w = w
+        self.h = h
+        self.x_margin = x_margin
+        self.y_margin = y_margin
+        self.moons = []
+        self.planet_radius = 0
+
+    def add_moons(self, moons):
+        self.moons = moons
+
+    def render(self, svg):
+        self._render_rectangle(svg)
+        self._render_inner(svg)
+
+    def _render_inner(self, svg):
+        moons_per_row = int((self.w - 2 * self.x_margin) / (DISC_RADIUS * 2 + DISC_SEPARATION))
+        x_padding = (self.w - 2 * self.x_margin - moons_per_row * (DISC_RADIUS * 2 + DISC_SEPARATION)) / 2
+        init_x = self.x + self.x_margin + x_padding + DISC_SEPARATION/2 + DISC_RADIUS
+        x = init_x
+        y = self.y + self.y_margin + DISC_SEPARATION/2 + DISC_RADIUS
+
+        for (i, moon) in enumerate(self.moons):
+            self._render_disc(svg, x, y, DISC_RADIUS, math.pi * random.random() / 5)
+            x += DISC_SEPARATION + 2 * DISC_RADIUS
+            if (i+1) % moons_per_row == 0:
+                x = init_x
+                y += DISC_SEPARATION + 2 * DISC_RADIUS
+
+    def _render_disc(self, svg, cx, cy, r, angle):
+        line_length = r * 3
+        line_overlap = r / 5
+        ellipse_major_axis = r * 0.4
+        ellipse_minor_axis = ellipse_major_axis * line_overlap / r
+
+        # draw surface ellipses
+        for offset in range(-r, r, 1):
+            major_axis = math.sqrt(r * r - offset * offset)
+            minor_axis = major_axis * line_overlap / r
+            svg.add_ellipse(
+                cx + math.sin(angle) * offset,
+                cy - math.cos(angle) * offset,
+                major_axis,
+                minor_axis,
+                angle,
+                'rotationAxisEquator' if int(offset) == 0 else 'rotationAxisLatitude', int(offset) != 0
+            )
+
+        # draw equatorial arrow head
+        x_head = cx - line_overlap * math.sin(angle)
+        y_head = cy + line_overlap * math.cos(angle)
+        arrow_line_length = r/4
+        arrow_line_angle = math.pi/8
+        x2_upper = x_head + arrow_line_length * math.cos(angle + arrow_line_angle)
+        y2_upper = y_head + arrow_line_length * math.sin(angle + arrow_line_angle)
+        x2_lower = x_head + arrow_line_length * math.cos(angle - arrow_line_angle)
+        y2_lower = y_head + arrow_line_length * math.sin(angle - arrow_line_angle)
+        svg.add_line(x_head, y_head, x2_upper, y2_upper, 'rotationArrowHead')
+        svg.add_line(x_head, y_head, x2_lower, y2_lower, 'rotationArrowHead')
+
+        # draw upper polar line
+        svg.add_line(
+            cx + math.sin(angle) * line_length / 2,
+            cy - math.cos(angle) * line_length / 2,
+            cx + math.sin(angle) * (r - line_overlap/2),
+            cy - math.cos(angle) * (r - line_overlap/2),
+            'rotationAxisLineTop ' + self.title)
+
+        # draw lower polar line
+        svg.add_line(
+            cx - math.sin(angle) * r,
+            cy + math.cos(angle) * r,
+            cx - math.sin(angle) * line_length / 2,
+            cy + math.cos(angle) * line_length / 2,
+            'rotationAxisLineBottom ' + self.title)
+
+        # draw outer circle
+        svg.add_circle(cx, cy, r, 'rotationDisc ' + self.title, '')
+
+        # draw upper polar ellipse
+        svg.add_ellipse(
+            cx + math.sin(angle) * 0.9 * line_length / 2,
+            cy - math.cos(angle) * 0.9 * line_length / 2,
+            ellipse_major_axis, ellipse_minor_axis, angle, 'rotationAxisEllipse'
+        )
+
+
+    def _render_rectangle(self, svg):
+        svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, 'planetBox ' + self.title)
+
+    def _get_inner_clip_path(self):
+        return 'rotation_clip_inner_' + self.title
+
+    def _get_outer_clip_path(self):
+        return 'rotation_clip_outer_' + self.title
+

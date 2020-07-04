@@ -57,10 +57,10 @@ class OrbitBox:
         svg.add_circle(self.x + self.cx, self.y + self.h/2, planet_radius - 1, 'planetDiscInner', '')
 
     def _get_inner_clip_path(self):
-        return 'clip_inner_' + self.title
+        return 'orbit_clip_inner_' + self.title
 
     def _get_outer_clip_path(self):
-        return 'clip_outer_' + self.title
+        return 'orbit_clip_outer_' + self.title
 
     def _render_labels(self, svg):
         MIN_SEPARATION = 15
@@ -71,8 +71,4 @@ class OrbitBox:
 
             if next_r - this_r > MIN_SEPARATION:
                 svg.add_circle_text(self.x + self.cx, self.y + self.h/2, this_r + 12, 'moonOrbitLabel ' + self.title, '{}'.format(moon['name']))
-
-    def _get_text_length(self, text):
-        return len(text) * 5
-
 

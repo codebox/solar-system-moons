@@ -1,5 +1,7 @@
 import codecs, random, math
 
+ARROW_MARKER_ID = 'arrowHead'
+
 class Svg:
     def __init__(self):
         self.template = open('template.svg').read()
@@ -7,10 +9,22 @@ class Svg:
         self.defs = []
         self.content = []
 
+        self._add_arrow_head_marker()
+
     def add_circle(self, x, y, r, css_class, clip_path, randomise_opacity=False):
         self.content.append(u'<circle cx="{}" cy="{}" r="{}" class="{}" clip-path="url(#{})" {}/>'.format(
             x, y, r, css_class, clip_path, 'style="stroke-opacity: {}"'.format(0.1 + random.random()/10) if randomise_opacity else ''
         ))
+
+    def add_ellipse(self, cx, cy, rx, ry, angle, css_class, randomise_opacity=False):
+        self.content.append(u'<ellipse cx="{0}" cy="{1}" rx="{2}" ry="{3}" transform="rotate({4},{0},{1})" class="{5}" {6} marker-end="url(#{7})"/>'.format(cx, cy, rx, ry, angle * 180 / math.pi, css_class, 'style="stroke: hsl(0, 0%,{}%)"'.format(75 + random.random() * 25) if randomise_opacity else '', ARROW_MARKER_ID))
+        # start_angle = math.pi * 1.4
+        # end_angle = math.pi * 0
+        # x1 = cx + rx * math.cos(start_angle)
+        # y1 = cy + ry * math.sin(start_angle)
+        # x2 = cx + rx * math.cos(end_angle)
+        # y2 = cy + ry * math.sin(end_angle)
+        # self.content.append(u'<path d="M {} {} A {} {} {} 1 1 {} {}" class="{}"/>'.format(x1, y1, rx, ry, angle * 180 / math.pi, x2, y2, css_class))
 
     def _get_circle_arc_path(self, cx, cy, r, start_angle, end_angle):
         start_x = cx + r * math.sin(start_angle)
@@ -49,6 +63,9 @@ class Svg:
     def add_substitutions(self, substitutions):
         for key, value in substitutions.items():
             self.template = self.template.replace('%{}%'.format(key), str(value))
+
+    def _add_arrow_head_marker(self):
+        self.defs.append(u'<marker id="{0}" orient="auto"><path d="M0,0 V4 L2,2 Z" class="{0}"/></marker>'.format(ARROW_MARKER_ID))
 
     def save(self, out_file):
         part1, tmp = self.template.split('%style%')
