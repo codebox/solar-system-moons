@@ -2,79 +2,90 @@ from orbit_box import OrbitBox
 from radius_box import RadiusBox
 from rotation_box import RotationBox
 
-WIDTH=2000
-Y_MARGIN=50
-X_MARGIN=50
-TITLE_Y=70
-ORBIT_BOX_Y=100
-ORBIT_BOX_HEIGHT=400
-RADIUS_BOX_Y=550
-RADIUS_BOX_HEIGHT=400
-ROTATION_BOX_Y=1000
-ROTATION_BOX_HEIGHT=400
-BOX_Y_SEPARATION=30
-BOX_X_MARGIN=40
-BOX_Y_MARGIN=80
+OUTER_X_MARGIN = 50
+OUTER_Y_MARGIN = 50
+BORDER_THICKNESS = 10
+INNER_X_MARGIN = 50
+INNER_Y_MARGIN = 50
+
+OUTER_BOX_WIDTH = 400
+OUTER_BOX_X_MARGIN = 40
+OUTER_BOX_Y_MARGIN = 80
+
+INNER_BOX_X_MARGIN = 40
+INNER_BOX_Y_MARGIN = 80
+
+CONTENT_X = OUTER_X_MARGIN + BORDER_THICKNESS + INNER_X_MARGIN
+CONTENT_Y = OUTER_Y_MARGIN + BORDER_THICKNESS + INNER_Y_MARGIN
+CONTENT_HEIGHT = 2500
+
+MOONS_PER_COLUMN_IN_CENTER = 10
+
+TITLE_Y_OFFSET = 25
 
 
 class SvgWrapper:
-    def __init__(self, svg):
+    def __init__(self, svg, data):
         self.svg = svg
+        self.data = data
+        self.content_width = 0
 
-    def render(self, data):
-        planet_name = data['planet']['name']
-        planet_radius = data['planet']['radius']
-        moons = data['moons']
+    def render(self):
+        orbit_box = self._build_orbit_box()
+        rotation_box = self._build_rotation_box()
+        radius_box = self._build_radius_box()
 
-        self._render_title('The Moons of {}'.format(planet_name))
-        self._render_orbit_box(planet_name, planet_radius, moons)
-        self._render_radius_box(planet_name, planet_radius, data['moons'])
-        self._render_rotation_box(planet_name, data['moons'])
-
-    def _render_title(self, planet_name):
-        self.svg.add_text(TITLE_Y, planet_name)
-
-    def _render_orbit_box(self, planet_name, planet_radius, moons):
-        box_x = X_MARGIN
-        box_y = ORBIT_BOX_Y
-        box_width = WIDTH - 2 * X_MARGIN
-        box_height = ORBIT_BOX_HEIGHT
-
-        orbit_box = OrbitBox(planet_name, box_x, box_y, box_width, box_height, BOX_X_MARGIN, BOX_X_MARGIN, BOX_Y_MARGIN)
-
-        orbit_box.set_planet_radius(planet_radius)
-        orbit_box.add_moons(moons)
-
+        self._render_border()
+        self._render_title()
         orbit_box.render(self.svg)
-
-    def _render_radius_box(self, planet_name, planet_radius, moons):
-        box_x = X_MARGIN
-        box_y = RADIUS_BOX_Y
-        box_width = WIDTH - 2 * X_MARGIN
-        box_height = RADIUS_BOX_HEIGHT
-
-        radius_box = RadiusBox(planet_name, box_x, box_y, box_width, box_height, BOX_X_MARGIN, BOX_Y_MARGIN)
-        radius_box.set_planet_radius(planet_radius)
-        radius_box.add_moons(moons)
-
+        rotation_box.render(self.svg)
         radius_box.render(self.svg)
+
+    def _render_title(self):
+        self.svg.add_text(OUTER_Y_MARGIN + BORDER_THICKNESS + INNER_Y_MARGIN + TITLE_Y_OFFSET, 'The Moons of {}'.format(self.data['planet']['name']))
+
+    def _build_orbit_box(self):
+        box_x = CONTENT_X + self.content_width
+        box_y = CONTENT_Y
+        box_width = OUTER_BOX_WIDTH
+        box_height = CONTENT_HEIGHT
+
+        orbit_box = OrbitBox(self.data, box_x, box_y, box_width, box_height, OUTER_BOX_Y_MARGIN, OUTER_BOX_X_MARGIN, OUTER_BOX_Y_MARGIN)
+        self.content_width += orbit_box.get_width()
+
+        return orbit_box
+
+    def _build_rotation_box(self):
+        box_x = CONTENT_X + self.content_width
+        box_y = CONTENT_Y
+        box_height = CONTENT_HEIGHT
+
+        rotation_box = RotationBox(self.data, box_x, box_y, box_height, INNER_BOX_X_MARGIN, INNER_BOX_Y_MARGIN)
+        self.content_width += rotation_box.get_width()
+
+        return rotation_box
+
+    def _build_radius_box(self):
+        box_x = CONTENT_X + self.content_width
+        box_y = CONTENT_Y
+        box_width = OUTER_BOX_WIDTH
+        box_height = CONTENT_HEIGHT
+
+        radius_box = RadiusBox(self.data, box_x, box_y, box_width, box_height, OUTER_BOX_X_MARGIN, OUTER_BOX_Y_MARGIN)
+        self.content_width += radius_box.get_width()
+
+        return radius_box
 
     def save(self, out_file):
         self.svg.add_substitutions({
-            'width': WIDTH,
-            'height': ROTATION_BOX_Y + ROTATION_BOX_HEIGHT + Y_MARGIN
+            'width': self.content_width + 2 * (OUTER_X_MARGIN + BORDER_THICKNESS + INNER_X_MARGIN),
+            'height': CONTENT_HEIGHT + 2 * (OUTER_Y_MARGIN + BORDER_THICKNESS + INNER_Y_MARGIN)
         })
 
         self.svg.save(out_file)
 
-    def _render_rotation_box(self, planet_name, moons):
-        box_x = X_MARGIN
-        box_y = ROTATION_BOX_Y
-        box_width = WIDTH - 2 * X_MARGIN
-        box_height = ROTATION_BOX_HEIGHT
-
-        rotation_box = RotationBox(planet_name, box_x, box_y, box_width, box_height, BOX_X_MARGIN, BOX_Y_MARGIN)
-        rotation_box.add_moons(moons)
-
-        rotation_box.render(self.svg)
+    def _render_border(self):
+        planet_name = self.data['planet']['name']
+        self.svg.add_rectangle(OUTER_X_MARGIN, OUTER_Y_MARGIN, self.content_width + 2 * (BORDER_THICKNESS + INNER_X_MARGIN), CONTENT_HEIGHT + 2 * (BORDER_THICKNESS + INNER_Y_MARGIN), 'borderOuter ' + planet_name)
+        self.svg.add_rectangle(OUTER_X_MARGIN + BORDER_THICKNESS, OUTER_Y_MARGIN + BORDER_THICKNESS, self.content_width + 2 * INNER_X_MARGIN, CONTENT_HEIGHT + 2 * INNER_Y_MARGIN, 'borderInner')
 

@@ -57,16 +57,16 @@
                 fill: transparent;
                 stroke-opacity: 0.3;
             }
-            .radiusBoxPlanetDiscInner.Jupiter, .moonOrbitLabel.Jupiter, .radiusBoxMoonName.Jupiter, .rotationDisc.Jupiter, .rotationDiscText.Jupiter {
+            .radiusBoxPlanetDiscInner.Jupiter, .moonOrbitLabel.Jupiter, .radiusBoxMoonName.Jupiter, .rotationDisc.Jupiter, .borderOuter.Jupiter {
                 fill: #bb7900;
             }
-            .radiusBoxPlanetDiscInner.Saturn, .moonOrbitLabel.Saturn, .radiusBoxMoonName.Saturn, .rotationDisc.Saturn, .rotationDiscText.Saturn {
+            .radiusBoxPlanetDiscInner.Saturn, .moonOrbitLabel.Saturn, .radiusBoxMoonName.Saturn, .rotationDisc.Saturn, .borderOuter.Saturn {
                 fill: #bda603;
             }
-            .radiusBoxPlanetDiscInner.Uranus, .moonOrbitLabel.Uranus, .radiusBoxMoonName.Uranus, .rotationDisc.Uranus, .rotationDiscText.Uranus {
+            .radiusBoxPlanetDiscInner.Uranus, .moonOrbitLabel.Uranus, .radiusBoxMoonName.Uranus, .rotationDisc.Uranus, .borderOuter.Uranus {
                 fill: #129e37;
             }
-            .radiusBoxPlanetDiscInner.Neptune, .moonOrbitLabel.Neptune, .radiusBoxMoonName.Neptune, .rotationDisc.Neptune, .rotationDiscText.Neptune {
+            .radiusBoxPlanetDiscInner.Neptune, .moonOrbitLabel.Neptune, .radiusBoxMoonName.Neptune, .rotationDisc.Neptune, .borderOuter.Neptune {
                 fill: #126a9e;
             }
             .radiusBoxMoonName, .moonOrbitLabel {
@@ -113,6 +113,16 @@
             }
             .rotationArrowHead {
                 stroke: black;
+            }
+            .borderOuter, .borderInner {
+                stroke: black;
+                stroke-width: 1px;
+            }
+            .borderOuter {
+                fill-opacity: 0.3;
+            }
+            .borderInner {
+                fill: white;
             }
         </style>
         <style type="text/css"><![CDATA[%style%]]></style>

@@ -17,8 +17,8 @@ if len(sys.argv) == 2:
     processed_planet_data = process_data(planet_data)
     if planet_data:
         svg = Svg()
-        svg_wrapper = SvgWrapper(svg)
-        svg_wrapper.render(processed_planet_data)
+        svg_wrapper = SvgWrapper(svg, processed_planet_data)
+        svg_wrapper.render()
         svg_wrapper.save('{}.svg'.format(planet_name))
 
     else:
