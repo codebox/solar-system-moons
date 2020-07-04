@@ -1,4 +1,4 @@
-import math, random
+import math
 
 DISC_SEPARATION = 50
 DISC_RADIUS=30
@@ -30,7 +30,7 @@ class RotationBox:
         y = self.y + self.y_margin + DISC_SEPARATION/2 + DISC_RADIUS
 
         for (i, moon) in enumerate(self.moons):
-            self._render_disc(svg, x, y, DISC_RADIUS, math.pi * random.random() / 5, moon['name'])
+            self._render_disc(svg, x, y, DISC_RADIUS, math.pi * moon['inclination'] / 180, moon['name'])
             x += DISC_SEPARATION + 2 * DISC_RADIUS
             if (i+1) % moons_per_row == 0:
                 x = init_x
@@ -86,7 +86,7 @@ class RotationBox:
         # draw outer circle
         svg.add_circle(cx, cy, r, 'rotationDisc ' + self.title, '')
 
-        svg.add_circle_text(cx, cy, r + 20, 'rotationDiscText', title, 3 * math.pi / 2, math.pi/2)
+        svg.add_circle_text(cx, cy, r + 30, 'rotationDiscText', title, 3 * math.pi / 2, math.pi/2)
 
         # draw upper polar ellipse
         svg.add_ellipse(
