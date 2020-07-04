@@ -2,6 +2,28 @@
     {
         "planet": "Jupiter",
         "radius": 69911,
+        "rings": [
+            {
+                "name": "Halo ring",
+                "radius": 92000,
+                "width": 30500
+            },
+            {
+                "name": "Main ring",
+                "radius": 122500,
+                "width": 6500
+            },
+            {
+                "name": "Amalthea gossamer ring",
+                "radius": 129000,
+                "width": 53000
+            },
+            {
+                "name": "Thebe gossamer ring",
+                "radius": 129000,
+                "width": 97000
+            }
+        ],
         "moons": [
             {
                 "name": "Metis",
@@ -719,6 +741,73 @@
     {
         "planet": "Saturn",
         "radius": 58232,
+        "rings": [
+            {
+                "name": "D Ring",
+                "radius": 66900,
+                "width": 7500
+            },
+            {
+                "name": "C Ring",
+                "radius": 74658,
+                "width": 17500
+            },
+            {
+                "name": "B Ring",
+                "radius": 92000,
+                "width": 25500
+            },
+            {
+                "name": "Cassini Division",
+                "radius": 117580,
+                "width": 4700
+            },
+            {
+                "name": "A ring",
+                "radius": 122170,
+                "width": 14600
+            },
+            {
+                "name": "Roche Division",
+                "radius": 136775,
+                "width": 2600
+            },
+            {
+                "name": "F Ring",
+                "radius": 140180,
+                "width": 30
+            },
+            {
+                "name": "Janus/Epimetheus Ring",
+                "radius": 149000,
+                "width": 5000
+            },
+            {
+                "name": "G Ring",
+                "radius": 166000,
+                "width": 9000
+            },
+            {
+                "name": "Methone Ring Arc",
+                "radius": 194230,
+                "width": 1
+            },
+            {
+                "name": "Anthe Ring Arc",
+                "radius": 197665,
+                "width": 1
+            },
+            {
+                "name": "Pallene Ring",
+                "radius": 211000,
+                "width": 2500
+            },
+            {
+                "name": "E Ring",
+                "radius": 180000,
+                "width": 300000
+            }
+        ],
         "moons": [
             {
                 "name": "S/2009 S 1",
@@ -1454,6 +1543,98 @@
     {
         "planet": "Uranus",
         "radius": 25362,
+        "rings": [
+            {
+                "name" : "ζcc",
+                "radius" : 26840,
+                "width" : 8000
+            },
+            {
+                "name" : "ζc",
+                "radius" : 34890,
+                "width" : 3000
+            },
+            {
+                "name" : "1986U2R",
+                "radius" : 37000,
+                "width" : 2500
+            },
+            {
+                "name" : "ζ",
+                "radius" : 37850,
+                "width" : 3500
+            },
+            {
+                "name" : "6",
+                "radius" : 41837,
+                "width" : 1.6
+            },
+            {
+                "name" : "5",
+                "radius" : 42234,
+                "width" : 1.9
+            },
+            {
+                "name" : "4",
+                "radius" : 42570,
+                "width" : 2.4
+            },
+            {
+                "name" : "α",
+                "radius" : 44718,
+                "width" : 4.8
+            },
+            {
+                "name" : "β",
+                "radius" : 45661,
+                "width" : 6.1
+            },
+            {
+                "name" : "η",
+                "radius" : 47175,
+                "width" : 1.9
+            },
+            {
+                "name" : "ηc",
+                "radius" : 47176,
+                "width" : 40
+            },
+            {
+                "name" : "γ",
+                "radius" : 47627,
+                "width" : 3.6
+            },
+            {
+                "name" : "δc",
+                "radius" : 48300,
+                "width" : 10
+            },
+            {
+                "name" : "δ",
+                "radius" : 48300,
+                "width" : 4.1
+            },
+            {
+                "name" : "λ",
+                "radius" : 50023,
+                "width" : 1
+            },
+            {
+                "name" : "ε",
+                "radius" : 51149,
+                "width" : 19.7
+            },
+            {
+                "name" : "ν",
+                "radius" : 66100,
+                "width" : 3800
+            },
+            {
+                "name" : "μ",
+                "radius" : 86000,
+                "width" : 17000
+            }
+        ],
         "moons": [
             {
                 "name": "Cordelia",
@@ -1703,6 +1884,33 @@
     {
         "planet": "Neptune",
         "radius": 24622,
+        "rings": [
+            {
+                "name" : "Galle (N42)",
+                "radius" : 40900,
+                "width" : 2000
+            },
+            {
+                "name" : "Le Verrier (N53)",
+                "radius" : 53200,
+                "width" : 113
+            },
+            {
+                "name" : "Lassell",
+                "radius" : 53200,
+                "width" : 4000
+            },
+            {
+                "name" : "Arago",
+                "radius" : 57200,
+                "width" : 100
+            },
+            {
+                "name" : "Adams (N63)",
+                "radius" : 62932,
+                "width" : 15
+            }
+        ],
         "moons": [
             {
                 "name": "Naiad",
