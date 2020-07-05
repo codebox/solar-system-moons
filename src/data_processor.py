@@ -19,12 +19,22 @@ def process_data(planet_data):
             'original': moon
         })
 
+    rings = []
+    for ring in planet_data['rings']:
+        rings.append({
+            'name': ring['name'],
+            'radius': scale_distance(ring['radius']),
+            'width': scale_distance(ring['width']),
+            'original': ring
+        })
+
     return {
         'planet': {
             'name': planet_data['planet'],
             'radius': scale_distance(planet_data['radius'])
         },
-        'moons': moons
+        'moons': moons,
+        'rings': rings
     }
 
 

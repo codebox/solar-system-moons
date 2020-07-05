@@ -28,14 +28,14 @@ class OrbitBox:
 
     def _render_outer(self, svg):
         clip_path_id = self._get_outer_clip_path()
-        svg.add_clip_path(self.x, self.y, self.w, self.h, clip_path_id)
+        svg.add_clip_path_rect(self.x, self.y, self.w, self.h, clip_path_id)
 
         for moon in self.moons:
             svg.add_circle(self.x + self.w/2, self.y + self.cy, self._scale_radius(moon['orbit']), 'moonOrbit moonOrbitOuter ' + self.title, clip_path_id)
 
     def _render_inner(self, svg):
         clip_path_id = self._get_inner_clip_path()
-        svg.add_clip_path(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, clip_path_id)
+        svg.add_clip_path_rect(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, clip_path_id)
 
         for moon in self.moons:
             svg.add_circle(self.x + self.w/2, self.y + self.cy, self._scale_radius(moon['orbit']), 'moonOrbit moonOrbitInner ' + self.title, clip_path_id)

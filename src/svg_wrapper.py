@@ -1,6 +1,7 @@
 from orbit_box import OrbitBox
 from radius_box import RadiusBox
 from rotation_box import RotationBox
+from ring_box import RingBox
 
 OUTER_X_MARGIN = 50
 OUTER_Y_MARGIN = 50
@@ -17,7 +18,7 @@ INNER_BOX_Y_MARGIN = 80
 
 CONTENT_X = OUTER_X_MARGIN + BORDER_THICKNESS + INNER_X_MARGIN
 CONTENT_Y = OUTER_Y_MARGIN + BORDER_THICKNESS + INNER_Y_MARGIN
-CONTENT_HEIGHT = 2500
+CONTENT_HEIGHT = 1500
 
 MOONS_PER_COLUMN_IN_CENTER = 10
 
@@ -32,13 +33,15 @@ class SvgWrapper:
 
     def render(self):
         orbit_box = self._build_orbit_box()
-        rotation_box = self._build_rotation_box()
+        ring_box = self._build_ring_box()
+        # rotation_box = self._build_rotation_box()
         radius_box = self._build_radius_box()
 
         self._render_border()
         self._render_title()
         orbit_box.render(self.svg)
-        rotation_box.render(self.svg)
+        ring_box.render(self.svg)
+        # rotation_box.render(self.svg)
         radius_box.render(self.svg)
 
     def _render_title(self):
@@ -54,6 +57,17 @@ class SvgWrapper:
         self.content_width += orbit_box.get_width()
 
         return orbit_box
+
+    def _build_ring_box(self):
+        box_x = CONTENT_X + self.content_width
+        box_y = CONTENT_Y
+        box_width = OUTER_BOX_WIDTH * 2
+        box_height = CONTENT_HEIGHT
+
+        ring_box = RingBox(self.data, box_x, box_y, box_width, box_height, INNER_BOX_X_MARGIN, INNER_BOX_Y_MARGIN)
+        self.content_width += ring_box.get_width()
+
+        return ring_box
 
     def _build_rotation_box(self):
         box_x = CONTENT_X + self.content_width

@@ -29,8 +29,8 @@ class RadiusBox:
 
         rescale = build_rescale(0, 1, 0, space_for_moons / total_moon_diameters)
 
-        svg.add_clip_path(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, INNER_CLIP_PATH_ID)
-        svg.add_clip_path(self.x, self.y, self.w, self.h, OUTER_CLIP_PATH_ID)
+        svg.add_clip_path_rect(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, INNER_CLIP_PATH_ID)
+        svg.add_clip_path_rect(self.x, self.y, self.w, self.h, OUTER_CLIP_PATH_ID)
 
         self._render_planet(svg, rescale)
         self._render_box_filler(svg, rescale)
