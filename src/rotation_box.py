@@ -34,13 +34,17 @@ class RotationBox:
             x += DISC_SEPARATION + 2 * DISC_RADIUS
             if (i+1) % self.moons_per_row == 0:
                 x = init_x
+
+                moons_remaining = len(self.moons) - i - 1
+                if moons_remaining < self.moons_per_row:
+                    x += (self.moons_per_row - moons_remaining) * (DISC_SEPARATION + 2 * DISC_RADIUS) / 2
+
                 y += DISC_SEPARATION + 2 * DISC_RADIUS
 
     def _render_disc(self, svg, cx, cy, r, angle, title):
         line_length = r * 3
         line_overlap = r / 5
         ellipse_major_axis = r * 0.4
-        ellipse_minor_axis = ellipse_major_axis * line_overlap / r
 
         # draw surface ellipses
         for offset in range(-r, r, 1):
