@@ -2,19 +2,20 @@ import math
 
 DISC_SEPARATION = 50
 DISC_RADIUS=30
-MOONS_PER_COLUMN=10
+WIDE_MOONS_PER_ROW=9
+NARROW_MOONS_PER_ROW=7
 
 class RotationBox:
     def __init__(self, planet_data, x, y, h, x_margin, y_margin):
         self.title = planet_data['planet']['name']
         self.x = x
         self.y = y
-        self.moons_per_row = (int(len(planet_data['moons']) / MOONS_PER_COLUMN) + 1)
+        self.moons = planet_data['moons']
+        self.moons_per_row = WIDE_MOONS_PER_ROW if len(self.moons) > 40 else NARROW_MOONS_PER_ROW
         self.w = 2 * x_margin + self.moons_per_row * (2 * DISC_RADIUS + DISC_SEPARATION) + DISC_SEPARATION
         self.h = h
         self.x_margin = x_margin
         self.y_margin = y_margin
-        self.moons = planet_data['moons']
 
     def get_width(self):
         return self.w

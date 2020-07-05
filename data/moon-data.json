@@ -4,22 +4,22 @@
         "radius": 69911,
         "rings": [
             {
-                "name": "Halo ring",
+                "name": "Halo Ring",
                 "radius": 92000,
                 "width": 30500
             },
             {
-                "name": "Main ring",
+                "name": "Main Ring",
                 "radius": 122500,
                 "width": 6500
             },
             {
-                "name": "Amalthea gossamer ring",
+                "name": "Amalthea Gossamer Ring",
                 "radius": 129000,
                 "width": 53000
             },
             {
-                "name": "Thebe gossamer ring",
+                "name": "Thebe Gossamer Ring",
                 "radius": 129000,
                 "width": 97000
             }
