@@ -1545,12 +1545,12 @@
         "radius": 25362,
         "rings": [
             {
-                "name" : "ζcc",
+                "name" : "ζcc Ring",
                 "radius" : 26840,
                 "width" : 8000
             },
             {
-                "name" : "ζc",
+                "name" : "ζc Ring",
                 "radius" : 34890,
                 "width" : 3000
             },
@@ -1560,77 +1560,77 @@
                 "width" : 2500
             },
             {
-                "name" : "ζ",
+                "name" : "ζ Ring",
                 "radius" : 37850,
                 "width" : 3500
             },
             {
-                "name" : "6",
+                "name" : "Ring 6",
                 "radius" : 41837,
                 "width" : 1.6
             },
             {
-                "name" : "5",
+                "name" : "Ring 5",
                 "radius" : 42234,
                 "width" : 1.9
             },
             {
-                "name" : "4",
+                "name" : "Ring 4",
                 "radius" : 42570,
                 "width" : 2.4
             },
             {
-                "name" : "α",
+                "name" : "α Ring",
                 "radius" : 44718,
                 "width" : 4.8
             },
             {
-                "name" : "β",
+                "name" : "β Ring",
                 "radius" : 45661,
                 "width" : 6.1
             },
             {
-                "name" : "η",
+                "name" : "η Ring",
                 "radius" : 47175,
                 "width" : 1.9
             },
             {
-                "name" : "ηc",
+                "name" : "ηc Ring",
                 "radius" : 47176,
                 "width" : 40
             },
             {
-                "name" : "γ",
+                "name" : "γ Ring",
                 "radius" : 47627,
                 "width" : 3.6
             },
             {
-                "name" : "δc",
-                "radius" : 48300,
+                "name" : "δc Ring",
+                "radius" : 48301,
                 "width" : 10
             },
             {
-                "name" : "δ",
+                "name" : "δ Ring",
                 "radius" : 48300,
                 "width" : 4.1
             },
             {
-                "name" : "λ",
+                "name" : "λ Ring",
                 "radius" : 50023,
                 "width" : 1
             },
             {
-                "name" : "ε",
+                "name" : "ε Ring",
                 "radius" : 51149,
                 "width" : 19.7
             },
             {
-                "name" : "ν",
+                "name" : "ν Ring",
                 "radius" : 66100,
                 "width" : 3800
             },
             {
-                "name" : "μ",
+                "name" : "μ Ring",
                 "radius" : 86000,
                 "width" : 17000
             }
