@@ -39,7 +39,7 @@ class RingBox:
         for ring in self.rings:
             inner_edge_radius = rescale(ring['radius'])
             outer_edge_radius = max(inner_edge_radius + 1, rescale(ring['radius'] + ring['width']))
-            svg.add_circle(cx, cy, outer_edge_radius, 'ringBoxRingOuterEdge ' + self.title, clip_path_id)
+            svg.add_circle(cx, cy, outer_edge_radius, 'ringBoxRing ' + self.title, clip_path_id)
 
     def _render_inner(self, svg, rescale):
         clip_path_id = self._get_inner_clip_path()
@@ -51,14 +51,14 @@ class RingBox:
         for ring in self.rings:
             inner_edge_radius = rescale(ring['radius'])
             outer_edge_radius = max(inner_edge_radius + 1, rescale(ring['radius'] + ring['width']))
-            svg.add_circle(cx, cy, outer_edge_radius, 'ringBoxRingOuter ' + self.title, clip_path_id)
-            svg.add_circle(cx, cy, inner_edge_radius, 'ringBoxRingInner ' + self.title, clip_path_id)
+            for r in range(int(inner_edge_radius), int(outer_edge_radius)):
+                svg.add_circle(cx, cy, r, 'ringBoxRing ' + self.title, clip_path_id, True)
+            svg.add_circle(cx, cy, outer_edge_radius, 'ringBoxRing ' + self.title, clip_path_id)
 
         angular_offset = 0
         for ring in self.rings:
             inner_edge_radius = rescale(ring['radius'])
             outer_edge_radius = max(inner_edge_radius + 1, rescale(ring['radius'] + ring['width']))
-            svg.add_circle(cx, cy, outer_edge_radius, 'ringBoxRingOuterEdge ' + self.title, clip_path_id)
             svg.add_circle_text(cx, cy, TEXT_OFFSET + (inner_edge_radius + outer_edge_radius)/2, 'ringBoxRingName ' + self.title, ring['name'], angular_offset + 3 * math.pi / 2, angular_offset + math.pi / 2, clip_path_id)
             angular_offset += 2 * (math.pi * 2 / len(self.rings))
 
