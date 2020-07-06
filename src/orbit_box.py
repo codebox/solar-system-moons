@@ -1,25 +1,25 @@
 import math
 
 class OrbitBox:
-    def __init__(self, planet_data, x, y, w, h, cy, x_margin, y_margin):
+    def __init__(self, planet_data, w, h, x_margin, y_margin):
         self.title = planet_data['planet']['name']
-        self.x = x
-        self.y = y
+        self.x = 0
+        self.y = 0
+        self.cy = 0
         self.w = w
         self.h = h
-        self.cy = cy
         self.x_margin = x_margin
         self.y_margin = y_margin
         self.moons = planet_data['moons']
         self.planet_radius = planet_data['planet']['radius'] * self.w
 
-    def get_width(self):
-        return self.w
-
     def _scale_radius(self, radius):
         return radius * (self.h - 2 * self.y_margin)
 
-    def render(self, svg):
+    def render(self, svg, x, y, cy):
+        self.x = x
+        self.y = y
+        self.cy = cy
         self._render_outer(svg)
         self._render_inner(svg)
         self._render_rectangle(svg)

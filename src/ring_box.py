@@ -5,10 +5,10 @@ PADDING = -30
 TEXT_OFFSET = 3
 
 class RingBox:
-    def __init__(self, planet_data, x, y, w, h, x_margin, y_margin):
+    def __init__(self, planet_data, w, h, x_margin, y_margin):
         self.title = planet_data['planet']['name']
-        self.x = x
-        self.y = y
+        self.x = 0
+        self.y = 0
         self.w = w
         self.h = h
         self.x_margin = x_margin
@@ -17,10 +17,9 @@ class RingBox:
         self.planet_radius = planet_data['planet']['radius']
         self.rings.sort(key=lambda r: r['radius'] + r['width'], reverse=True)
 
-    def get_width(self):
-        return self.w
-
-    def render(self, svg):
+    def render(self, svg, x, y):
+        self.x = x
+        self.y = y
         max_ring_radius = max(map(lambda r: r['radius'] + r['width'], self.rings))
         min_dimension = min(self.h - 2 * self.y_margin, self.w - 2 * self.x_margin)
 

@@ -4,23 +4,26 @@ DISC_SEPARATION = 50
 DISC_RADIUS=30
 WIDE_MOONS_PER_ROW=9
 NARROW_MOONS_PER_ROW=7
+BOTTOM_PADDING = 10
 
 class RotationBox:
-    def __init__(self, planet_data, x, y, h, x_margin, y_margin):
+    def __init__(self, planet_data, x_margin, y_margin):
         self.title = planet_data['planet']['name']
-        self.x = x
-        self.y = y
+        self.x = 0
+        self.y = 0
         self.moons = planet_data['moons']
         self.moons_per_row = WIDE_MOONS_PER_ROW if len(self.moons) > 40 else NARROW_MOONS_PER_ROW
         self.w = 2 * x_margin + self.moons_per_row * (2 * DISC_RADIUS + DISC_SEPARATION) + DISC_SEPARATION
-        self.h = h
+        self.h = 2 * y_margin + math.ceil(len(self.moons) / self.moons_per_row) * (2 * DISC_RADIUS + DISC_SEPARATION) + DISC_SEPARATION + BOTTOM_PADDING
         self.x_margin = x_margin
         self.y_margin = y_margin
 
-    def get_width(self):
-        return self.w
+    def get_height(self):
+        return self.h
 
-    def render(self, svg):
+    def render(self, svg, x, y):
+        self.x = x
+        self.y = y
         self._render_rectangle(svg)
         self._render_inner(svg)
 

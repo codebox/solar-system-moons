@@ -9,10 +9,10 @@ TEXT_TO_DISC_SEPARATION = 5
 
 
 class RadiusBox:
-    def __init__(self, planet_data, x, y, w, h, x_margin, y_margin):
+    def __init__(self, planet_data, w, h, x_margin, y_margin):
         self.title = planet_data['planet']['name']
-        self.x = x
-        self.y = y
+        self.x = 0
+        self.y = 0
         self.w = w
         self.h = h
         self.x_margin = x_margin
@@ -20,10 +20,9 @@ class RadiusBox:
         self.moons = planet_data['moons']
         self.planet_radius = planet_data['planet']['radius']
 
-    def get_width(self):
-        return self.w
-
-    def render(self, svg):
+    def render(self, svg, x, y):
+        self.x = x
+        self.y = y
         total_moon_diameters = sum(map(lambda m: m['radius'] * 2, self.moons))
         space_for_moons = self.h - 2 * self.y_margin - PLANET_DISC_SEGMENT_WIDTH - (1 + len(self.moons)) * DISC_SEPARATION
 

@@ -46,8 +46,8 @@ class Svg:
     def add_clip_path_rect(self, x, y, w, h, id):
         self.content.append(u'<clipPath id="{}"><rect x="{}" y="{}" width="{}" height="{}"/></clipPath>'.format(id, x, y, w, h))
 
-    def add_text(self, y, text):
-        self.content.append(u'<text x="50%" y="{}" text-anchor="middle" startOffset="50%" class="boxTitle">{}</text>'.format(y, text))
+    def add_text(self, y, text, css_class):
+        self.content.append(u'<text x="50%" y="{}" text-anchor="middle" startOffset="50%" class="{}">{}</text>'.format(y, css_class, text))
 
     def add_substitutions(self, substitutions):
         for key, value in substitutions.items():

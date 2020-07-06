@@ -8,7 +8,10 @@
             text {
                 font-family: 'Open Sans Condensed', sans-serif;
             }
-            .boxTitle {
+            .boxTitleLarge {
+                font-size: 48px;
+            }
+            .boxTitleSmall {
                 font-size: 36px;
             }
             .moonOrbit {

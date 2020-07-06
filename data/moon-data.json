@@ -801,11 +801,6 @@
                 "name": "Pallene Ring",
                 "radius": 211000,
                 "width": 2500
-            },
-            {
-                "name": "E Ring",
-                "radius": 180000,
-                "width": 300000
             }
         ],
         "moons": [
