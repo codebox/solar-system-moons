@@ -14,6 +14,7 @@ LONG_CONTENT_HEIGHT = 2500
 SHORT_CONTENT_HEIGHT = 1500
 MIN_RING_BOX_HEIGHT = 800
 LOTS_OF_MOONS_THRESHOLD = 40
+TEXT_LINE_CENTER_OFFSET = 5
 
 class SvgWrapper:
     def __init__(self, svg, data):
@@ -44,6 +45,8 @@ class SvgWrapper:
         self.info_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y)
 
         self.radius_box.render(self.svg, self.rotation_box.x + self.rotation_box.w, self.content_y)
+
+        self._render_footer()
 
     def _render_title(self):
         self.svg.add_text(self.margin + self.border_thickness + 2 * self.margin, 'The Moons of {}'.format(self.data['planet']['name']), 'boxTitle' + ('Large' if self.lots_of_moons else 'Small'))
@@ -98,5 +101,8 @@ class SvgWrapper:
         self.content_width = self.orbit_box.w + self.margin + self.rotation_box.w + self.margin + self.radius_box.w
         self.svg.add_rectangle(self.margin, self.margin, self.content_width + 2 * self.border_thickness, self.content_height + 2 * (self.border_thickness + self.margin), 'borderOuter ' + planet_name)
         self.svg.add_rectangle(self.margin + self.border_thickness, self.margin + self.border_thickness, self.content_width, self.content_height + 2 * self.margin, 'borderInner')
+
+    def _render_footer(self):
+        self.svg.add_text(self.content_y + self.content_height + TEXT_LINE_CENTER_OFFSET, 'https://codebox.net/gas-giants', 'footerText' )
 
 

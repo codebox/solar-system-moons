@@ -59,7 +59,7 @@ class RingBox:
             inner_edge_radius = rescale(ring['radius'])
             outer_edge_radius = max(inner_edge_radius + 1, rescale(ring['radius'] + ring['width']))
             svg.add_circle(cx, cy, outer_edge_radius, 'ringBoxRingOuterEdge ' + self.title, clip_path_id)
-            svg.add_circle_text(cx, cy, TEXT_OFFSET + (inner_edge_radius + outer_edge_radius)/2, 'ringBoxRingName ' + self.title, ring['name'], angular_offset + 3 * math.pi / 2, angular_offset + math.pi / 2)
+            svg.add_circle_text(cx, cy, TEXT_OFFSET + (inner_edge_radius + outer_edge_radius)/2, 'ringBoxRingName ' + self.title, ring['name'], angular_offset + 3 * math.pi / 2, angular_offset + math.pi / 2, clip_path_id)
             angular_offset += 2 * (math.pi * 2 / len(self.rings))
 
         svg.add_circle(cx, cy, rescale(self.planet_radius), 'ringBoxPlanetDisc ' + self.title, clip_path_id)
