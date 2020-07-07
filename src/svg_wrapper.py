@@ -3,6 +3,8 @@ from radius_box import RadiusBox
 from rotation_box import RotationBox
 from ring_box import RingBox
 from info_box import InfoBox
+from timeline_box import TimelineBox
+from eccentricity_box import EccentricityBox
 
 WIDE_MARGIN = 50
 NARROW_MARGIN = 30
@@ -33,6 +35,8 @@ class SvgWrapper:
         self.ring_box = self._build_ring_box()
         self.radius_box = self._build_radius_box()
         self.info_box = self._build_info_box()
+        self.eccentricity_box = self._build_eccentricity_box()
+        self.timeline_box = self._build_timeline_box()
 
     def render(self):
         self._render_border()
@@ -40,7 +44,9 @@ class SvgWrapper:
 
         self.orbit_box.render(self.svg, self.content_x, self.content_y, self.margin)
 
-        self.ring_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h - self.ring_box.h)
+        self.timeline_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y)
+        self.eccentricity_box.render(self.svg, self.content_x + self.orbit_box.w + self.rotation_box.w / 2, self.content_y)
+        # self.ring_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h - self.ring_box.h)
         self.rotation_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h)
         self.info_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y)
 
@@ -87,6 +93,22 @@ class SvgWrapper:
         radius_box = RadiusBox(self.data, box_width, box_height, self.margin, self.margin)
 
         return radius_box
+
+    def _build_eccentricity_box(self):
+        box_width = self.rotation_box.w / 2
+        box_height = self.rotation_box.h
+
+        eccentricity_box = EccentricityBox(self.data, box_width, box_height, self.margin, self.margin)
+
+        return eccentricity_box
+
+    def _build_timeline_box(self):
+        box_width = self.rotation_box.w / 2
+        box_height = self.rotation_box.h
+
+        timeline_box = TimelineBox(self.data, box_width, box_height, self.margin, self.margin)
+
+        return timeline_box
 
     def save(self, out_file):
         self.svg.add_substitutions({
