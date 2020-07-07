@@ -16,6 +16,7 @@ def process_data(planet_data):
             'radius': scale_distance(moon['radius']),
             'inclination': moon['inclination'],
             'eccentricity': moon['eccentricity'],
+            'year': moon['year'],
             'original': moon
         })
 
