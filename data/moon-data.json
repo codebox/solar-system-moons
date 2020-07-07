@@ -31,8 +31,10 @@
                 "orbit": 128000.0,
                 "period": 0.295,
                 "year": 1979,
-                "inclination": 0.06,
-                "eccentricity": 0.0002
+                "inclination": 0.019,
+                "eccentricity": 0.0002,
+                "longitudeOfAscendingNode": 146.912,
+                "argumentOfPeriapsis": 297.177
             },
             {
                 "name": "Adrastea",
@@ -40,8 +42,10 @@
                 "orbit": 129000.0,
                 "period": 0.298,
                 "year": 1979,
-                "inclination": 0.03,
-                "eccentricity": 0.0015
+                "inclination": 0.054,
+                "eccentricity": 0.0015,
+                "longitudeOfAscendingNode": 228.378,
+                "argumentOfPeriapsis": 328.047
             },
             {
                 "name": "Amalthea",
@@ -49,8 +53,10 @@
                 "orbit": 181400.0,
                 "period": 0.498,
                 "year": 1892,
-                "inclination": 0.40,
-                "eccentricity": 0.003
+                "inclination": 0.38,
+                "eccentricity": 0.003,
+                "longitudeOfAscendingNode": 108.946,
+                "argumentOfPeriapsis": 155.873
             },
             {
                 "name": "Thebe",
@@ -58,8 +64,10 @@
                 "orbit": 221900.0,
                 "period": 0.675,
                 "year": 1979,
-                "inclination": 0.8,
-                "eccentricity": 0.018
+                "inclination": 1.08,
+                "eccentricity": 0.018,
+                "longitudeOfAscendingNode": 235.694,
+                "argumentOfPeriapsis": 234.269
             },
             {
                 "name": "Io",
@@ -67,8 +75,10 @@
                 "orbit": 421800.0,
                 "period": 1.769,
                 "year": 1610,
-                "inclination": 0.04,
-                "eccentricity": 0.004
+                "inclination": 0.036,
+                "eccentricity": 0.004,
+                "longitudeOfAscendingNode": 43.977,
+                "argumentOfPeriapsis": 84.129
             },
             {
                 "name": "Europa",
@@ -76,8 +86,10 @@
                 "orbit": 671100.0,
                 "period": 3.551,
                 "year": 1610,
-                "inclination": 0.47,
-                "eccentricity": 0.009
+                "inclination": 0.466,
+                "eccentricity": 0.009,
+                "longitudeOfAscendingNode": 219.106,
+                "argumentOfPeriapsis": 88.97
             },
             {
                 "name": "Ganymede",
@@ -85,8 +97,10 @@
                 "orbit": 1070400.0,
                 "period": 7.155,
                 "year": 1610,
-                "inclination": 0.18,
-                "eccentricity": 0.001
+                "inclination": 0.177,
+                "eccentricity": 0.001,
+                "longitudeOfAscendingNode": 63.552,
+                "argumentOfPeriapsis": 192.417
             },
             {
                 "name": "Callisto",
@@ -94,8 +108,10 @@
                 "orbit": 1882700.0,
                 "period": 16.69,
                 "year": 1610,
-                "inclination": 0.19,
-                "eccentricity": 0.007
+                "inclination": 0.192,
+                "eccentricity": 0.007,
+                "longitudeOfAscendingNode": 298.848,
+                "argumentOfPeriapsis": 52.643
             },
             {
                 "name": "Themisto",
@@ -103,8 +119,10 @@
                 "orbit": 7284000.0,
                 "period": 130.02,
                 "year": 1975,
-                "inclination": 45.67,
-                "eccentricity": 0.242
+                "inclination": 42.977,
+                "eccentricity": 0.242,
+                "longitudeOfAscendingNode": 192.288,
+                "argumentOfPeriapsis": 217.147
             },
             {
                 "name": "Leda",
@@ -112,8 +130,10 @@
                 "orbit": 11165000.0,
                 "period": 240.92,
                 "year": 1974,
-                "inclination": 27.47,
-                "eccentricity": 0.164
+                "inclination": 27.882,
+                "eccentricity": 0.164,
+                "longitudeOfAscendingNode": 219.181,
+                "argumentOfPeriapsis": 269.393
             },
             {
                 "name": "Ersa",
@@ -122,7 +142,9 @@
                 "period": 250.4,
                 "year": 2018,
                 "inclination": 30.61,
-                "eccentricity": 0.094
+                "eccentricity": 0.094,
+                "longitudeOfAscendingNode": 93.3,
+                "argumentOfPeriapsis": 346.7
             },
             {
                 "name": "Himalia",
@@ -130,8 +152,10 @@
                 "orbit": 11461000.0,
                 "period": 250.56,
                 "year": 1904,
-                "inclination": 27.63,
-                "eccentricity": 0.162
+                "inclination": 28.612,
+                "eccentricity": 0.162,
+                "longitudeOfAscendingNode": 64.798,
+                "argumentOfPeriapsis": 331.234
             },
             {
                 "name": "Pandia",
@@ -140,7 +164,9 @@
                 "period": 251.8,
                 "year": 2017,
                 "inclination": 28.15,
-                "eccentricity": 0.180
+                "eccentricity": 0.18,
+                "longitudeOfAscendingNode": 228.4,
+                "argumentOfPeriapsis": 238.8
             },
             {
                 "name": "Lysithea",
@@ -148,8 +174,10 @@
                 "orbit": 11717000.0,
                 "period": 259.2,
                 "year": 1938,
-                "inclination": 27.35,
-                "eccentricity": 0.112
+                "inclination": 27.663,
+                "eccentricity": 0.112,
+                "longitudeOfAscendingNode": 5.326,
+                "argumentOfPeriapsis": 49.67
             },
             {
                 "name": "Elara",
@@ -157,8 +185,10 @@
                 "orbit": 11741000.0,
                 "period": 259.64,
                 "year": 1905,
-                "inclination": 24.77,
-                "eccentricity": 0.217
+                "inclination": 27.945,
+                "eccentricity": 0.217,
+                "longitudeOfAscendingNode": 115.511,
+                "argumentOfPeriapsis": 142.001
             },
             {
                 "name": "Dia",
@@ -167,7 +197,9 @@
                 "period": 287.93,
                 "year": 2000,
                 "inclination": 28.2,
-                "eccentricity": 0.248
+                "eccentricity": 0.248,
+                "longitudeOfAscendingNode": 290.9,
+                "argumentOfPeriapsis": 178
             },
             {
                 "name": "Carpo",
@@ -175,8 +207,10 @@
                 "orbit": 17058000.0,
                 "period": 456.3,
                 "year": 2003,
-                "inclination": 51.4,
-                "eccentricity": 0.430
+                "inclination": 51.624,
+                "eccentricity": 0.43,
+                "longitudeOfAscendingNode": 50.597,
+                "argumentOfPeriapsis": 90.372
             },
             {
                 "name": "S/2003 J 12",
@@ -184,8 +218,10 @@
                 "orbit": 17833000.0,
                 "period": 489.72,
                 "year": 2003,
-                "inclination": 145.8,
-                "eccentricity": 0.376
+                "inclination": 151.003,
+                "eccentricity": 0.376,
+                "longitudeOfAscendingNode": 65.53,
+                "argumentOfPeriapsis": 13.288
             },
             {
                 "name": "Valetudo",
@@ -194,7 +230,9 @@
                 "period": 532.0,
                 "year": 2016,
                 "inclination": 34.0,
-                "eccentricity": 0.222
+                "eccentricity": 0.222,
+                "longitudeOfAscendingNode": 240.3,
+                "argumentOfPeriapsis": 116.8
             },
             {
                 "name": "Euporie",
@@ -202,8 +240,10 @@
                 "orbit": 19304000.0,
                 "period": 550.74,
                 "year": 2001,
-                "inclination": 147.0,
-                "eccentricity": 0.156
+                "inclination": 145.74,
+                "eccentricity": 0.156,
+                "longitudeOfAscendingNode": 60.143,
+                "argumentOfPeriapsis": 89.904
             },
             {
                 "name": "S/2011 J 1",
@@ -211,8 +251,10 @@
                 "orbit": 20155290.0,
                 "period": 580.7,
                 "year": 2011,
-                "inclination": 162.8,
-                "eccentricity": 0.296
+                "inclination": 165.318,
+                "eccentricity": 0.296,
+                "longitudeOfAscendingNode": 250.728,
+                "argumentOfPeriapsis": 31.514
             },
             {
                 "name": "Eupheme",
@@ -221,7 +263,9 @@
                 "period": 583.88,
                 "year": 2003,
                 "inclination": 143.7,
-                "eccentricity": 0.241
+                "eccentricity": 0.241,
+                "longitudeOfAscendingNode": 292,
+                "argumentOfPeriapsis": 109
             },
             {
                 "name": "S/2010 J 2",
@@ -229,8 +273,10 @@
                 "orbit": 20307150.0,
                 "period": 588.1,
                 "year": 2010,
-                "inclination": 150.4,
-                "eccentricity": 0.307
+                "inclination": 148.673,
+                "eccentricity": 0.307,
+                "longitudeOfAscendingNode": 5.802,
+                "argumentOfPeriapsis": 18.252
             },
             {
                 "name": "S/2003 J 18",
@@ -238,8 +284,10 @@
                 "orbit": 20426000.0,
                 "period": 596.58,
                 "year": 2003,
-                "inclination": 146.5,
-                "eccentricity": 0.119
+                "inclination": 146.077,
+                "eccentricity": 0.119,
+                "longitudeOfAscendingNode": 158.247,
+                "argumentOfPeriapsis": 130.894
             },
             {
                 "name": "S/2017 J 7",
@@ -248,7 +296,9 @@
                 "period": 602.8,
                 "year": 2017,
                 "inclination": 143.4,
-                "eccentricity": 0.215
+                "eccentricity": 0.215,
+                "longitudeOfAscendingNode": 321.5,
+                "argumentOfPeriapsis": 323.5
             },
             {
                 "name": "S/2016 J 1",
@@ -257,7 +307,9 @@
                 "period": 602.7,
                 "year": 2016,
                 "inclination": 139.8,
-                "eccentricity": 0.141
+                "eccentricity": 0.141,
+                "longitudeOfAscendingNode": 293.8,
+                "argumentOfPeriapsis": 328.2
             },
             {
                 "name": "S/2017 J 3",
@@ -266,7 +318,9 @@
                 "period": 605.8,
                 "year": 2017,
                 "inclination": 147.9,
-                "eccentricity": 0.148
+                "eccentricity": 0.148,
+                "longitudeOfAscendingNode": 82.5,
+                "argumentOfPeriapsis": 171.6
             },
             {
                 "name": "Orthosie",
@@ -274,8 +328,10 @@
                 "orbit": 20720000.0,
                 "period": 622.56,
                 "year": 2001,
-                "inclination": 145.9,
-                "eccentricity": 0.281
+                "inclination": 146.004,
+                "eccentricity": 0.281,
+                "longitudeOfAscendingNode": 221.949,
+                "argumentOfPeriapsis": 216.805
             },
             {
                 "name": "Euanthe",
@@ -283,8 +339,10 @@
                 "orbit": 20797000.0,
                 "period": 620.49,
                 "year": 2001,
-                "inclination": 148.9,
-                "eccentricity": 0.232
+                "inclination": 148.915,
+                "eccentricity": 0.232,
+                "longitudeOfAscendingNode": 254.297,
+                "argumentOfPeriapsis": 320.635
             },
             {
                 "name": "Harpalyke",
@@ -292,8 +350,10 @@
                 "orbit": 20858000.0,
                 "period": 623.32,
                 "year": 2000,
-                "inclination": 148.7,
-                "eccentricity": 0.227
+                "inclination": 148.759,
+                "eccentricity": 0.227,
+                "longitudeOfAscendingNode": 29.834,
+                "argumentOfPeriapsis": 134.505
             },
             {
                 "name": "Praxidike",
@@ -301,8 +361,10 @@
                 "orbit": 20908000.0,
                 "period": 625.39,
                 "year": 2000,
-                "inclination": 148.7,
-                "eccentricity": 0.220
+                "inclination": 148.885,
+                "eccentricity": 0.22,
+                "longitudeOfAscendingNode": 280.956,
+                "argumentOfPeriapsis": 190.862
             },
             {
                 "name": "Thyone",
@@ -310,8 +372,10 @@
                 "orbit": 20939000.0,
                 "period": 627.21,
                 "year": 2001,
-                "inclination": 148.5,
-                "eccentricity": 0.229
+                "inclination": 148.595,
+                "eccentricity": 0.229,
+                "longitudeOfAscendingNode": 233.022,
+                "argumentOfPeriapsis": 97.023
             },
             {
                 "name": "S/2003 J 16",
@@ -319,8 +383,10 @@
                 "orbit": 20956000.0,
                 "period": 616.33,
                 "year": 2003,
-                "inclination": 148.6,
-                "eccentricity": 0.270
+                "inclination": 148.683,
+                "eccentricity": 0.27,
+                "longitudeOfAscendingNode": 16.883,
+                "argumentOfPeriapsis": 57.681
             },
             {
                 "name": "Mneme",
@@ -328,8 +394,10 @@
                 "orbit": 21035000.0,
                 "period": 620.04,
                 "year": 2003,
-                "inclination": 148.6,
-                "eccentricity": 0.227
+                "inclination": 148.585,
+                "eccentricity": 0.227,
+                "longitudeOfAscendingNode": 13.467,
+                "argumentOfPeriapsis": 40.542
             },
             {
                 "name": "Iocaste",
@@ -337,8 +405,10 @@
                 "orbit": 21060000.0,
                 "period": 631.6,
                 "year": 2000,
-                "inclination": 159.7,
-                "eccentricity": 0.218
+                "inclination": 149.411,
+                "eccentricity": 0.218,
+                "longitudeOfAscendingNode": 269.613,
+                "argumentOfPeriapsis": 64.727
             },
             {
                 "name": "Helike",
@@ -346,8 +416,10 @@
                 "orbit": 21069000.0,
                 "period": 626.32,
                 "year": 2003,
-                "inclination": 154.8,
-                "eccentricity": 0.156
+                "inclination": 154.842,
+                "eccentricity": 0.156,
+                "longitudeOfAscendingNode": 89.749,
+                "argumentOfPeriapsis": 299.482
             },
             {
                 "name": "Hermippe",
@@ -355,8 +427,10 @@
                 "orbit": 21131000.0,
                 "period": 633.9,
                 "year": 2001,
-                "inclination": 150.7,
-                "eccentricity": 0.210
+                "inclination": 150.74,
+                "eccentricity": 0.21,
+                "longitudeOfAscendingNode": 330.393,
+                "argumentOfPeriapsis": 300.836
             },
             {
                 "name": "Thelxinoe",
@@ -364,8 +438,10 @@
                 "orbit": 21164000.0,
                 "period": 628.09,
                 "year": 2003,
-                "inclination": 151.4,
-                "eccentricity": 0.221
+                "inclination": 151.39,
+                "eccentricity": 0.221,
+                "longitudeOfAscendingNode": 169.962,
+                "argumentOfPeriapsis": 313.183
             },
             {
                 "name": "Ananke",
@@ -373,8 +449,10 @@
                 "orbit": 21276000.0,
                 "period": 629.77,
                 "year": 1951,
-                "inclination": 148.9,
-                "eccentricity": 0.244
+                "inclination": 148.693,
+                "eccentricity": 0.244,
+                "longitudeOfAscendingNode": 15.959,
+                "argumentOfPeriapsis": 95.772
             },
             {
                 "name": "S/2017 J 9",
@@ -383,7 +461,9 @@
                 "period": 640.9,
                 "year": 2017,
                 "inclination": 152.7,
-                "eccentricity": 0.229
+                "eccentricity": 0.229,
+                "longitudeOfAscendingNode": 306.4,
+                "argumentOfPeriapsis": 317.7
             },
             {
                 "name": "S/2017 J 6",
@@ -401,7 +481,7 @@
                 "period": 689.77,
                 "year": 2003,
                 "inclination": 140.8,
-                "eccentricity": 0.110
+                "eccentricity": 0.11
             },
             {
                 "name": "Eurydome",
@@ -409,8 +489,10 @@
                 "orbit": 22865000.0,
                 "period": 717.33,
                 "year": 2001,
-                "inclination": 150.3,
-                "eccentricity": 0.276
+                "inclination": 150.271,
+                "eccentricity": 0.276,
+                "longitudeOfAscendingNode": 302.47,
+                "argumentOfPeriapsis": 223.631
             },
             {
                 "name": "Herse",
@@ -418,8 +500,10 @@
                 "orbit": 22983000.0,
                 "period": 714.51,
                 "year": 2003,
-                "inclination": 164.2,
-                "eccentricity": 0.200
+                "inclination": 164.964,
+                "eccentricity": 0.2,
+                "longitudeOfAscendingNode": 295.702,
+                "argumentOfPeriapsis": 330.295
             },
             {
                 "name": "Pasithee",
@@ -427,8 +511,10 @@
                 "orbit": 23004000.0,
                 "period": 719.44,
                 "year": 2001,
-                "inclination": 165.4,
-                "eccentricity": 0.288
+                "inclination": 165.117,
+                "eccentricity": 0.288,
+                "longitudeOfAscendingNode": 327.729,
+                "argumentOfPeriapsis": 231.92
             },
             {
                 "name": "S/2003 J 10",
@@ -436,8 +522,10 @@
                 "orbit": 23044000.0,
                 "period": 716.25,
                 "year": 2003,
-                "inclination": 164.1,
-                "eccentricity": 0.214
+                "inclination": 165.073,
+                "eccentricity": 0.214,
+                "longitudeOfAscendingNode": 151.911,
+                "argumentOfPeriapsis": 170.833
             },
             {
                 "name": "Chaldene",
@@ -445,8 +533,10 @@
                 "orbit": 23100000.0,
                 "period": 723.72,
                 "year": 2000,
-                "inclination": 165.4,
-                "eccentricity": 0.238
+                "inclination": 165.155,
+                "eccentricity": 0.238,
+                "longitudeOfAscendingNode": 134.24,
+                "argumentOfPeriapsis": 243.878
             },
             {
                 "name": "Isonoe",
@@ -454,8 +544,10 @@
                 "orbit": 23155000.0,
                 "period": 726.23,
                 "year": 2000,
-                "inclination": 165.0,
-                "eccentricity": 0.261
+                "inclination": 165.25,
+                "eccentricity": 0.261,
+                "longitudeOfAscendingNode": 130.961,
+                "argumentOfPeriapsis": 116.879
             },
             {
                 "name": "S/2017 J 5",
@@ -464,7 +556,9 @@
                 "period": 720.5,
                 "year": 2017,
                 "inclination": 164.3,
-                "eccentricity": 0.284
+                "eccentricity": 0.284,
+                "longitudeOfAscendingNode": 118.2,
+                "argumentOfPeriapsis": 11.9
             },
             {
                 "name": "S/2017 J 8",
@@ -473,7 +567,9 @@
                 "period": 720.7,
                 "year": 2017,
                 "inclination": 164.7,
-                "eccentricity": 0.312
+                "eccentricity": 0.312,
+                "longitudeOfAscendingNode": 160.3,
+                "argumentOfPeriapsis": 45.1
             },
             {
                 "name": "Erinome",
@@ -481,8 +577,10 @@
                 "orbit": 23196000.0,
                 "period": 728.46,
                 "year": 2000,
-                "inclination": 164.9,
-                "eccentricity": 0.270
+                "inclination": 164.914,
+                "eccentricity": 0.27,
+                "longitudeOfAscendingNode": 317.497,
+                "argumentOfPeriapsis": 10.274
             },
             {
                 "name": "Kale",
@@ -490,8 +588,10 @@
                 "orbit": 23217000.0,
                 "period": 729.47,
                 "year": 2001,
-                "inclination": 165.0,
-                "eccentricity": 0.260
+                "inclination": 164.944,
+                "eccentricity": 0.26,
+                "longitudeOfAscendingNode": 60.17,
+                "argumentOfPeriapsis": 44.233
             },
             {
                 "name": "Aitne",
@@ -499,8 +599,10 @@
                 "orbit": 23229000.0,
                 "period": 730.18,
                 "year": 2001,
-                "inclination": 165.1,
-                "eccentricity": 0.264
+                "inclination": 165.048,
+                "eccentricity": 0.264,
+                "longitudeOfAscendingNode": 8.679,
+                "argumentOfPeriapsis": 99.401
             },
             {
                 "name": "S/2017 J 2",
@@ -509,7 +611,9 @@
                 "period": 723.8,
                 "year": 2017,
                 "inclination": 166.4,
-                "eccentricity": 0.236
+                "eccentricity": 0.236,
+                "longitudeOfAscendingNode": 74.7,
+                "argumentOfPeriapsis": 231.9
             },
             {
                 "name": "Taygete",
@@ -517,8 +621,10 @@
                 "orbit": 23280000.0,
                 "period": 732.41,
                 "year": 2000,
-                "inclination": 165.2,
-                "eccentricity": 0.251
+                "inclination": 165.253,
+                "eccentricity": 0.251,
+                "longitudeOfAscendingNode": 305.114,
+                "argumentOfPeriapsis": 231.54
             },
             {
                 "name": "Kallichore",
@@ -526,8 +632,10 @@
                 "orbit": 23288000.0,
                 "period": 728.73,
                 "year": 2003,
-                "inclination": 165.5,
-                "eccentricity": 0.264
+                "inclination": 165.102,
+                "eccentricity": 0.264,
+                "longitudeOfAscendingNode": 30.339,
+                "argumentOfPeriapsis": 9.836
             },
             {
                 "name": "S/2010 J 1",
@@ -535,8 +643,10 @@
                 "orbit": 23314335.0,
                 "period": 723.2,
                 "year": 2010,
-                "inclination": 163.2,
-                "eccentricity": 0.320
+                "inclination": 165.1,
+                "eccentricity": 0.32,
+                "longitudeOfAscendingNode": 282.871,
+                "argumentOfPeriapsis": 189.23
             },
             {
                 "name": "Eukelade",
@@ -544,8 +654,10 @@
                 "orbit": 23328000.0,
                 "period": 730.47,
                 "year": 2003,
-                "inclination": 165.5,
-                "eccentricity": 0.272
+                "inclination": 165.265,
+                "eccentricity": 0.272,
+                "longitudeOfAscendingNode": 193.558,
+                "argumentOfPeriapsis": 309.685
             },
             {
                 "name": "S/2011 J 2",
@@ -553,8 +665,10 @@
                 "orbit": 23329710.0,
                 "period": 726.8,
                 "year": 2011,
-                "inclination": 151.9,
-                "eccentricity": 0.387
+                "inclination": 153.597,
+                "eccentricity": 0.387,
+                "longitudeOfAscendingNode": 24.866,
+                "argumentOfPeriapsis": 270.154
             },
             {
                 "name": "Arche",
@@ -562,8 +676,10 @@
                 "orbit": 23355000.0,
                 "period": 731.95,
                 "year": 2002,
-                "inclination": 165.0,
-                "eccentricity": 0.259
+                "inclination": 165.015,
+                "eccentricity": 0.259,
+                "longitudeOfAscendingNode": 339.21,
+                "argumentOfPeriapsis": 171.632
             },
             {
                 "name": "S/2003 J 9",
@@ -571,8 +687,10 @@
                 "orbit": 23388000.0,
                 "period": 733.3,
                 "year": 2003,
-                "inclination": 164.5,
-                "eccentricity": 0.269
+                "inclination": 165.047,
+                "eccentricity": 0.269,
+                "longitudeOfAscendingNode": 44.321,
+                "argumentOfPeriapsis": 292.662
             },
             {
                 "name": "Carme",
@@ -580,8 +698,10 @@
                 "orbit": 23404000.0,
                 "period": 734.17,
                 "year": 1938,
-                "inclination": 164.9,
-                "eccentricity": 0.253
+                "inclination": 164.994,
+                "eccentricity": 0.253,
+                "longitudeOfAscendingNode": 114.854,
+                "argumentOfPeriapsis": 26.416
             },
             {
                 "name": "Kalyke",
@@ -589,8 +709,10 @@
                 "orbit": 23483000.0,
                 "period": 742.06,
                 "year": 2000,
-                "inclination": 165.2,
-                "eccentricity": 0.243
+                "inclination": 165.121,
+                "eccentricity": 0.243,
+                "longitudeOfAscendingNode": 43.864,
+                "argumentOfPeriapsis": 218.934
             },
             {
                 "name": "S/2017 J 1",
@@ -607,8 +729,10 @@
                 "orbit": 23487000.0,
                 "period": 748.34,
                 "year": 2001,
-                "inclination": 151.0,
-                "eccentricity": 0.312
+                "inclination": 150.997,
+                "eccentricity": 0.312,
+                "longitudeOfAscendingNode": 116.363,
+                "argumentOfPeriapsis": 61.885
             },
             {
                 "name": "Megaclite",
@@ -616,8 +740,10 @@
                 "orbit": 23493000.0,
                 "period": 752.86,
                 "year": 2000,
-                "inclination": 152.8,
-                "eccentricity": 0.421
+                "inclination": 152.781,
+                "eccentricity": 0.421,
+                "longitudeOfAscendingNode": 280.575,
+                "argumentOfPeriapsis": 288.882
             },
             {
                 "name": "Eirene",
@@ -626,7 +752,7 @@
                 "period": 738.74,
                 "year": 2003,
                 "inclination": 165.0,
-                "eccentricity": 0.210
+                "eccentricity": 0.21
             },
             {
                 "name": "S/2003 J 19",
@@ -634,8 +760,10 @@
                 "orbit": 23535000.0,
                 "period": 740.43,
                 "year": 2003,
-                "inclination": 162.9,
-                "eccentricity": 0.334
+                "inclination": 165.116,
+                "eccentricity": 0.334,
+                "longitudeOfAscendingNode": 27.442,
+                "argumentOfPeriapsis": 176.668
             },
             {
                 "name": "S/2003 J 23",
@@ -643,8 +771,10 @@
                 "orbit": 23566000.0,
                 "period": 732.45,
                 "year": 2004,
-                "inclination": 149.2,
-                "eccentricity": 0.309
+                "inclination": 146.424,
+                "eccentricity": 0.309,
+                "longitudeOfAscendingNode": 41.706,
+                "argumentOfPeriapsis": 255.114
             },
             {
                 "name": "Hegemone",
@@ -652,8 +782,10 @@
                 "orbit": 23577000.0,
                 "period": 739.88,
                 "year": 2003,
-                "inclination": 155.2,
-                "eccentricity": 0.328
+                "inclination": 154.164,
+                "eccentricity": 0.328,
+                "longitudeOfAscendingNode": 318.902,
+                "argumentOfPeriapsis": 197.144
             },
             {
                 "name": "Pasiphae",
@@ -661,8 +793,10 @@
                 "orbit": 23624000.0,
                 "period": 743.63,
                 "year": 1908,
-                "inclination": 151.4,
-                "eccentricity": 0.409
+                "inclination": 151.413,
+                "eccentricity": 0.409,
+                "longitudeOfAscendingNode": 314.223,
+                "argumentOfPeriapsis": 169.226
             },
             {
                 "name": "Cyllene",
@@ -670,8 +804,10 @@
                 "orbit": 23809000.0,
                 "period": 752.0,
                 "year": 2003,
-                "inclination": 149.3,
-                "eccentricity": 0.319
+                "inclination": 150.336,
+                "eccentricity": 0.319,
+                "longitudeOfAscendingNode": 252.611,
+                "argumentOfPeriapsis": 187.429
             },
             {
                 "name": "S/2003 J 4",
@@ -679,8 +815,10 @@
                 "orbit": 23933000.0,
                 "period": 755.26,
                 "year": 2003,
-                "inclination": 144.9,
-                "eccentricity": 0.204
+                "inclination": 149.589,
+                "eccentricity": 0.204,
+                "longitudeOfAscendingNode": 179.131,
+                "argumentOfPeriapsis": 197.401
             },
             {
                 "name": "Sinope",
@@ -688,8 +826,10 @@
                 "orbit": 23939000.0,
                 "period": 758.9,
                 "year": 1914,
-                "inclination": 158.1,
-                "eccentricity": 0.250
+                "inclination": 158.189,
+                "eccentricity": 0.25,
+                "longitudeOfAscendingNode": 309.199,
+                "argumentOfPeriapsis": 354.541
             },
             {
                 "name": "Aoede",
@@ -697,8 +837,10 @@
                 "orbit": 23980000.0,
                 "period": 761.5,
                 "year": 2003,
-                "inclination": 158.3,
-                "eccentricity": 0.432
+                "inclination": 158.272,
+                "eccentricity": 0.432,
+                "longitudeOfAscendingNode": 173.392,
+                "argumentOfPeriapsis": 59.739
             },
             {
                 "name": "Autonoe",
@@ -706,8 +848,10 @@
                 "orbit": 24046000.0,
                 "period": 760.95,
                 "year": 2001,
-                "inclination": 152.9,
-                "eccentricity": 0.334
+                "inclination": 152.364,
+                "eccentricity": 0.334,
+                "longitudeOfAscendingNode": 272.817,
+                "argumentOfPeriapsis": 54.793
             },
             {
                 "name": "Callirrhoe",
@@ -715,8 +859,10 @@
                 "orbit": 24103000.0,
                 "period": 758.77,
                 "year": 2000,
-                "inclination": 147.1,
-                "eccentricity": 0.283
+                "inclination": 147.08,
+                "eccentricity": 0.283,
+                "longitudeOfAscendingNode": 283.104,
+                "argumentOfPeriapsis": 23.909
             },
             {
                 "name": "Kore",
@@ -724,8 +870,10 @@
                 "orbit": 24543000.0,
                 "period": 779.17,
                 "year": 2003,
-                "inclination": 152.4,
-                "eccentricity": 0.325
+                "inclination": 145.173,
+                "eccentricity": 0.325,
+                "longitudeOfAscendingNode": 313.355,
+                "argumentOfPeriapsis": 138.071
             },
             {
                 "name": "S/2003 J 2",
@@ -733,8 +881,10 @@
                 "orbit": 28455000.0,
                 "period": 981.55,
                 "year": 2003,
-                "inclination": 151.8,
-                "eccentricity": 0.380
+                "inclination": 157.291,
+                "eccentricity": 0.38,
+                "longitudeOfAscendingNode": 344.782,
+                "argumentOfPeriapsis": 165.201
             }
         ]
     },
@@ -811,7 +961,7 @@
                 "period": 0.471,
                 "year": 2009,
                 "inclination": 0.0,
-                "eccentricity": 0.000
+                "eccentricity": 0.0
             },
             {
                 "name": "Pan",
@@ -820,7 +970,9 @@
                 "period": 0.575,
                 "year": 1990,
                 "inclination": 0.0,
-                "eccentricity": 0.000
+                "eccentricity": 0.0,
+                "longitudeOfAscendingNode": 52.076,
+                "argumentOfPeriapsis": 103.331
             },
             {
                 "name": "Daphnis",
@@ -828,8 +980,10 @@
                 "orbit": 136500.0,
                 "period": 0.594,
                 "year": 2005,
-                "inclination": 0.0,
-                "eccentricity": 0.000
+                "inclination": 0.003,
+                "eccentricity": 0.0,
+                "longitudeOfAscendingNode": 132.867,
+                "argumentOfPeriapsis": 266.931
             },
             {
                 "name": "Atlas",
@@ -837,8 +991,10 @@
                 "orbit": 137670.0,
                 "period": 0.602,
                 "year": 1980,
-                "inclination": 0.3,
-                "eccentricity": 0.000
+                "inclination": 0.003,
+                "eccentricity": 0.0,
+                "longitudeOfAscendingNode": 236.422,
+                "argumentOfPeriapsis": 210.851
             },
             {
                 "name": "Prometheus",
@@ -846,8 +1002,10 @@
                 "orbit": 139380.0,
                 "period": 0.613,
                 "year": 1980,
-                "inclination": 0.0,
-                "eccentricity": 0.00204
+                "inclination": 0.007,
+                "eccentricity": 0.00204,
+                "longitudeOfAscendingNode": 319.176,
+                "argumentOfPeriapsis": 37.514
             },
             {
                 "name": "Pandora",
@@ -855,8 +1013,10 @@
                 "orbit": 141720.0,
                 "period": 0.629,
                 "year": 1980,
-                "inclination": 0.0,
-                "eccentricity": 0.0042
+                "inclination": 0.05,
+                "eccentricity": 0.0042,
+                "longitudeOfAscendingNode": 147.272,
+                "argumentOfPeriapsis": 66.248
             },
             {
                 "name": "Janus",
@@ -864,8 +1024,10 @@
                 "orbit": 151460.0,
                 "period": 0.695,
                 "year": 1966,
-                "inclination": 0.14,
-                "eccentricity": 0.007
+                "inclination": 0.165,
+                "eccentricity": 0.007,
+                "longitudeOfAscendingNode": 154.175,
+                "argumentOfPeriapsis": 16.012
             },
             {
                 "name": "Aegaeon",
@@ -874,7 +1036,9 @@
                 "period": 0.808,
                 "year": 2008,
                 "inclination": 0.001,
-                "eccentricity": 0.0002
+                "eccentricity": 0.0002,
+                "longitudeOfAscendingNode": 317.202,
+                "argumentOfPeriapsis": 152.905
             },
             {
                 "name": "Mimas",
@@ -882,8 +1046,10 @@
                 "orbit": 185540.0,
                 "period": 0.942,
                 "year": 1789,
-                "inclination": 1.53,
-                "eccentricity": 0.0202
+                "inclination": 1.574,
+                "eccentricity": 0.0202,
+                "longitudeOfAscendingNode": 173.027,
+                "argumentOfPeriapsis": 332.499
             },
             {
                 "name": "Methone",
@@ -891,8 +1057,10 @@
                 "orbit": 194440.0,
                 "period": 1.01,
                 "year": 2004,
-                "inclination": 0,
-                "eccentricity": 0
+                "inclination": 0.013,
+                "eccentricity": 0,
+                "longitudeOfAscendingNode": 313.562,
+                "argumentOfPeriapsis": 134.636
             },
             {
                 "name": "Anthe",
@@ -900,8 +1068,10 @@
                 "orbit": 197700.0,
                 "period": 1.0365,
                 "year": 2007,
-                "inclination": 0.1,
-                "eccentricity": 0.001
+                "inclination": 0.015,
+                "eccentricity": 0.001,
+                "longitudeOfAscendingNode": 287.852,
+                "argumentOfPeriapsis": 138.902
             },
             {
                 "name": "Pallene",
@@ -909,8 +1079,10 @@
                 "orbit": 212280.0,
                 "period": 1.154,
                 "year": 2004,
-                "inclination": 0,
-                "eccentricity": 0
+                "inclination": 0.001,
+                "eccentricity": 0,
+                "longitudeOfAscendingNode": 123.18,
+                "argumentOfPeriapsis": 16.074
             },
             {
                 "name": "Enceladus",
@@ -918,8 +1090,10 @@
                 "orbit": 238040.0,
                 "period": 1.37,
                 "year": 1789,
-                "inclination": 0.00,
-                "eccentricity": 0.0045
+                "inclination": 0.003,
+                "eccentricity": 0.0045,
+                "longitudeOfAscendingNode": 342.507,
+                "argumentOfPeriapsis": 0.076
             },
             {
                 "name": "Tethys",
@@ -927,8 +1101,10 @@
                 "orbit": 294670.0,
                 "period": 1.888,
                 "year": 1684,
-                "inclination": 1.86,
-                "eccentricity": 0.0000
+                "inclination": 1.091,
+                "eccentricity": 0.0,
+                "longitudeOfAscendingNode": 259.842,
+                "argumentOfPeriapsis": 45.202
             },
             {
                 "name": "Telesto",
@@ -936,8 +1112,10 @@
                 "orbit": 294710.0,
                 "period": 1.888,
                 "year": 1980,
-                "inclination": 1.158,
-                "eccentricity": 0.001
+                "inclination": 1.18,
+                "eccentricity": 0.001,
+                "longitudeOfAscendingNode": 229.182,
+                "argumentOfPeriapsis": 119.135
             },
             {
                 "name": "Calypso",
@@ -945,8 +1123,10 @@
                 "orbit": 294710.0,
                 "period": 1.888,
                 "year": 1980,
-                "inclination": 1.473,
-                "eccentricity": 0.001
+                "inclination": 1.5,
+                "eccentricity": 0.001,
+                "longitudeOfAscendingNode": 314.226,
+                "argumentOfPeriapsis": 17.47
             },
             {
                 "name": "Polydeuces",
@@ -954,8 +1134,10 @@
                 "orbit": 377200.0,
                 "period": 2.737,
                 "year": 2004,
-                "inclination": 0,
-                "eccentricity": 0
+                "inclination": 0.175,
+                "eccentricity": 0,
+                "longitudeOfAscendingNode": 67.936,
+                "argumentOfPeriapsis": 311.847
             },
             {
                 "name": "Dione",
@@ -963,8 +1145,10 @@
                 "orbit": 377420.0,
                 "period": 2.737,
                 "year": 1684,
-                "inclination": 0.02,
-                "eccentricity": 0.0022
+                "inclination": 0.028,
+                "eccentricity": 0.0022,
+                "longitudeOfAscendingNode": 290.415,
+                "argumentOfPeriapsis": 284.315
             },
             {
                 "name": "Helene",
@@ -972,8 +1156,10 @@
                 "orbit": 377420.0,
                 "period": 2.737,
                 "year": 1980,
-                "inclination": 0.0,
-                "eccentricity": 0.005
+                "inclination": 0.213,
+                "eccentricity": 0.005,
+                "longitudeOfAscendingNode": 163.112,
+                "argumentOfPeriapsis": 33.134
             },
             {
                 "name": "Rhea",
@@ -981,8 +1167,10 @@
                 "orbit": 527070.0,
                 "period": 4.518,
                 "year": 1672,
-                "inclination": 0.35,
-                "eccentricity": 0.0010
+                "inclination": 0.333,
+                "eccentricity": 0.001,
+                "longitudeOfAscendingNode": 351.042,
+                "argumentOfPeriapsis": 241.619
             },
             {
                 "name": "Titan",
@@ -990,8 +1178,10 @@
                 "orbit": 1221870.0,
                 "period": 15.95,
                 "year": 1655,
-                "inclination": 0.33,
-                "eccentricity": 0.0292
+                "inclination": 0.306,
+                "eccentricity": 0.0292,
+                "longitudeOfAscendingNode": 28.06,
+                "argumentOfPeriapsis": 180.532
             },
             {
                 "name": "Hyperion",
@@ -999,8 +1189,10 @@
                 "orbit": 1500880.0,
                 "period": 21.28,
                 "year": 1848,
-                "inclination": 0.43,
-                "eccentricity": 0.1042
+                "inclination": 0.615,
+                "eccentricity": 0.1042,
+                "longitudeOfAscendingNode": 263.847,
+                "argumentOfPeriapsis": 303.178
             },
             {
                 "name": "Iapetus",
@@ -1008,8 +1200,10 @@
                 "orbit": 3560840.0,
                 "period": 79.33,
                 "year": 1671,
-                "inclination": 14.72,
-                "eccentricity": 0.0283
+                "inclination": 8.298,
+                "eccentricity": 0.0283,
+                "longitudeOfAscendingNode": 81.105,
+                "argumentOfPeriapsis": 271.606
             },
             {
                 "name": "Kiviuq",
@@ -1017,8 +1211,10 @@
                 "orbit": 11110000.0,
                 "period": 449.22,
                 "year": 2000,
-                "inclination": 48.7,
-                "eccentricity": 0.334
+                "inclination": 46.764,
+                "eccentricity": 0.334,
+                "longitudeOfAscendingNode": 353.584,
+                "argumentOfPeriapsis": 90.205
             },
             {
                 "name": "Ijiraq",
@@ -1026,8 +1222,10 @@
                 "orbit": 11124000.0,
                 "period": 451.42,
                 "year": 2000,
-                "inclination": 49.1,
-                "eccentricity": 0.316
+                "inclination": 47.485,
+                "eccentricity": 0.316,
+                "longitudeOfAscendingNode": 130.779,
+                "argumentOfPeriapsis": 92.899
             },
             {
                 "name": "Phoebe",
@@ -1035,8 +1233,10 @@
                 "orbit": 12947780.0,
                 "period": 550.31,
                 "year": 1899,
-                "inclination": 174.8,
-                "eccentricity": 0.164
+                "inclination": 175.243,
+                "eccentricity": 0.164,
+                "longitudeOfAscendingNode": 241.086,
+                "argumentOfPeriapsis": 342.5
             },
             {
                 "name": "Paaliaq",
@@ -1044,8 +1244,10 @@
                 "orbit": 15200000.0,
                 "period": 686.95,
                 "year": 2000,
-                "inclination": 47.2,
-                "eccentricity": 0.364
+                "inclination": 46.228,
+                "eccentricity": 0.364,
+                "longitudeOfAscendingNode": 330.022,
+                "argumentOfPeriapsis": 237.522
             },
             {
                 "name": "Skathi",
@@ -1053,8 +1255,10 @@
                 "orbit": 15540000.0,
                 "period": 728.2,
                 "year": 2000,
-                "inclination": 148.5,
-                "eccentricity": 0.270
+                "inclination": 152.633,
+                "eccentricity": 0.27,
+                "longitudeOfAscendingNode": 286.599,
+                "argumentOfPeriapsis": 203.517
             },
             {
                 "name": "S/2004 S 37",
@@ -1071,8 +1275,10 @@
                 "orbit": 16182000.0,
                 "period": 783.45,
                 "year": 2000,
-                "inclination": 34.0,
-                "eccentricity": 0.469
+                "inclination": 34.06,
+                "eccentricity": 0.469,
+                "longitudeOfAscendingNode": 102.512,
+                "argumentOfPeriapsis": 55.932
             },
             {
                 "name": "S/2007 S 2",
@@ -1080,8 +1286,10 @@
                 "orbit": 16725000.0,
                 "period": 808.08,
                 "year": 2007,
-                "inclination": 176.7,
-                "eccentricity": 0.218
+                "inclination": 174.057,
+                "eccentricity": 0.218,
+                "longitudeOfAscendingNode": 111.277,
+                "argumentOfPeriapsis": 57.72
             },
             {
                 "name": "S/2004 S 29",
@@ -1098,8 +1306,10 @@
                 "orbit": 17119000.0,
                 "period": 834.84,
                 "year": 2004,
-                "inclination": 35.0,
-                "eccentricity": 0.469
+                "inclination": 35.101,
+                "eccentricity": 0.469,
+                "longitudeOfAscendingNode": 199.128,
+                "argumentOfPeriapsis": 358.141
             },
             {
                 "name": "Erriapus",
@@ -1107,8 +1317,10 @@
                 "orbit": 17343000.0,
                 "period": 871.19,
                 "year": 2000,
-                "inclination": 34.6,
-                "eccentricity": 0.474
+                "inclination": 34.481,
+                "eccentricity": 0.474,
+                "longitudeOfAscendingNode": 150.985,
+                "argumentOfPeriapsis": 282.522
             },
             {
                 "name": "S/2004 S 31",
@@ -1125,8 +1337,10 @@
                 "orbit": 17665000.0,
                 "period": 878.29,
                 "year": 2006,
-                "inclination": 161.2,
-                "eccentricity": 0.464
+                "inclination": 161.01,
+                "eccentricity": 0.464,
+                "longitudeOfAscendingNode": 296.623,
+                "argumentOfPeriapsis": 193.115
             },
             {
                 "name": "Tarvos",
@@ -1134,8 +1348,10 @@
                 "orbit": 17983000.0,
                 "period": 926.23,
                 "year": 2000,
-                "inclination": 33.8,
-                "eccentricity": 0.531
+                "inclination": 33.725,
+                "eccentricity": 0.531,
+                "longitudeOfAscendingNode": 102.504,
+                "argumentOfPeriapsis": 274.104
             },
             {
                 "name": "Tarqeq",
@@ -1143,8 +1359,10 @@
                 "orbit": 18009000.0,
                 "period": 887.48,
                 "year": 2007,
-                "inclination": 46.1,
-                "eccentricity": 0.160
+                "inclination": 46.291,
+                "eccentricity": 0.16,
+                "longitudeOfAscendingNode": 83.291,
+                "argumentOfPeriapsis": 34.767
             },
             {
                 "name": "Siarnaq",
@@ -1152,8 +1370,10 @@
                 "orbit": 18015400.0,
                 "period": 896.44,
                 "year": 2000,
-                "inclination": 45.6,
-                "eccentricity": 0.295
+                "inclination": 45.809,
+                "eccentricity": 0.295,
+                "longitudeOfAscendingNode": 47.826,
+                "argumentOfPeriapsis": 65.929
             },
             {
                 "name": "Greip",
@@ -1161,8 +1381,10 @@
                 "orbit": 18206000.0,
                 "period": 921.19,
                 "year": 2006,
-                "inclination": 179.8,
-                "eccentricity": 0.326
+                "inclination": 174.8,
+                "eccentricity": 0.326,
+                "longitudeOfAscendingNode": 349.35,
+                "argumentOfPeriapsis": 152.16
             },
             {
                 "name": "S/2004 S 13",
@@ -1170,8 +1392,10 @@
                 "orbit": 18404000.0,
                 "period": 933.48,
                 "year": 2004,
-                "inclination": 167.4,
-                "eccentricity": 0.273
+                "inclination": 168.798,
+                "eccentricity": 0.273,
+                "longitudeOfAscendingNode": 205.701,
+                "argumentOfPeriapsis": 346.186
             },
             {
                 "name": "Hyrrokkin",
@@ -1179,8 +1403,10 @@
                 "orbit": 18437000.0,
                 "period": 931.86,
                 "year": 2004,
-                "inclination": 151.4,
-                "eccentricity": 0.333
+                "inclination": 151.536,
+                "eccentricity": 0.333,
+                "longitudeOfAscendingNode": 45.402,
+                "argumentOfPeriapsis": 273.076
             },
             {
                 "name": "Mundilfari",
@@ -1188,8 +1414,10 @@
                 "orbit": 18628000.0,
                 "period": 952.77,
                 "year": 2000,
-                "inclination": 169.4,
-                "eccentricity": 0.210
+                "inclination": 167.439,
+                "eccentricity": 0.21,
+                "longitudeOfAscendingNode": 82.856,
+                "argumentOfPeriapsis": 309.694
             },
             {
                 "name": "S/2006 S 1",
@@ -1197,8 +1425,10 @@
                 "orbit": 18790000.0,
                 "period": 963.37,
                 "year": 2006,
-                "inclination": 154.2,
-                "eccentricity": 0.130
+                "inclination": 156.18,
+                "eccentricity": 0.13,
+                "longitudeOfAscendingNode": 336.641,
+                "argumentOfPeriapsis": 154.95
             },
             {
                 "name": "Jarnsaxa",
@@ -1206,8 +1436,10 @@
                 "orbit": 18811000.0,
                 "period": 964.74,
                 "year": 2006,
-                "inclination": 163.3,
-                "eccentricity": 0.216
+                "inclination": 163.649,
+                "eccentricity": 0.216,
+                "longitudeOfAscendingNode": 22.519,
+                "argumentOfPeriapsis": 237.422
             },
             {
                 "name": "S/2007 S 3",
@@ -1215,8 +1447,10 @@
                 "orbit": 18975000.0,
                 "period": 977.8,
                 "year": 2007,
-                "inclination": 177.2,
-                "eccentricity": 0.130
+                "inclination": 177.595,
+                "eccentricity": 0.13,
+                "longitudeOfAscendingNode": 276.824,
+                "argumentOfPeriapsis": 111.854
             },
             {
                 "name": "Narvi",
@@ -1224,8 +1458,10 @@
                 "orbit": 19007000.0,
                 "period": 1003.86,
                 "year": 2003,
-                "inclination": 145.8,
-                "eccentricity": 0.431
+                "inclination": 145.731,
+                "eccentricity": 0.431,
+                "longitudeOfAscendingNode": 174.435,
+                "argumentOfPeriapsis": 169.959
             },
             {
                 "name": "Bergelmir",
@@ -1233,8 +1469,10 @@
                 "orbit": 19336000.0,
                 "period": 1005.74,
                 "year": 2004,
-                "inclination": 158.5,
-                "eccentricity": 0.142
+                "inclination": 158.557,
+                "eccentricity": 0.142,
+                "longitudeOfAscendingNode": 202.164,
+                "argumentOfPeriapsis": 133.4
             },
             {
                 "name": "S/2004 S 20",
@@ -1251,8 +1489,10 @@
                 "orbit": 19447000.0,
                 "period": 1014.7,
                 "year": 2004,
-                "inclination": 166.6,
-                "eccentricity": 0.259
+                "inclination": 168.239,
+                "eccentricity": 0.259,
+                "longitudeOfAscendingNode": 26.664,
+                "argumentOfPeriapsis": 180.792
             },
             {
                 "name": "Suttungr",
@@ -1260,8 +1500,10 @@
                 "orbit": 19459000.0,
                 "period": 1016.67,
                 "year": 2000,
-                "inclination": 175.8,
-                "eccentricity": 0.114
+                "inclination": 175.815,
+                "eccentricity": 0.114,
+                "longitudeOfAscendingNode": 227.259,
+                "argumentOfPeriapsis": 34.281
             },
             {
                 "name": "Hati",
@@ -1269,8 +1511,10 @@
                 "orbit": 19846000.0,
                 "period": 1038.61,
                 "year": 2004,
-                "inclination": 165.8,
-                "eccentricity": 0.372
+                "inclination": 165.808,
+                "eccentricity": 0.372,
+                "longitudeOfAscendingNode": 324.38,
+                "argumentOfPeriapsis": 21.286
             },
             {
                 "name": "S/2004 S 12",
@@ -1278,8 +1522,10 @@
                 "orbit": 19878000.0,
                 "period": 1046.19,
                 "year": 2004,
-                "inclination": 164.0,
-                "eccentricity": 0.401
+                "inclination": 165.261,
+                "eccentricity": 0.401,
+                "longitudeOfAscendingNode": 307.942,
+                "argumentOfPeriapsis": 87.128
             },
             {
                 "name": "S/2004 S 27",
@@ -1288,7 +1534,7 @@
                 "period": 1054.45,
                 "year": 2019,
                 "inclination": 167.1,
-                "eccentricity": 0.120
+                "eccentricity": 0.12
             },
             {
                 "name": "Bestla",
@@ -1296,8 +1542,10 @@
                 "orbit": 20192000.0,
                 "period": 1088.72,
                 "year": 2004,
-                "inclination": 145.2,
-                "eccentricity": 0.521
+                "inclination": 145.136,
+                "eccentricity": 0.521,
+                "longitudeOfAscendingNode": 288.308,
+                "argumentOfPeriapsis": 81.185
             },
             {
                 "name": "Thrymr",
@@ -1305,8 +1553,10 @@
                 "orbit": 20314000.0,
                 "period": 1094.11,
                 "year": 2000,
-                "inclination": 175.0,
-                "eccentricity": 0.470
+                "inclination": 177.659,
+                "eccentricity": 0.47,
+                "longitudeOfAscendingNode": 285.762,
+                "argumentOfPeriapsis": 125.404
             },
             {
                 "name": "Farbauti",
@@ -1314,8 +1564,10 @@
                 "orbit": 20377000.0,
                 "period": 1085.55,
                 "year": 2004,
-                "inclination": 156.4,
-                "eccentricity": 0.206
+                "inclination": 156.52,
+                "eccentricity": 0.206,
+                "longitudeOfAscendingNode": 135.109,
+                "argumentOfPeriapsis": 342.995
             },
             {
                 "name": "S/2004 S 30",
@@ -1341,8 +1593,10 @@
                 "orbit": 20751000.0,
                 "period": 1117.52,
                 "year": 2004,
-                "inclination": 166.7,
-                "eccentricity": 0.252
+                "inclination": 166.668,
+                "eccentricity": 0.252,
+                "longitudeOfAscendingNode": 179.064,
+                "argumentOfPeriapsis": 242.651
             },
             {
                 "name": "S/2004 S 7",
@@ -1350,8 +1604,10 @@
                 "orbit": 20999000.0,
                 "period": 1140.24,
                 "year": 2004,
-                "inclination": 165.6,
-                "eccentricity": 0.5541
+                "inclination": 165.693,
+                "eccentricity": 0.5541,
+                "longitudeOfAscendingNode": 341.236,
+                "argumentOfPeriapsis": 84.036
             },
             {
                 "name": "S/2004 S 23",
@@ -1404,8 +1660,10 @@
                 "orbit": 22089000.0,
                 "period": 1230.97,
                 "year": 2006,
-                "inclination": 156.3,
-                "eccentricity": 0.478
+                "inclination": 156.067,
+                "eccentricity": 0.478,
+                "longitudeOfAscendingNode": 281.211,
+                "argumentOfPeriapsis": 163.935
             },
             {
                 "name": "S/2006 S 3",
@@ -1413,8 +1671,10 @@
                 "orbit": 22096000.0,
                 "period": 1227.21,
                 "year": 2006,
-                "inclination": 150.8,
-                "eccentricity": 0.471
+                "inclination": 158.631,
+                "eccentricity": 0.471,
+                "longitudeOfAscendingNode": 206.993,
+                "argumentOfPeriapsis": 188.728
             },
             {
                 "name": "S/2004 S 35",
@@ -1431,8 +1691,10 @@
                 "orbit": 22454000.0,
                 "period": 1260.35,
                 "year": 2004,
-                "inclination": 164.9,
-                "eccentricity": 0.136
+                "inclination": 164.963,
+                "eccentricity": 0.136,
+                "longitudeOfAscendingNode": 226.595,
+                "argumentOfPeriapsis": 120.982
             },
             {
                 "name": "S/2004 S 21",
@@ -1449,8 +1711,10 @@
                 "orbit": 22704000.0,
                 "period": 1297.36,
                 "year": 2006,
-                "inclination": 177.5,
-                "eccentricity": 0.451
+                "inclination": 169.688,
+                "eccentricity": 0.451,
+                "longitudeOfAscendingNode": 236.537,
+                "argumentOfPeriapsis": 303.662
             },
             {
                 "name": "S/2004 S 24",
@@ -1467,8 +1731,10 @@
                 "orbit": 23058000.0,
                 "period": 1311.36,
                 "year": 2006,
-                "inclination": 167.9,
-                "eccentricity": 0.187
+                "inclination": 167.689,
+                "eccentricity": 0.187,
+                "longitudeOfAscendingNode": 343.811,
+                "argumentOfPeriapsis": 32.821
             },
             {
                 "name": "Ymir",
@@ -1476,8 +1742,10 @@
                 "orbit": 23140400.0,
                 "period": 1315.58,
                 "year": 2000,
-                "inclination": 173.1,
-                "eccentricity": 0.335
+                "inclination": 173.497,
+                "eccentricity": 0.335,
+                "longitudeOfAscendingNode": 192.937,
+                "argumentOfPeriapsis": 21.352
             },
             {
                 "name": "S/2004 S 36",
@@ -1521,8 +1789,10 @@
                 "orbit": 25146000.0,
                 "period": 1494.2,
                 "year": 2004,
-                "inclination": 170.4,
-                "eccentricity": 0.206
+                "inclination": 170.372,
+                "eccentricity": 0.206,
+                "longitudeOfAscendingNode": 259.946,
+                "argumentOfPeriapsis": 324.787
             },
             {
                 "name": "S/2004 S 26",
@@ -1540,94 +1810,94 @@
         "radius": 25362,
         "rings": [
             {
-                "name" : "ζcc Ring",
-                "radius" : 26840,
-                "width" : 8000
+                "name": "\u03b6cc Ring",
+                "radius": 26840,
+                "width": 8000
             },
             {
-                "name" : "ζc Ring",
-                "radius" : 34890,
-                "width" : 3000
+                "name": "\u03b6c Ring",
+                "radius": 34890,
+                "width": 3000
             },
             {
-                "name" : "1986U2R",
-                "radius" : 37000,
-                "width" : 2500
+                "name": "1986U2R",
+                "radius": 37000,
+                "width": 2500
             },
             {
-                "name" : "ζ Ring",
-                "radius" : 37850,
-                "width" : 3500
+                "name": "\u03b6 Ring",
+                "radius": 37850,
+                "width": 3500
             },
             {
-                "name" : "Ring 6",
-                "radius" : 41837,
-                "width" : 1.6
+                "name": "Ring 6",
+                "radius": 41837,
+                "width": 1.6
             },
             {
-                "name" : "Ring 5",
-                "radius" : 42234,
-                "width" : 1.9
+                "name": "Ring 5",
+                "radius": 42234,
+                "width": 1.9
             },
             {
-                "name" : "Ring 4",
-                "radius" : 42570,
-                "width" : 2.4
+                "name": "Ring 4",
+                "radius": 42570,
+                "width": 2.4
             },
             {
-                "name" : "α Ring",
-                "radius" : 44718,
-                "width" : 4.8
+                "name": "\u03b1 Ring",
+                "radius": 44718,
+                "width": 4.8
             },
             {
-                "name" : "β Ring",
-                "radius" : 45661,
-                "width" : 6.1
+                "name": "\u03b2 Ring",
+                "radius": 45661,
+                "width": 6.1
             },
             {
-                "name" : "η Ring",
-                "radius" : 47175,
-                "width" : 1.9
+                "name": "\u03b7 Ring",
+                "radius": 47175,
+                "width": 1.9
             },
             {
-                "name" : "ηc Ring",
-                "radius" : 47176,
-                "width" : 40
+                "name": "\u03b7c Ring",
+                "radius": 47176,
+                "width": 40
             },
             {
-                "name" : "γ Ring",
-                "radius" : 47627,
-                "width" : 3.6
+                "name": "\u03b3 Ring",
+                "radius": 47627,
+                "width": 3.6
             },
             {
-                "name" : "δc Ring",
-                "radius" : 48301,
-                "width" : 10
+                "name": "\u03b4c Ring",
+                "radius": 48301,
+                "width": 10
             },
             {
-                "name" : "δ Ring",
-                "radius" : 48300,
-                "width" : 4.1
+                "name": "\u03b4 Ring",
+                "radius": 48300,
+                "width": 4.1
             },
             {
-                "name" : "λ Ring",
-                "radius" : 50023,
-                "width" : 1
+                "name": "\u03bb Ring",
+                "radius": 50023,
+                "width": 1
             },
             {
-                "name" : "ε Ring",
-                "radius" : 51149,
-                "width" : 19.7
+                "name": "\u03b5 Ring",
+                "radius": 51149,
+                "width": 19.7
             },
             {
-                "name" : "ν Ring",
-                "radius" : 66100,
-                "width" : 3800
+                "name": "\u03bd Ring",
+                "radius": 66100,
+                "width": 3800
             },
             {
-                "name" : "μ Ring",
-                "radius" : 86000,
-                "width" : 17000
+                "name": "\u03bc Ring",
+                "radius": 86000,
+                "width": 17000
             }
         ],
         "moons": [
@@ -1637,8 +1907,10 @@
                 "orbit": 49800.0,
                 "period": 0.335,
                 "year": 1986,
-                "inclination": 0.08,
-                "eccentricity": 0.0003
+                "inclination": 0.085,
+                "eccentricity": 0.0003,
+                "longitudeOfAscendingNode": 38.374,
+                "argumentOfPeriapsis": 136.827
             },
             {
                 "name": "Ophelia",
@@ -1646,8 +1918,10 @@
                 "orbit": 53800.0,
                 "period": 0.376,
                 "year": 1986,
-                "inclination": 0.10,
-                "eccentricity": 0.0099
+                "inclination": 0.104,
+                "eccentricity": 0.0099,
+                "longitudeOfAscendingNode": 164.048,
+                "argumentOfPeriapsis": 17.761
             },
             {
                 "name": "Bianca",
@@ -1655,8 +1929,10 @@
                 "orbit": 59200.0,
                 "period": 0.435,
                 "year": 1986,
-                "inclination": 0.19,
-                "eccentricity": 0.0009
+                "inclination": 0.193,
+                "eccentricity": 0.0009,
+                "longitudeOfAscendingNode": 93.22,
+                "argumentOfPeriapsis": 8.293
             },
             {
                 "name": "Cressida",
@@ -1664,8 +1940,10 @@
                 "orbit": 61800.0,
                 "period": 0.464,
                 "year": 1986,
-                "inclination": 0.01,
-                "eccentricity": 0.0004
+                "inclination": 0.006,
+                "eccentricity": 0.0004,
+                "longitudeOfAscendingNode": 99.403,
+                "argumentOfPeriapsis": 44.236
             },
             {
                 "name": "Desdemona",
@@ -1673,8 +1951,10 @@
                 "orbit": 62700.0,
                 "period": 0.474,
                 "year": 1986,
-                "inclination": 0.11,
-                "eccentricity": 0.0001
+                "inclination": 0.113,
+                "eccentricity": 0.0001,
+                "longitudeOfAscendingNode": 306.089,
+                "argumentOfPeriapsis": 183.285
             },
             {
                 "name": "Juliet",
@@ -1682,8 +1962,10 @@
                 "orbit": 64400.0,
                 "period": 0.493,
                 "year": 1986,
-                "inclination": 0.07,
-                "eccentricity": 0.0007
+                "inclination": 0.065,
+                "eccentricity": 0.0007,
+                "longitudeOfAscendingNode": 200.155,
+                "argumentOfPeriapsis": 223.819
             },
             {
                 "name": "Portia",
@@ -1691,8 +1973,10 @@
                 "orbit": 66100.0,
                 "period": 0.513,
                 "year": 1986,
-                "inclination": 0.06,
-                "eccentricity": 0.0001
+                "inclination": 0.059,
+                "eccentricity": 0.0001,
+                "longitudeOfAscendingNode": 260.067,
+                "argumentOfPeriapsis": 222.433
             },
             {
                 "name": "Rosalind",
@@ -1700,8 +1984,10 @@
                 "orbit": 69900.0,
                 "period": 0.558,
                 "year": 1986,
-                "inclination": 0.28,
-                "eccentricity": 0.0001
+                "inclination": 0.279,
+                "eccentricity": 0.0001,
+                "longitudeOfAscendingNode": 12.847,
+                "argumentOfPeriapsis": 140.477
             },
             {
                 "name": "Cupid",
@@ -1709,8 +1995,10 @@
                 "orbit": 74392.0,
                 "period": 0.613,
                 "year": 2003,
-                "inclination": 0.10,
-                "eccentricity": 0
+                "inclination": 0.099,
+                "eccentricity": 0,
+                "longitudeOfAscendingNode": 182.793,
+                "argumentOfPeriapsis": 247.608
             },
             {
                 "name": "Belinda",
@@ -1718,8 +2006,10 @@
                 "orbit": 75300.0,
                 "period": 0.624,
                 "year": 1986,
-                "inclination": 0.03,
-                "eccentricity": 0.0001
+                "inclination": 0.031,
+                "eccentricity": 0.0001,
+                "longitudeOfAscendingNode": 279.337,
+                "argumentOfPeriapsis": 42.406
             },
             {
                 "name": "Perdita",
@@ -1728,7 +2018,9 @@
                 "period": 0.638,
                 "year": 1999,
                 "inclination": 0.47,
-                "eccentricity": 0
+                "eccentricity": 0,
+                "longitudeOfAscendingNode": 309.376,
+                "argumentOfPeriapsis": 253.925
             },
             {
                 "name": "Puck",
@@ -1736,8 +2028,10 @@
                 "orbit": 86000.0,
                 "period": 0.762,
                 "year": 1985,
-                "inclination": 0.32,
-                "eccentricity": 0.0001
+                "inclination": 0.319,
+                "eccentricity": 0.0001,
+                "longitudeOfAscendingNode": 268.734,
+                "argumentOfPeriapsis": 177.094
             },
             {
                 "name": "Mab",
@@ -1745,8 +2039,10 @@
                 "orbit": 97736.0,
                 "period": 0.923,
                 "year": 2003,
-                "inclination": 0.13,
-                "eccentricity": 0
+                "inclination": 0.134,
+                "eccentricity": 0,
+                "longitudeOfAscendingNode": 350.737,
+                "argumentOfPeriapsis": 249.565
             },
             {
                 "name": "Miranda",
@@ -1754,8 +2050,10 @@
                 "orbit": 129900.0,
                 "period": 1.413,
                 "year": 1948,
-                "inclination": 4.34,
-                "eccentricity": 0.0013
+                "inclination": 4.338,
+                "eccentricity": 0.0013,
+                "longitudeOfAscendingNode": 326.438,
+                "argumentOfPeriapsis": 68.312
             },
             {
                 "name": "Ariel",
@@ -1763,8 +2061,10 @@
                 "orbit": 190900.0,
                 "period": 2.52,
                 "year": 1851,
-                "inclination": 0.04,
-                "eccentricity": 0.0012
+                "inclination": 0.041,
+                "eccentricity": 0.0012,
+                "longitudeOfAscendingNode": 22.394,
+                "argumentOfPeriapsis": 115.349
             },
             {
                 "name": "Umbriel",
@@ -1772,8 +2072,10 @@
                 "orbit": 266000.0,
                 "period": 4.144,
                 "year": 1851,
-                "inclination": 0.13,
-                "eccentricity": 0.0039
+                "inclination": 0.128,
+                "eccentricity": 0.0039,
+                "longitudeOfAscendingNode": 33.485,
+                "argumentOfPeriapsis": 84.709
             },
             {
                 "name": "Titania",
@@ -1781,8 +2083,10 @@
                 "orbit": 436300.0,
                 "period": 8.706,
                 "year": 1787,
-                "inclination": 0.08,
-                "eccentricity": 0.0011
+                "inclination": 0.079,
+                "eccentricity": 0.0011,
+                "longitudeOfAscendingNode": 99.771,
+                "argumentOfPeriapsis": 284.4
             },
             {
                 "name": "Oberon",
@@ -1790,8 +2094,10 @@
                 "orbit": 583500.0,
                 "period": 13.46,
                 "year": 1787,
-                "inclination": 0.07,
-                "eccentricity": 0.0014
+                "inclination": 0.068,
+                "eccentricity": 0.0014,
+                "longitudeOfAscendingNode": 279.771,
+                "argumentOfPeriapsis": 104.4
             },
             {
                 "name": "Francisco",
@@ -1800,7 +2106,9 @@
                 "period": 266.56,
                 "year": 2001,
                 "inclination": 147.25,
-                "eccentricity": 0.1324
+                "eccentricity": 0.1324,
+                "longitudeOfAscendingNode": 100.738,
+                "argumentOfPeriapsis": 140.644
             },
             {
                 "name": "Caliban",
@@ -1808,8 +2116,10 @@
                 "orbit": 7231100.0,
                 "period": 579.73,
                 "year": 1997,
-                "inclination": 141.53,
-                "eccentricity": 0.1812
+                "inclination": 141.529,
+                "eccentricity": 0.1812,
+                "longitudeOfAscendingNode": 171.189,
+                "argumentOfPeriapsis": 354.339
             },
             {
                 "name": "Stephano",
@@ -1817,8 +2127,10 @@
                 "orbit": 8004000.0,
                 "period": 677.36,
                 "year": 1999,
-                "inclination": 143.82,
-                "eccentricity": 0.2248
+                "inclination": 143.819,
+                "eccentricity": 0.2248,
+                "longitudeOfAscendingNode": 191.411,
+                "argumentOfPeriapsis": 14.956
             },
             {
                 "name": "Trinculo",
@@ -1826,8 +2138,10 @@
                 "orbit": 8504000.0,
                 "period": 749.24,
                 "year": 2001,
-                "inclination": 166.93,
-                "eccentricity": 0.2194
+                "inclination": 166.971,
+                "eccentricity": 0.2194,
+                "longitudeOfAscendingNode": 193.755,
+                "argumentOfPeriapsis": 158.688
             },
             {
                 "name": "Sycorax",
@@ -1836,7 +2150,9 @@
                 "period": 1288.38,
                 "year": 1997,
                 "inclination": 159.42,
-                "eccentricity": 0.5219
+                "eccentricity": 0.5219,
+                "longitudeOfAscendingNode": 263.034,
+                "argumentOfPeriapsis": 20.103
             },
             {
                 "name": "Margaret",
@@ -1844,8 +2160,10 @@
                 "orbit": 14345000.0,
                 "period": 1687.01,
                 "year": 2003,
-                "inclination": 57.37,
-                "eccentricity": 0.6772
+                "inclination": 57.367,
+                "eccentricity": 0.6772,
+                "longitudeOfAscendingNode": 7.067,
+                "argumentOfPeriapsis": 90.017
             },
             {
                 "name": "Prospero",
@@ -1854,7 +2172,9 @@
                 "period": 1978.29,
                 "year": 1999,
                 "inclination": 151.83,
-                "eccentricity": 0.4445
+                "eccentricity": 0.4445,
+                "longitudeOfAscendingNode": 319.003,
+                "argumentOfPeriapsis": 174.152
             },
             {
                 "name": "Setebos",
@@ -1862,8 +2182,10 @@
                 "orbit": 17418000.0,
                 "period": 2225.21,
                 "year": 1999,
-                "inclination": 158.24,
-                "eccentricity": 0.5908
+                "inclination": 158.235,
+                "eccentricity": 0.5908,
+                "longitudeOfAscendingNode": 250.235,
+                "argumentOfPeriapsis": 359.953
             },
             {
                 "name": "Ferdinand",
@@ -1871,8 +2193,10 @@
                 "orbit": 20901000.0,
                 "period": 2887.21,
                 "year": 2001,
-                "inclination": 169.79,
-                "eccentricity": 0.3993
+                "inclination": 169.793,
+                "eccentricity": 0.3993,
+                "longitudeOfAscendingNode": 217.35,
+                "argumentOfPeriapsis": 156.298
             }
         ]
     },
@@ -1881,29 +2205,29 @@
         "radius": 24622,
         "rings": [
             {
-                "name" : "Galle (N42)",
-                "radius" : 40900,
-                "width" : 2000
+                "name": "Galle (N42)",
+                "radius": 40900,
+                "width": 2000
             },
             {
-                "name" : "Le Verrier (N53)",
-                "radius" : 53200,
-                "width" : 113
+                "name": "Le Verrier (N53)",
+                "radius": 53200,
+                "width": 113
             },
             {
-                "name" : "Lassell",
-                "radius" : 53200,
-                "width" : 4000
+                "name": "Lassell",
+                "radius": 53200,
+                "width": 4000
             },
             {
-                "name" : "Arago",
-                "radius" : 57200,
-                "width" : 100
+                "name": "Arago",
+                "radius": 57200,
+                "width": 100
             },
             {
-                "name" : "Adams (N63)",
-                "radius" : 62932,
-                "width" : 15
+                "name": "Adams (N63)",
+                "radius": 62932,
+                "width": 15
             }
         ],
         "moons": [
@@ -1913,8 +2237,10 @@
                 "orbit": 48224.0,
                 "period": 0.294,
                 "year": 1989,
-                "inclination": 4.74,
-                "eccentricity": 0.0003
+                "inclination": 4.691,
+                "eccentricity": 0.0003,
+                "longitudeOfAscendingNode": 42.279,
+                "argumentOfPeriapsis": 2.045
             },
             {
                 "name": "Thalassa",
@@ -1922,8 +2248,10 @@
                 "orbit": 50075.0,
                 "period": 0.311,
                 "year": 1989,
-                "inclination": 0.21,
-                "eccentricity": 0.0002
+                "inclination": 0.135,
+                "eccentricity": 0.0002,
+                "longitudeOfAscendingNode": 145.98,
+                "argumentOfPeriapsis": 237.065
             },
             {
                 "name": "Despina",
@@ -1931,8 +2259,10 @@
                 "orbit": 52526.0,
                 "period": 0.335,
                 "year": 1989,
-                "inclination": 0.07,
-                "eccentricity": 0.0001
+                "inclination": 0.068,
+                "eccentricity": 0.0001,
+                "longitudeOfAscendingNode": 77.06,
+                "argumentOfPeriapsis": 176.857
             },
             {
                 "name": "Galatea",
@@ -1940,8 +2270,10 @@
                 "orbit": 61953.0,
                 "period": 0.429,
                 "year": 1989,
-                "inclination": 0.05,
-                "eccentricity": 0.0001
+                "inclination": 0.034,
+                "eccentricity": 0.0001,
+                "longitudeOfAscendingNode": 37.247,
+                "argumentOfPeriapsis": 343.011
             },
             {
                 "name": "Larissa",
@@ -1949,8 +2281,10 @@
                 "orbit": 73548.0,
                 "period": 0.555,
                 "year": 1982,
-                "inclination": 0.20,
-                "eccentricity": 0.0014
+                "inclination": 0.205,
+                "eccentricity": 0.0014,
+                "longitudeOfAscendingNode": 308.127,
+                "argumentOfPeriapsis": 249.891
             },
             {
                 "name": "Proteus",
@@ -1958,8 +2292,10 @@
                 "orbit": 117647.0,
                 "period": 1.122,
                 "year": 1989,
-                "inclination": 0.04,
-                "eccentricity": 0.0004
+                "inclination": 0.075,
+                "eccentricity": 0.0004,
+                "longitudeOfAscendingNode": 315.131,
+                "argumentOfPeriapsis": 67.968
             },
             {
                 "name": "Triton",
@@ -1967,8 +2303,10 @@
                 "orbit": 354800.0,
                 "period": 5.877,
                 "year": 1846,
-                "inclination": 157.345,
-                "eccentricity": 0.000016
+                "inclination": 156.865,
+                "eccentricity": 1.6e-05,
+                "longitudeOfAscendingNode": 177.608,
+                "argumentOfPeriapsis": 66.142
             },
             {
                 "name": "Nereid",
@@ -1976,8 +2314,10 @@
                 "orbit": 5513820.0,
                 "period": 360.14,
                 "year": 1949,
-                "inclination": 7.23,
-                "eccentricity": 0.7512
+                "inclination": 7.09,
+                "eccentricity": 0.7512,
+                "longitudeOfAscendingNode": 335.57,
+                "argumentOfPeriapsis": 281.117
             },
             {
                 "name": "Halimede",
@@ -1985,8 +2325,10 @@
                 "orbit": 15728000.0,
                 "period": 1879.71,
                 "year": 2002,
-                "inclination": 134.1,
-                "eccentricity": 0.571
+                "inclination": 112.898,
+                "eccentricity": 0.571,
+                "longitudeOfAscendingNode": 217.288,
+                "argumentOfPeriapsis": 162.119
             },
             {
                 "name": "Sao",
@@ -1994,8 +2336,10 @@
                 "orbit": 22422000.0,
                 "period": 2914.07,
                 "year": 2002,
-                "inclination": 48.5,
-                "eccentricity": 0.293
+                "inclination": 49.907,
+                "eccentricity": 0.293,
+                "longitudeOfAscendingNode": 60.354,
+                "argumentOfPeriapsis": 65.047
             },
             {
                 "name": "Laomedeia",
@@ -2003,8 +2347,10 @@
                 "orbit": 23571000.0,
                 "period": 3167.85,
                 "year": 2002,
-                "inclination": 34.7,
-                "eccentricity": 0.424
+                "inclination": 34.049,
+                "eccentricity": 0.424,
+                "longitudeOfAscendingNode": 59.124,
+                "argumentOfPeriapsis": 140.107
             },
             {
                 "name": "Psamathe",
@@ -2012,8 +2358,10 @@
                 "orbit": 46695000.0,
                 "period": 9115.91,
                 "year": 2003,
-                "inclination": 137.4,
-                "eccentricity": 0.450
+                "inclination": 137.679,
+                "eccentricity": 0.45,
+                "longitudeOfAscendingNode": 298.074,
+                "argumentOfPeriapsis": 144.158
             },
             {
                 "name": "Neso",
@@ -2021,8 +2369,10 @@
                 "orbit": 48387000.0,
                 "period": 9373.99,
                 "year": 2002,
-                "inclination": 132.6,
-                "eccentricity": 0.495
+                "inclination": 131.265,
+                "eccentricity": 0.495,
+                "longitudeOfAscendingNode": 49.151,
+                "argumentOfPeriapsis": 86.441
             }
         ]
     }

@@ -3,6 +3,8 @@ import math
 MOON_SCALED_DISTANCE_MIN = 0
 MOON_SCALED_DISTANCE_MAX = 1
 
+def degrees_to_radians(degrees):
+    return math.pi * degrees / 180
 
 def process_data(planet_data):
     max_moon_distance = max([moon['orbit'] for moon in planet_data['moons']])
@@ -16,6 +18,9 @@ def process_data(planet_data):
             'radius': scale_distance(moon['radius']),
             'inclination': moon['inclination'],
             'eccentricity': moon['eccentricity'],
+            'longitudeOfAscendingNode': degrees_to_radians(moon.get('longitudeOfAscendingNode', 0)),
+            'argumentOfPeriapsis': degrees_to_radians(moon.get('argumentOfPeriapsis', 0)),
+            'inclination': degrees_to_radians(moon.get('inclination', 0)),
             'year': moon['year'],
             'original': moon
         })

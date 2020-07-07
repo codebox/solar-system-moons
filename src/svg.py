@@ -12,8 +12,12 @@ class Svg:
             x, y, r, css_class, clip_path, 'style="stroke-opacity: {}"'.format(0.1 + random.random()/10) if randomise_opacity else ''
         ))
 
-    def add_ellipse(self, cx, cy, rx, ry, angle, css_class, randomise_opacity=False):
-        self.content.append(u'<ellipse cx="{0}" cy="{1}" rx="{2}" ry="{3}" transform="rotate({4},{0},{1})" class="{5}" {6}/>'.format(cx, cy, rx, ry, angle * 180 / math.pi, css_class, 'style="stroke: hsl(0, 0%,{}%)"'.format(75 + random.random() * 25) if randomise_opacity else ''))
+    def add_ellipse(self, cx, cy, rx, ry, angle, css_class, randomise_opacity=False, rotation_x=None, rotation_y=None):
+        self.content.append(u'<ellipse cx="{0}" cy="{1}" rx="{2}" ry="{3}" transform="rotate({4},{5},{6})" class="{7}" {8}/>'.format(
+            cx, cy, rx, ry,
+            angle * 180 / math.pi, cx if rotation_x is None else rotation_x, cy if rotation_y is None else rotation_y,
+            css_class, 'style="stroke: hsl(0, 0%,{}%)"'.format(75 + random.random() * 25) if randomise_opacity else '')
+        )
 
     def _get_circle_arc_path(self, cx, cy, r, start_angle, end_angle):
         start_x = cx + r * math.sin(start_angle)

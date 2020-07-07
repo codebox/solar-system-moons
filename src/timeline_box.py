@@ -18,4 +18,5 @@ class TimelineBox:
             timeline[year].append(name)
 
         for moon_name in sorted(timeline.keys()):
-            print(moon_name, timeline[moon_name])
+            # print(moon_name, timeline[moon_name])
+            pass

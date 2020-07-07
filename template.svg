@@ -127,6 +127,10 @@
                 fill: none;
                 stroke-opacity: 0.5;
             }
+            .eccentricityPath {
+                fill: none;
+            stroke: black;
+            }
         </style>
         <style type="text/css"><![CDATA[%style%]]></style>
         %defs%
