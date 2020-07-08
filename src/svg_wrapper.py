@@ -18,6 +18,8 @@ MIN_RING_BOX_HEIGHT = 800
 LOTS_OF_MOONS_THRESHOLD = 40
 TEXT_LINE_CENTER_OFFSET = 5
 RING_BOX_HEIGHT_FRACTION = 0.7
+WIDE_TITLE_PADDING = 80
+NARROW_TITLE_PADDING = 50
 
 class SvgWrapper:
     def __init__(self, svg, data):
@@ -29,6 +31,7 @@ class SvgWrapper:
         self.content_height = LONG_CONTENT_HEIGHT if self.lots_of_moons else SHORT_CONTENT_HEIGHT
         self.margin = WIDE_MARGIN if self.lots_of_moons else NARROW_MARGIN
         self.border_thickness = WIDE_BORDER if self.lots_of_moons else NARROW_BORDER
+        self.title_padding = WIDE_TITLE_PADDING if self.lots_of_moons else NARROW_TITLE_PADDING
         self.content_x = 2 * self.margin + self.border_thickness
         self.content_y = 2 * self.margin + self.border_thickness
         self.orbit_box = self._build_orbit_box()
@@ -47,7 +50,7 @@ class SvgWrapper:
 
         self.timeline_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h - self.timeline_box.h)
         self.eccentricity_box.render(self.svg, self.content_x + self.orbit_box.w + self.rotation_box.w / 2, self.content_y + self.content_height - self.rotation_box.h - self.eccentricity_box.h)
-        self.ring_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y)
+        self.ring_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.title_padding)
 
         self.rotation_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h)
 
@@ -56,7 +59,7 @@ class SvgWrapper:
         self._render_footer()
 
     def _render_title(self):
-        self.svg.add_text(self.margin + self.border_thickness + 2 * self.margin, 'The Moons of {}'.format(self.data['planet']['name']), 'boxTitle' + ('Large' if self.lots_of_moons else 'Small'))
+        self.svg.add_text(self.margin + self.border_thickness + 2 * self.margin + 5, 'The Moons of {}'.format(self.data['planet']['name']), 'boxTitle' + ('Large' if self.lots_of_moons else 'Small'))
 
     def _build_orbit_box(self):
         box_width = OUTER_BOX_WIDTH
@@ -68,7 +71,7 @@ class SvgWrapper:
 
     def _build_ring_box(self):
         box_width = self.rotation_box.w
-        box_height = (self.content_height - self.rotation_box.h) * RING_BOX_HEIGHT_FRACTION
+        box_height = (self.content_height - self.rotation_box.h - self.title_padding) * RING_BOX_HEIGHT_FRACTION
 
         ring_box = RingBox(self.data, box_width, box_height, self.margin, self.margin)
 
@@ -97,7 +100,7 @@ class SvgWrapper:
 
     def _build_eccentricity_box(self):
         box_width = self.rotation_box.w / 2
-        box_height = (self.content_height - self.rotation_box.h) * (1 - RING_BOX_HEIGHT_FRACTION)
+        box_height = (self.content_height - self.rotation_box.h - self.title_padding) * (1 - RING_BOX_HEIGHT_FRACTION)
 
         eccentricity_box = EccentricityBox(self.data, box_width, box_height, self.margin, self.margin)
 
@@ -105,7 +108,7 @@ class SvgWrapper:
 
     def _build_timeline_box(self):
         box_width = self.rotation_box.w / 2
-        box_height = (self.content_height - self.rotation_box.h) * (1 - RING_BOX_HEIGHT_FRACTION)
+        box_height = (self.content_height - self.rotation_box.h - self.title_padding) * (1 - RING_BOX_HEIGHT_FRACTION)
 
         timeline_box = TimelineBox(self.data, box_width, box_height, self.margin, self.margin)
 
