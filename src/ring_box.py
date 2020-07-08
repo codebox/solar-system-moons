@@ -62,6 +62,7 @@ class RingBox:
             svg.add_circle_text(cx, cy, TEXT_OFFSET + (inner_edge_radius + outer_edge_radius)/2, 'ringBoxRingName ' + self.title, ring['name'], angular_offset + 3 * math.pi / 2, angular_offset + math.pi / 2, clip_path_id)
             angular_offset += 2 * (math.pi * 2 / len(self.rings))
 
+        svg.add_radial_gradient('ringBoxPlanetGradient', self.title)
         svg.add_circle(cx, cy, rescale(self.planet_radius), 'ringBoxPlanetDisc ' + self.title, clip_path_id)
 
     def _render_rectangle(self, svg):

@@ -14,7 +14,7 @@ class Svg:
         elif opacity:
             style_attribute = 'style="stroke-opacity: {}"'.format(opacity)
 
-        self.content.append(u'<circle cx="{}" cy="{}" r="{}" class="{}" clip-path="url(#{})" {}/>'.format(
+        self.content.append(u'<circle cx="{}" cy="{}" r="{}" class="{}" clip-path="url(#{})" {} />'.format(
             x, y, r, css_class, clip_path, style_attribute
         ))
 
@@ -58,6 +58,9 @@ class Svg:
 
     def add_text(self, y, text, css_class):
         self.content.append(u'<text x="50%" y="{}" text-anchor="middle" startOffset="50%" class="{}">{}</text>'.format(y, css_class, text))
+
+    def add_radial_gradient(self, id, css_class):
+        self.defs.append(u'<radialGradient id="{}" class="{}" r="50%" cx="50%" cy="50%"><stop offset="0.9" stop-opacity="1"/><stop offset="1" stop-opacity="0"/></radialGradient>'.format(id, css_class))
 
     def add_substitutions(self, substitutions):
         for key, value in substitutions.items():

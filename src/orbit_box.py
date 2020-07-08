@@ -1,5 +1,7 @@
 import math
 
+BOTTOM_PADDING = 20
+
 class OrbitBox:
     def __init__(self, planet_data, w, h, x_margin, y_margin):
         self.title = planet_data['planet']['name']
@@ -14,7 +16,7 @@ class OrbitBox:
         self.planet_radius = planet_data['planet']['radius'] * self.w
 
     def _scale_radius(self, radius):
-        return radius * (self.h - 2 * self.y_margin)
+        return radius * (self.h - 2 * self.y_margin - BOTTOM_PADDING)
 
     def render(self, svg, x, y, cy):
         self.x = x

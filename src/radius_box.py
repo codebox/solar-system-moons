@@ -24,7 +24,7 @@ class RadiusBox:
         self.x = x
         self.y = y
         total_moon_diameters = sum(map(lambda m: m['radius'] * 2, self.moons))
-        space_for_moons = self.h - 2 * self.y_margin - PLANET_DISC_SEGMENT_WIDTH - (1 + len(self.moons)) * DISC_SEPARATION
+        space_for_moons = self.h - 2 * self.y_margin - PLANET_DISC_SEGMENT_WIDTH - len(self.moons) * DISC_SEPARATION
 
         rescale = build_rescale(0, 1, 0, space_for_moons / total_moon_diameters)
 

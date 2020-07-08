@@ -6,8 +6,8 @@ from info_box import InfoBox
 from timeline_box import TimelineBox
 from eccentricity_box import EccentricityBox
 
-WIDE_MARGIN = 50
-NARROW_MARGIN = 30
+WIDE_MARGIN = 30
+NARROW_MARGIN = 20
 
 WIDE_BORDER = 25
 NARROW_BORDER = 15
@@ -59,7 +59,7 @@ class SvgWrapper:
         self._render_footer()
 
     def _render_title(self):
-        self.svg.add_text(self.margin + self.border_thickness + 2 * self.margin + 5, 'The Moons of {}'.format(self.data['planet']['name']), 'boxTitle' + ('Large' if self.lots_of_moons else 'Small'))
+        self.svg.add_text(self.margin + self.border_thickness + 2 * self.margin + self.title_padding/4, 'The Rings and Satellites of {}'.format(self.data['planet']['name']), 'boxTitle' + ('Large' if self.lots_of_moons else 'Small'))
 
     def _build_orbit_box(self):
         box_width = OUTER_BOX_WIDTH

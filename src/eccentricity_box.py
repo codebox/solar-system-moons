@@ -1,7 +1,6 @@
 import math
 from data_processor import build_rescale
 
-MAX_RADIUS = 200
 MIN_ORBIT_SIZE_FOR_MOON_DISPLAY = 5
 
 class EccentricityBox:
@@ -21,7 +20,7 @@ class EccentricityBox:
         all_orbit_values = [self._calc_orbit_values(moon) for moon in self.data['moons']]
 
         max_orbit_radius = max(map(lambda m: m['orbit'], self.data['moons']))
-        rescale_distance = build_rescale(0, max_orbit_radius, 0, MAX_RADIUS)
+        rescale_distance = build_rescale(0, max_orbit_radius, 0, min(self.w, self.h)/2)
 
         moon_count = len(self.data['moons'])
         max_opacity = 1 if moon_count < 40 else 0.8
