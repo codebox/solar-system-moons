@@ -2,7 +2,6 @@ from orbit_box import OrbitBox
 from radius_box import RadiusBox
 from rotation_box import RotationBox
 from ring_box import RingBox
-from info_box import InfoBox
 from timeline_box import TimelineBox
 from eccentricity_box import EccentricityBox
 
@@ -38,7 +37,6 @@ class SvgWrapper:
         self.rotation_box = self._build_rotation_box()
         self.ring_box = self._build_ring_box()
         self.radius_box = self._build_radius_box()
-        self.info_box = self._build_info_box()
         self.eccentricity_box = self._build_eccentricity_box()
         self.timeline_box = self._build_timeline_box()
 
@@ -59,7 +57,7 @@ class SvgWrapper:
         self._render_footer()
 
     def _render_title(self):
-        self.svg.add_text(self.margin + self.border_thickness + 2 * self.margin + self.title_padding/4, 'The Rings and Satellites of {}'.format(self.data['planet']['name']), 'boxTitle' + ('Large' if self.lots_of_moons else 'Small'))
+        self.svg.add_centered_text(self.margin + self.border_thickness + 2 * self.margin + self.title_padding/4, 'The Rings and Satellites of {}'.format(self.data['planet']['name']), 'boxTitle' + ('Large' if self.lots_of_moons else 'Small'))
 
     def _build_orbit_box(self):
         box_width = OUTER_BOX_WIDTH
@@ -76,14 +74,6 @@ class SvgWrapper:
         ring_box = RingBox(self.data, box_width, box_height, self.margin, self.margin)
 
         return ring_box
-
-    def _build_info_box(self):
-        box_width = self.rotation_box.w
-        box_height = self.content_height - self.ring_box.h - self.rotation_box.h
-
-        info_box = InfoBox(self.data, box_width, box_height, self.margin, self.margin)
-
-        return info_box
 
     def _build_rotation_box(self):
         rotation_box = RotationBox(self.data, self.margin, self.margin)
@@ -129,6 +119,6 @@ class SvgWrapper:
         self.svg.add_rectangle(self.margin + self.border_thickness, self.margin + self.border_thickness, self.content_width, self.content_height + 2 * self.margin, 'borderInner')
 
     def _render_footer(self):
-        self.svg.add_text(self.content_y + self.content_height + TEXT_LINE_CENTER_OFFSET, 'https://codebox.net/gas-giants', 'footerText' )
+        self.svg.add_centered_text(self.content_y + self.content_height + TEXT_LINE_CENTER_OFFSET, 'https://codebox.net/gas-giants', 'footerText' )
 
 

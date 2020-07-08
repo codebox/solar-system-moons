@@ -40,7 +40,8 @@ def process_data(planet_data):
             'radius': scale_distance(planet_data['radius'])
         },
         'moons': moons,
-        'rings': rings
+        'rings': rings,
+        'timeline': planet_data['timeline']
     }
 
 

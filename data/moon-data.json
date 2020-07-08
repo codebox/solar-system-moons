@@ -24,6 +24,45 @@
                 "width": 97000
             }
         ],
+        "timeline" : [
+            {
+                "year" : 0,
+                "event" : "Jupiter is clearly visible to the naked eye and has been known since antiquity"
+            },
+            {
+                "year" : 1610,
+                "event" : "Galileo Galilei discovers Jupiter's four largest moons"
+            },
+            {
+                "year" : 1973,
+                "event" : "Pioneer 10 is the first man-made probe to visit Jupiter"
+            },
+            {
+                "year" : 1974,
+                "event" : "Pioneer 11 passes Jupiter"
+            },
+            {
+                "year" : 1979,
+                "event" : "Voyagers 1 and 2 arrive at Jupiter, observing the planets ring system for the first time"
+            },
+            {
+                "year" : 1995,
+                "event" : "Galileo orbiter arrives at Jupiter remaining in the Jovian system until 2003"
+            },
+            {
+                "year" : 2000,
+                "event" : "Cassini probe passes Jupiter en route to Saturn"
+            },
+            {
+                "year" : 2007,
+                "event" : "New Horizons probe passes Jupiter en route to Pluto"
+            },
+            {
+                "year" : 2016,
+                "event" : "Juno probe enters polar orbit around Jupiter"
+            }
+
+        ],
         "moons": [
             {
                 "name": "Metis",
@@ -953,6 +992,7 @@
                 "width": 2500
             }
         ],
+        "timeline" : [],
         "moons": [
             {
                 "name": "S/2009 S 1",
@@ -1900,6 +1940,7 @@
                 "width": 17000
             }
         ],
+        "timeline" : [],
         "moons": [
             {
                 "name": "Cordelia",
@@ -2230,6 +2271,7 @@
                 "width": 15
             }
         ],
+        "timeline" : [],
         "moons": [
             {
                 "name": "Naiad",
