@@ -7,16 +7,16 @@ class Svg:
         self.defs = []
         self.content = []
 
-    def add_circle(self, x, y, r, css_class, clip_path, randomise_opacity=False):
-        self.content.append(u'<circle cx="{}" cy="{}" r="{}" class="{}" clip-path="url(#{})" {}/>'.format(
-            x, y, r, css_class, clip_path, 'style="stroke-opacity: {}"'.format(0.1 + random.random()/10) if randomise_opacity else ''
+    def add_circle(self, x, y, r, css_class, clip_path, randomise_opacity=False, opacity=1):
+        self.content.append(u'<circle cx="{}" cy="{}" r="{}" class="{}" clip-path="url(#{})" style="stroke-opacity: {}"/>'.format(
+            x, y, r, css_class, clip_path, 0.1 + random.random()/10 if randomise_opacity else opacity
         ))
 
-    def add_ellipse(self, cx, cy, rx, ry, angle, css_class, randomise_opacity=False, rotation_x=None, rotation_y=None):
+    def add_ellipse(self, cx, cy, rx, ry, angle, css_class, randomise_lightness=False, rotation_x=None, rotation_y=None, opacity=1):
         self.content.append(u'<ellipse cx="{0}" cy="{1}" rx="{2}" ry="{3}" transform="rotate({4},{5},{6})" class="{7}" {8}/>'.format(
             cx, cy, rx, ry,
             angle * 180 / math.pi, cx if rotation_x is None else rotation_x, cy if rotation_y is None else rotation_y,
-            css_class, 'style="stroke: hsl(0, 0%,{}%)"'.format(75 + random.random() * 25) if randomise_opacity else '')
+            css_class, 'style="stroke: hsla(0, 0%,{}%,{})"'.format(75 + random.random() * 25, opacity) if randomise_lightness else 'style="stroke-opacity: {}"'.format(opacity))
         )
 
     def _get_circle_arc_path(self, cx, cy, r, start_angle, end_angle):

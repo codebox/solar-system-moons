@@ -18,16 +18,16 @@
                 fill: transparent;
                 stroke-width: 1px;
             }
-            .moonOrbit.Jupiter, .planetRadiusFiller.Jupiter, .ringBoxRing.Jupiter {
+            .moonOrbit.Jupiter, .planetRadiusFiller.Jupiter, .ringBoxRing.Jupiter, .eccentricityPath.Jupiter, .eccentricityMoon.Jupiter {
                 stroke: #bb7900;
             }
-            .moonOrbit.Saturn, .planetRadiusFiller.Saturn, .ringBoxRing.Saturn {
+            .moonOrbit.Saturn, .planetRadiusFiller.Saturn, .ringBoxRing.Saturn, .eccentricityPath.Saturn, .eccentricityMoon.Saturn {
                 stroke: #bda603;
             }
-            .moonOrbit.Uranus, .planetRadiusFiller.Uranus, .ringBoxRing.Uranus {
+            .moonOrbit.Uranus, .planetRadiusFiller.Uranus, .ringBoxRing.Uranus, .eccentricityPath.Uranus, .eccentricityMoon.Uranus {
                 stroke: #129e37;
             }
-            .moonOrbit.Neptune, .planetRadiusFiller.Neptune, .ringBoxRing.Neptune {
+            .moonOrbit.Neptune, .planetRadiusFiller.Neptune, .ringBoxRing.Neptune, .eccentricityPath.Neptune, .eccentricityMoon.Neptune {
                 stroke: #126a9e;
             }
             .moonOrbit.moonOrbitOuter {
@@ -129,7 +129,10 @@
             }
             .eccentricityPath {
                 fill: none;
-            stroke: black;
+                stroke-opacity: 1;
+            }
+            .eccentricityMoon {
+                fill: white;
             }
         </style>
         <style type="text/css"><![CDATA[%style%]]></style>
