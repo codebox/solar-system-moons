@@ -17,6 +17,7 @@ SHORT_CONTENT_HEIGHT = 1500
 MIN_RING_BOX_HEIGHT = 800
 LOTS_OF_MOONS_THRESHOLD = 40
 TEXT_LINE_CENTER_OFFSET = 5
+RING_BOX_HEIGHT_FRACTION = 0.7
 
 class SvgWrapper:
     def __init__(self, svg, data):
@@ -44,11 +45,11 @@ class SvgWrapper:
 
         self.orbit_box.render(self.svg, self.content_x, self.content_y, self.margin)
 
-        self.timeline_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y)
-        self.eccentricity_box.render(self.svg, self.content_x + self.orbit_box.w + self.rotation_box.w / 2, self.content_y)
-        # self.ring_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h - self.ring_box.h)
+        self.timeline_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h - self.timeline_box.h)
+        self.eccentricity_box.render(self.svg, self.content_x + self.orbit_box.w + self.rotation_box.w / 2, self.content_y + self.content_height - self.rotation_box.h - self.eccentricity_box.h)
+        self.ring_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y)
+
         self.rotation_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h)
-        self.info_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y)
 
         self.radius_box.render(self.svg, self.rotation_box.x + self.rotation_box.w, self.content_y)
 
@@ -67,7 +68,7 @@ class SvgWrapper:
 
     def _build_ring_box(self):
         box_width = self.rotation_box.w
-        box_height = max(self.rotation_box.h, MIN_RING_BOX_HEIGHT)
+        box_height = (self.content_height - self.rotation_box.h) * RING_BOX_HEIGHT_FRACTION
 
         ring_box = RingBox(self.data, box_width, box_height, self.margin, self.margin)
 
@@ -96,7 +97,7 @@ class SvgWrapper:
 
     def _build_eccentricity_box(self):
         box_width = self.rotation_box.w / 2
-        box_height = self.rotation_box.h
+        box_height = (self.content_height - self.rotation_box.h) * (1 - RING_BOX_HEIGHT_FRACTION)
 
         eccentricity_box = EccentricityBox(self.data, box_width, box_height, self.margin, self.margin)
 
@@ -104,7 +105,7 @@ class SvgWrapper:
 
     def _build_timeline_box(self):
         box_width = self.rotation_box.w / 2
-        box_height = self.rotation_box.h
+        box_height = (self.content_height - self.rotation_box.h) * (1 - RING_BOX_HEIGHT_FRACTION)
 
         timeline_box = TimelineBox(self.data, box_width, box_height, self.margin, self.margin)
 

@@ -7,9 +7,15 @@ class Svg:
         self.defs = []
         self.content = []
 
-    def add_circle(self, x, y, r, css_class, clip_path, randomise_opacity=False, opacity=1):
-        self.content.append(u'<circle cx="{}" cy="{}" r="{}" class="{}" clip-path="url(#{})" style="stroke-opacity: {}"/>'.format(
-            x, y, r, css_class, clip_path, 0.1 + random.random()/10 if randomise_opacity else opacity
+    def add_circle(self, x, y, r, css_class, clip_path, randomise_opacity=False, opacity=None):
+        style_attribute = ''
+        if randomise_opacity:
+            style_attribute = 'style="stroke-opacity: {}"'.format(0.1 + random.random()/10)
+        elif opacity:
+            style_attribute = 'style="stroke-opacity: {}"'.format(opacity)
+
+        self.content.append(u'<circle cx="{}" cy="{}" r="{}" class="{}" clip-path="url(#{})" {}/>'.format(
+            x, y, r, css_class, clip_path, style_attribute
         ))
 
     def add_ellipse(self, cx, cy, rx, ry, angle, css_class, randomise_lightness=False, rotation_x=None, rotation_y=None, opacity=1):

@@ -33,7 +33,7 @@ class RotationBox:
         y = self.y + self.y_margin + DISC_SEPARATION + DISC_RADIUS
 
         for (i, moon) in enumerate(self.moons):
-            self._render_disc(svg, x, y, DISC_RADIUS, math.pi * moon['inclination'] / 180, moon['name'])
+            self._render_disc(svg, x, y, DISC_RADIUS, moon['inclination'], moon['name'])
             x += DISC_SEPARATION + 2 * DISC_RADIUS
             if (i+1) % self.moons_per_row == 0:
                 x = init_x

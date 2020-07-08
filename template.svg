@@ -18,16 +18,16 @@
                 fill: transparent;
                 stroke-width: 1px;
             }
-            .moonOrbit.Jupiter, .planetRadiusFiller.Jupiter, .ringBoxRing.Jupiter, .eccentricityPath.Jupiter, .eccentricityMoon.Jupiter {
+            .moonOrbit.Jupiter, .planetRadiusFiller.Jupiter, .ringBoxRing.Jupiter, .eccentricityPath.Jupiter, .eccentricityMoon.Jupiter, .ringBoxPlanetDisc.Jupiter {
                 stroke: #bb7900;
             }
-            .moonOrbit.Saturn, .planetRadiusFiller.Saturn, .ringBoxRing.Saturn, .eccentricityPath.Saturn, .eccentricityMoon.Saturn {
+            .moonOrbit.Saturn, .planetRadiusFiller.Saturn, .ringBoxRing.Saturn, .eccentricityPath.Saturn, .eccentricityMoon.Saturn, .ringBoxPlanetDisc.Saturn {
                 stroke: #bda603;
             }
-            .moonOrbit.Uranus, .planetRadiusFiller.Uranus, .ringBoxRing.Uranus, .eccentricityPath.Uranus, .eccentricityMoon.Uranus {
+            .moonOrbit.Uranus, .planetRadiusFiller.Uranus, .ringBoxRing.Uranus, .eccentricityPath.Uranus, .eccentricityMoon.Uranus, .ringBoxPlanetDisc.Uranus {
                 stroke: #129e37;
             }
-            .moonOrbit.Neptune, .planetRadiusFiller.Neptune, .ringBoxRing.Neptune, .eccentricityPath.Neptune, .eccentricityMoon.Neptune {
+            .moonOrbit.Neptune, .planetRadiusFiller.Neptune, .ringBoxRing.Neptune, .eccentricityPath.Neptune, .eccentricityMoon.Neptune, .ringBoxPlanetDisc.Neptune {
                 stroke: #126a9e;
             }
             .moonOrbit.moonOrbitOuter {
@@ -92,7 +92,7 @@
             .moonOrbitLabel, .radiusBoxMoonName, .rotationDiscText, .ringBoxRingName {
                 font-size: 12px;
             }
-            .rotationDisc, .ringBoxPlanetDisc {
+            .rotationDisc {
                 stroke: black;
                 fill-opacity: 0.4;
             }
@@ -125,7 +125,7 @@
             }
             .ringBoxRing {
                 fill: none;
-                stroke-opacity: 0.5;
+                stroke-opacity: 0.3;
             }
             .eccentricityPath {
                 fill: none;
@@ -133,6 +133,9 @@
             }
             .eccentricityMoon {
                 fill: white;
+            }
+            .ringBoxPlanetDisc {
+                fill-opacity: 0.5;
             }
         </style>
         <style type="text/css"><![CDATA[%style%]]></style>
