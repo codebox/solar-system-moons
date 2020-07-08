@@ -18,9 +18,9 @@ class Svg:
             x, y, r, css_class, clip_path, style_attribute
         ))
 
-    def add_ellipse(self, cx, cy, rx, ry, angle, css_class, randomise_lightness=False, rotation_x=None, rotation_y=None, opacity=1):
-        self.content.append(u'<ellipse cx="{0}" cy="{1}" rx="{2}" ry="{3}" transform="rotate({4},{5},{6})" class="{7}" {8}/>'.format(
-            cx, cy, rx, ry,
+    def add_ellipse(self, cx, cy, rx, ry, angle, css_class, clip_path='', randomise_lightness=False, rotation_x=None, rotation_y=None, opacity=1):
+        self.content.append(u'<g clip-path="url(#{4})" ><ellipse cx="{0}" cy="{1}" rx="{2}" ry="{3}" transform="rotate({5},{6},{7})" class="{8}" {9}/></g>'.format(
+            cx, cy, rx, ry, clip_path,
             angle * 180 / math.pi, cx if rotation_x is None else rotation_x, cy if rotation_y is None else rotation_y,
             css_class, 'style="stroke: hsla(0, 0%,{}%,{})"'.format(75 + random.random() * 25, opacity) if randomise_lightness else 'style="stroke-opacity: {}"'.format(opacity))
         )

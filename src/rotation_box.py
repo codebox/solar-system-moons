@@ -59,7 +59,7 @@ class RotationBox:
                 major_axis,
                 minor_axis,
                 angle,
-                'rotationAxisEquator' if int(offset) == 0 else 'rotationAxisLatitude', int(offset) != 0
+                'rotationAxisEquator' if int(offset) == 0 else 'rotationAxisLatitude', '', int(offset) != 0
             )
 
         # draw equatorial arrow head
