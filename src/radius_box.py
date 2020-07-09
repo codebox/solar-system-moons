@@ -40,8 +40,8 @@ class RadiusBox:
         scaled_planet_radius = rescale(self.planet_radius)
         planet_cx = self.x + self.w/2
         planet_cy = self.y + self.y_margin + PLANET_DISC_SEGMENT_WIDTH - scaled_planet_radius
-        svg.add_circle(planet_cx, planet_cy, scaled_planet_radius, 'radiusBoxPlanetDisc radiusBoxPlanetDiscInner ' + self.title, INNER_CLIP_PATH_ID)
-        svg.add_circle(planet_cx, planet_cy, scaled_planet_radius, 'radiusBoxPlanetDisc radiusBoxPlanetDiscOuter ' + self.title, OUTER_CLIP_PATH_ID)
+        svg.add_circle(planet_cx, planet_cy, scaled_planet_radius).with_class('radiusBoxPlanetDisc radiusBoxPlanetDiscInner ' + self.title).with_clip_path(INNER_CLIP_PATH_ID)
+        svg.add_circle(planet_cx, planet_cy, scaled_planet_radius).with_class('radiusBoxPlanetDisc radiusBoxPlanetDiscOuter ' + self.title).with_clip_path(OUTER_CLIP_PATH_ID)
 
     def _render_moons(self, svg, rescale):
         SPACE_NEEDED_FOR_NAME_OUTSIDE_DISC = 40
@@ -50,23 +50,43 @@ class RadiusBox:
         for moon in self.moons:
             radius = max(1, rescale(moon['radius']))
             cy = current_y + DISC_SEPARATION + radius
-            svg.add_circle(cx, cy, radius, 'radiusBoxMoon radiusBoxMoonInner ' + self.title, INNER_CLIP_PATH_ID)
-            svg.add_circle(cx, cy, radius, 'radiusBoxMoon radiusBoxMoonOuter ' + self.title, OUTER_CLIP_PATH_ID)
+            svg.add_circle(cx, cy, radius).with_class('radiusBoxMoon radiusBoxMoonInner ' + self.title).with_clip_path(INNER_CLIP_PATH_ID)
+            svg.add_circle(cx, cy, radius).with_class('radiusBoxMoon radiusBoxMoonOuter ' + self.title).with_clip_path(OUTER_CLIP_PATH_ID)
             moon_radius = '{:,} km'.format(int(moon['original']['radius']))
             if self.w/2 - self.x_margin - radius > SPACE_NEEDED_FOR_NAME_OUTSIDE_DISC:
-                svg.add_line_text(self.x + self.x_margin, cy + TEXT_CENTERING_OFFSET, self.x + self.w/2 - radius - TEXT_TO_DISC_SEPARATION, cy + TEXT_CENTERING_OFFSET, 'radiusBoxMoonName ' + self.title, moon['name'])
-                svg.add_line_text(self.x + self.w/2 + radius + TEXT_TO_DISC_SEPARATION, cy + TEXT_CENTERING_OFFSET, self.x + self.w - self.x_margin, cy + TEXT_CENTERING_OFFSET, 'radiusBoxMoonName ' + self.title, moon_radius, 'start', '0%')
+                svg.add_line_text(
+                    self.x + self.x_margin,
+                    cy + TEXT_CENTERING_OFFSET,
+                    self.x + self.w/2 - radius - TEXT_TO_DISC_SEPARATION,
+                    cy + TEXT_CENTERING_OFFSET,
+                    moon['name']
+                ).with_class('radiusBoxMoonName ' + self.title)
+
+                svg.add_line_text(
+                    self.x + self.w/2 + radius + TEXT_TO_DISC_SEPARATION,
+                    cy + TEXT_CENTERING_OFFSET,
+                    self.x + self.w - self.x_margin,
+                    cy + TEXT_CENTERING_OFFSET,
+                    moon_radius
+                ).with_class('radiusBoxMoonName ' + self.title).align_start()
+
             else:
-                svg.add_line_text(self.x + self.x_margin, cy + TEXT_CENTERING_OFFSET, self.x + self.w - self.x_margin, cy + TEXT_CENTERING_OFFSET, 'radiusBoxMoonName ' + self.title, '{} - {}'.format(moon['name'], moon_radius), 'middle', '50%')
+                svg.add_line_text(
+                    self.x + self.x_margin,
+                    cy + TEXT_CENTERING_OFFSET,
+                    self.x + self.w - self.x_margin,
+                    cy + TEXT_CENTERING_OFFSET,
+                    '{} - {}'.format(moon['name'], moon_radius)
+                ).with_class('radiusBoxMoonName ' + self.title).align_middle()
             current_y = cy + radius - 2
 
     def _render_box(self, svg):
-        svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, 'radiusBox')
+        svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin).with_class('radiusBox')
 
     def _render_box_filler(self, svg, rescale):
         scaled_planet_radius = rescale(self.planet_radius)
         planet_cx = self.x + self.w/2
         planet_cy = self.y + self.y_margin + PLANET_DISC_SEGMENT_WIDTH - scaled_planet_radius
         for i in range(int(self.h)):
-            svg.add_circle(planet_cx, planet_cy, i + scaled_planet_radius, 'planetRadiusFiller ' + self.title, INNER_CLIP_PATH_ID, True)
+            svg.add_circle(planet_cx, planet_cy, i + scaled_planet_radius).with_class('planetRadiusFiller ' + self.title).with_clip_path(INNER_CLIP_PATH_ID).with_random_opacity()
 

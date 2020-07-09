@@ -18,7 +18,7 @@ class EccentricityBox:
 
         self._render_inner(svg)
         self._render_outer(svg)
-        svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, 'planetBox')
+        svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin).with_class('planetBox')
 
 
     def _render_inner(self, svg):
@@ -65,7 +65,7 @@ class EccentricityBox:
             ry = orbit_values['ry'] * orbit_scale
             rotation_angle = orbit_values['angle']
 
-            svg.add_ellipse(cx, cy, rx, ry, rotation_angle, 'eccentricityPath ' + self.title, clip_path_id, False, focus_x, focus_y, opacity)
+            svg.add_ellipse(cx, cy, rx, ry).with_rotation(focus_x, focus_y, rotation_angle).with_class('eccentricityPath ' + self.title).with_clip_path(clip_path_id).with_opacity(opacity)
 
             if draw_moons:
                 moon_x_pre = cx + rx * math.cos(offset_angle)
@@ -75,7 +75,7 @@ class EccentricityBox:
                 moon_y = math.sin(rotation_angle) * (moon_x_pre-focus_x) + math.cos(rotation_angle) * (moon_y_pre-focus_y) + focus_y
 
                 if rx ** 2 + ry ** 2 > MIN_ORBIT_SIZE_FOR_MOON_DISPLAY:
-                    svg.add_circle(moon_x, moon_y, 2, 'eccentricityMoon ' + self.title, clip_path_id, False, opacity + 0.2)
+                    svg.add_circle(moon_x, moon_y, 2).with_class('eccentricityMoon ' + self.title).with_clip_path(clip_path_id).with_opacity(opacity + 0.2)
 
             offset_angle += math.pi * 2 / len(all_orbit_values)
 

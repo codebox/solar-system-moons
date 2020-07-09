@@ -53,14 +53,12 @@ class RotationBox:
         for offset in range(-r, r, 1):
             major_axis = math.sqrt(r * r - offset * offset)
             minor_axis = major_axis * line_overlap / r
-            svg.add_ellipse(
-                cx + math.sin(angle) * offset,
-                cy - math.cos(angle) * offset,
-                major_axis,
-                minor_axis,
-                angle,
-                'rotationAxisEquator' if int(offset) == 0 else 'rotationAxisLatitude', '', int(offset) != 0
-            )
+            ellipse_cx = cx + math.sin(angle) * offset
+            ellipse_cy = cy - math.cos(angle) * offset
+            svg.add_ellipse(ellipse_cx, ellipse_cy, major_axis, minor_axis)\
+                .with_rotation(ellipse_cx, ellipse_cy, angle)\
+                .with_class('rotationAxisEquator' if int(offset) == 0 else 'rotationAxisLatitude')\
+                .with_random_lightness(int(offset) != 0)
 
         # draw equatorial arrow head
         x_head = cx - line_overlap * math.sin(angle)
@@ -71,32 +69,32 @@ class RotationBox:
         y2_upper = y_head + arrow_line_length * math.sin(angle + arrow_line_angle)
         x2_lower = x_head + arrow_line_length * math.cos(angle - arrow_line_angle)
         y2_lower = y_head + arrow_line_length * math.sin(angle - arrow_line_angle)
-        svg.add_line(x_head, y_head, x2_upper, y2_upper, 'rotationArrowHead')
-        svg.add_line(x_head, y_head, x2_lower, y2_lower, 'rotationArrowHead')
+        svg.add_line(x_head, y_head, x2_upper, y2_upper).with_class('rotationArrowHead')
+        svg.add_line(x_head, y_head, x2_lower, y2_lower).with_class('rotationArrowHead')
 
         # draw upper polar line
         svg.add_line(
             cx + math.sin(angle) * line_length / 2,
             cy - math.cos(angle) * line_length / 2,
             cx + math.sin(angle) * (r - line_overlap/2),
-            cy - math.cos(angle) * (r - line_overlap/2),
-            'rotationAxisLineTop ' + self.title)
+            cy - math.cos(angle) * (r - line_overlap/2)
+        ).with_class('rotationAxisLineTop ' + self.title)
 
         # draw lower polar line
         svg.add_line(
             cx - math.sin(angle) * r,
             cy + math.cos(angle) * r,
             cx - math.sin(angle) * line_length / 2,
-            cy + math.cos(angle) * line_length / 2,
-            'rotationAxisLineBottom ' + self.title)
+            cy + math.cos(angle) * line_length / 2
+        ).with_class('rotationAxisLineBottom ' + self.title)
 
         # draw outer circle
-        svg.add_circle(cx, cy, r, 'rotationDisc ' + self.title, '')
+        svg.add_circle(cx, cy, r).with_class('rotationDisc ' + self.title)
 
-        svg.add_circle_text(cx, cy, r + 30, 'rotationDiscText', title, 3 * math.pi / 2, math.pi/2)
+        svg.add_circle_text(cx, cy, r + 30, title).with_class('rotationDiscText').with_angle(3 * math.pi / 2, math.pi/2)
 
     def _render_rectangle(self, svg):
-        svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, 'planetBox ' + self.title)
+        svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin).with_class('planetBox ' + self.title)
 
     def _get_inner_clip_path(self):
         return 'rotation_clip_inner_' + self.title

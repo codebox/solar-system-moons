@@ -33,27 +33,27 @@ class OrbitBox:
         svg.add_clip_path_rect(self.x, self.y, self.w, self.h, clip_path_id)
 
         for moon in self.moons:
-            svg.add_circle(self.x + self.w/2, self.y + self.cy, self._scale_radius(moon['orbit']), 'moonOrbit moonOrbitOuter ' + self.title, clip_path_id)
+            svg.add_circle(self.x + self.w/2, self.y + self.cy, self._scale_radius(moon['orbit'])).with_class('moonOrbit moonOrbitOuter ' + self.title).with_clip_path(clip_path_id)
 
     def _render_inner(self, svg):
         clip_path_id = self._get_inner_clip_path()
         svg.add_clip_path_rect(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, clip_path_id)
 
         for moon in self.moons:
-            svg.add_circle(self.x + self.w/2, self.y + self.cy, self._scale_radius(moon['orbit']), 'moonOrbit moonOrbitInner ' + self.title, clip_path_id)
+            svg.add_circle(self.x + self.w/2, self.y + self.cy, self._scale_radius(moon['orbit'])).with_class('moonOrbit moonOrbitInner ' + self.title).with_clip_path(clip_path_id)
 
     def _render_rectangle(self, svg):
         clip_path_id = self._get_inner_clip_path()
-        for i in range(int(self.h)):
-            svg.add_circle(self.x + self.w/2, self.y + self.cy, i, 'moonOrbit moonOrbitFiller ' + self.title, clip_path_id, True)
+        # for i in range(int(self.h)):
+        #     svg.add_circle(self.x + self.w/2, self.y + self.cy, i).with_class('moonOrbit moonOrbitFiller ' + self.title).with_clip_path(clip_path_id).with_random_opacity()
 
-        svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, 'planetBox ' + self.title)
+        svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin).with_class('planetBox ' + self.title)
 
     def _render_planet(self, svg):
         clip_path_id = self._get_inner_clip_path()
         planet_radius = max(self.planet_radius, 2)
-        svg.add_circle(self.x + self.w/2, self.y + self.cy, planet_radius, 'planetDiscOuter', clip_path_id)
-        svg.add_circle(self.x + self.w/2, self.y + self.cy, planet_radius - 1, 'planetDiscInner', '')
+        svg.add_circle(self.x + self.w/2, self.y + self.cy, planet_radius).with_class('planetDiscOuter').with_clip_path(clip_path_id)
+        svg.add_circle(self.x + self.w/2, self.y + self.cy, planet_radius - 1).with_class('planetDiscInner')
 
     def _get_inner_clip_path(self):
         return 'orbit_clip_inner_' + self.title
@@ -70,5 +70,5 @@ class OrbitBox:
             next_r = self._scale_radius(self.moons[i+1]['orbit']) if i < len(self.moons) - 1 else math.inf
 
             if next_r - this_r > MIN_SEPARATION:
-                svg.add_circle_text(self.x + self.w/2, self.y + self.cy, this_r + LABEL_ORBIT_SEPARATION, 'moonOrbitLabel ' + self.title, '{}'.format(moon['name']))
+                svg.add_circle_text(self.x + self.w/2, self.y + self.cy, this_r + LABEL_ORBIT_SEPARATION, moon['name']).with_class('moonOrbitLabel ' + self.title)
 

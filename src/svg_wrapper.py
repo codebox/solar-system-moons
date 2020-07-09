@@ -46,18 +46,22 @@ class SvgWrapper:
 
         self.orbit_box.render(self.svg, self.content_x, self.content_y, self.margin)
 
-        self.timeline_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h - self.timeline_box.h)
-        self.eccentricity_box.render(self.svg, self.content_x + self.orbit_box.w + self.rotation_box.w / 2, self.content_y + self.content_height - self.rotation_box.h - self.eccentricity_box.h)
-        self.ring_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.title_padding)
-
-        self.rotation_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h)
-
-        self.radius_box.render(self.svg, self.rotation_box.x + self.rotation_box.w, self.content_y)
-
-        self._render_footer()
+        # self.timeline_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h - self.timeline_box.h)
+        # self.eccentricity_box.render(self.svg, self.content_x + self.orbit_box.w + self.rotation_box.w / 2, self.content_y + self.content_height - self.rotation_box.h - self.eccentricity_box.h)
+        # self.ring_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.title_padding)
+        #
+        # self.rotation_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h)
+        #
+        # self.radius_box.render(self.svg, self.rotation_box.x + self.rotation_box.w, self.content_y)
+        #
+        # self._render_footer()
 
     def _render_title(self):
-        self.svg.add_centered_text(self.margin + self.border_thickness + 2 * self.margin + self.title_padding/4, 'The Rings and Satellites of {}'.format(self.data['planet']['name']), 'boxTitle' + ('Large' if self.lots_of_moons else 'Small'))
+        self.svg.add_text(
+            '50%',
+            self.margin + self.border_thickness + 2 * self.margin + self.title_padding/4,
+            'The Rings and Satellites of {}'.format(self.data['planet']['name'])
+        ).with_class('boxTitle' + ('Large' if self.lots_of_moons else 'Small'))
 
     def _build_orbit_box(self):
         box_width = OUTER_BOX_WIDTH
@@ -115,10 +119,10 @@ class SvgWrapper:
     def _render_border(self):
         planet_name = self.data['planet']['name']
         self.content_width = self.orbit_box.w + self.margin + self.rotation_box.w + self.margin + self.radius_box.w
-        self.svg.add_rectangle(self.margin, self.margin, self.content_width + 2 * self.border_thickness, self.content_height + 2 * (self.border_thickness + self.margin), 'borderOuter ' + planet_name)
-        self.svg.add_rectangle(self.margin + self.border_thickness, self.margin + self.border_thickness, self.content_width, self.content_height + 2 * self.margin, 'borderInner')
+        self.svg.add_rectangle(self.margin, self.margin, self.content_width + 2 * self.border_thickness, self.content_height + 2 * (self.border_thickness + self.margin)).with_class('borderOuter ' + planet_name)
+        self.svg.add_rectangle(self.margin + self.border_thickness, self.margin + self.border_thickness, self.content_width, self.content_height + 2 * self.margin).with_class('borderInner')
 
     def _render_footer(self):
-        self.svg.add_centered_text(self.content_y + self.content_height + TEXT_LINE_CENTER_OFFSET, 'https://codebox.net/gas-giants', 'footerText' )
+        self.svg.add_text('50%', self.content_y + self.content_height + TEXT_LINE_CENTER_OFFSET, 'https://codebox.net/gas-giants').with_class('footerText').align_middle()
 
 

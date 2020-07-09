@@ -39,7 +39,7 @@ class RingBox:
         for ring in self.rings:
             inner_edge_radius = rescale(ring['radius'])
             outer_edge_radius = max(inner_edge_radius + 1, rescale(ring['radius'] + ring['width']))
-            svg.add_circle(cx, cy, outer_edge_radius, 'ringBoxRing ' + self.title, clip_path_id)
+            svg.add_circle(cx, cy, outer_edge_radius).with_class('ringBoxRing ' + self.title).with_clip_path(clip_path_id)
 
     def _render_inner(self, svg, rescale):
         clip_path_id = self._get_inner_clip_path()
@@ -52,21 +52,24 @@ class RingBox:
             inner_edge_radius = rescale(ring['radius'])
             outer_edge_radius = max(inner_edge_radius + 1, rescale(ring['radius'] + ring['width']))
             for r in range(int(inner_edge_radius), int(outer_edge_radius)):
-                svg.add_circle(cx, cy, r, 'ringBoxRing ' + self.title, clip_path_id, True)
-            svg.add_circle(cx, cy, outer_edge_radius, 'ringBoxRing ' + self.title, clip_path_id)
+                svg.add_circle(cx, cy, r).with_class('ringBoxRing ' + self.title).with_clip_path(clip_path_id).with_random_opacity()
+            svg.add_circle(cx, cy, outer_edge_radius).with_class('ringBoxRing ' + self.title).with_clip_path(clip_path_id)
 
         angular_offset = 0
         for ring in self.rings:
             inner_edge_radius = rescale(ring['radius'])
             outer_edge_radius = max(inner_edge_radius + 1, rescale(ring['radius'] + ring['width']))
-            svg.add_circle_text(cx, cy, TEXT_OFFSET + (inner_edge_radius + outer_edge_radius)/2, 'ringBoxRingName ' + self.title, ring['name'], angular_offset + 3 * math.pi / 2, angular_offset + math.pi / 2, clip_path_id)
+            svg.add_circle_text(cx, cy, TEXT_OFFSET + (inner_edge_radius + outer_edge_radius)/2, ring['name'])\
+                .with_class('ringBoxRingName ' + self.title)\
+                .with_angle(angular_offset + 3 * math.pi / 2, angular_offset + math.pi / 2)\
+                .with_clip_path(clip_path_id)
             angular_offset += 2 * (math.pi * 2 / len(self.rings))
 
         svg.add_radial_gradient('ringBoxPlanetGradient', self.title)
-        svg.add_circle(cx, cy, rescale(self.planet_radius), 'ringBoxPlanetDisc ' + self.title, clip_path_id)
+        svg.add_circle(cx, cy, rescale(self.planet_radius)).with_class('ringBoxPlanetDisc ' + self.title).with_clip_path(clip_path_id)
 
     def _render_rectangle(self, svg):
-        svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin, 'ringBox ' + self.title)
+        svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin).with_class('ringBox ' + self.title)
 
     def _get_inner_clip_path(self):
         return 'ring_clip_inner_' + self.title
