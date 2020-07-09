@@ -46,22 +46,22 @@ class SvgWrapper:
 
         self.orbit_box.render(self.svg, self.content_x, self.content_y, self.margin)
 
-        # self.timeline_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h - self.timeline_box.h)
-        # self.eccentricity_box.render(self.svg, self.content_x + self.orbit_box.w + self.rotation_box.w / 2, self.content_y + self.content_height - self.rotation_box.h - self.eccentricity_box.h)
-        # self.ring_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.title_padding)
-        #
-        # self.rotation_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h)
-        #
-        # self.radius_box.render(self.svg, self.rotation_box.x + self.rotation_box.w, self.content_y)
-        #
-        # self._render_footer()
+        self.timeline_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h - self.timeline_box.h)
+        self.eccentricity_box.render(self.svg, self.content_x + self.orbit_box.w + self.rotation_box.w / 2, self.content_y + self.content_height - self.rotation_box.h - self.eccentricity_box.h)
+        self.ring_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.title_padding)
+
+        self.rotation_box.render(self.svg, self.content_x + self.orbit_box.w, self.content_y + self.content_height - self.rotation_box.h)
+
+        self.radius_box.render(self.svg, self.rotation_box.x + self.rotation_box.w, self.content_y)
+
+        self._render_footer()
 
     def _render_title(self):
         self.svg.add_text(
             '50%',
             self.margin + self.border_thickness + 2 * self.margin + self.title_padding/4,
             'The Rings and Satellites of {}'.format(self.data['planet']['name'])
-        ).with_class('boxTitle' + ('Large' if self.lots_of_moons else 'Small'))
+        ).with_class('boxTitle' + ('Large' if self.lots_of_moons else 'Small')).align_middle()
 
     def _build_orbit_box(self):
         box_width = OUTER_BOX_WIDTH

@@ -63,10 +63,22 @@ class RingBox:
                 .with_class('ringBoxRingName ' + self.title)\
                 .with_angle(angular_offset + 3 * math.pi / 2, angular_offset + math.pi / 2)\
                 .with_clip_path(clip_path_id)
+
             angular_offset += 2 * (math.pi * 2 / len(self.rings))
 
-        svg.add_radial_gradient('ringBoxPlanetGradient', self.title)
-        svg.add_circle(cx, cy, rescale(self.planet_radius)).with_class('ringBoxPlanetDisc ' + self.title).with_clip_path(clip_path_id)
+        # svg.add_radial_gradient('ringBoxPlanetGradient', self.title).add_stop(0.9, 1).add_stop(1, 0)
+        # svg.add_circle(cx, cy, rescale(self.planet_radius)).with_class('ringBoxPlanetDisc ' + self.title).with_clip_path(clip_path_id)
+
+        scaled_radius = rescale(self.planet_radius)
+        for r in range(int(scaled_radius * 0.9)):
+            n = math.sin(0.5 * math.pi * r / scaled_radius)
+            min_opacity = 0.1 + n * 0.5
+            max_opacity = 0.2 + n * 0.5
+            svg.add_circle(cx, cy, r).with_class('ringBoxPlanetDiscSurface ' + self.title).with_random_opacity(min_opacity, max_opacity)
+
+        for r in range(int(scaled_radius * 0.9), int(scaled_radius)):
+            n = 1 - (r - int(scaled_radius * 0.9)) / (int(scaled_radius) / 10)
+            svg.add_circle(cx, cy, r).with_class('ringBoxPlanetDiscSurface ' + self.title).with_opacity(n * max_opacity)
 
     def _render_rectangle(self, svg):
         svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin).with_class('ringBox ' + self.title)

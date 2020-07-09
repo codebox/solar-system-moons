@@ -56,7 +56,7 @@ class CircleBuilder(ElementBuilder):
 class RectangleBuilder(ElementBuilder):
     def __init__(self, x, y, w, h):
         super().__init__('rect')
-        self.attribute('x', x).attribute('y', y).attribute('w', w).attribute('h', h)
+        self.attribute('x', x).attribute('y', y).attribute('width', w).attribute('height', h)
 
 
 class LineBuilder(ElementBuilder):
@@ -76,7 +76,7 @@ class EllipseBuilder(ElementBuilder):
         return self
 
     def with_rotation(self, cx, cy, angle):
-        self.attribute('transform', 'rotate({},{},{})'.format(angle, cx, cy))
+        self.attribute('transform', 'rotate({},{},{})'.format(angle * 180 / math.pi, cx, cy))
         return self
 
     def with_random_lightness(self, is_random=True, min_lightness=75, max_lightness=100):
@@ -107,8 +107,6 @@ class TextPathBuilder(ElementBuilder):
         super().__init__('textPath')
         self.set_content(text)
         self.path_id = uuid.uuid4().hex
-        path_d = self._get_path()
-        self.defs = '<path id="{}" d="{}" />'.format(self.path_id, path_d)
         self.attribute('href', '#' + self.path_id)
 
     @abstractmethod
@@ -116,16 +114,24 @@ class TextPathBuilder(ElementBuilder):
         pass
 
     def align_start(self):
-        self.attribute('text-anchor', 'start').attribute('start-offset', '0%')
+        self.attribute('text-anchor', 'start').attribute('startOffset', '0%')
         return self
 
     def align_middle(self):
-        self.attribute('text-anchor', 'middle').attribute('start-offset', '50%')
+        self.attribute('text-anchor', 'middle').attribute('startOffset', '50%')
         return self
 
     def align_end(self):
-        self.attribute('text-anchor', 'end').attribute('start-offset', '100%')
+        self.attribute('text-anchor', 'end').attribute('startOffset', '100%')
         return self
+
+    def get_element(self):
+        text_path_source = super().get_element()
+        return '<text>{}</text>'.format(text_path_source)
+
+    def get_defs(self):
+        path_d = self._get_path()
+        return '<path id="{}" d="{}" />'.format(self.path_id, path_d)
 
 
 class CircleTextBuilder(TextPathBuilder):
@@ -169,11 +175,11 @@ class TextBuilder(ElementBuilder):
         self.set_content(text)
 
     def align_middle(self):
-        self.attribute('text-anchor', 'middle').attribute('start-offset', '50%')
+        self.attribute('text-anchor', 'middle').attribute('startOffset', '50%')
         return self
 
     def align_end(self):
-        self.attribute('text-anchor', 'end').attribute('start-offset', '100%')
+        self.attribute('text-anchor', 'end').attribute('startOffset', '100%')
         return self
 
 

@@ -91,7 +91,7 @@ class RotationBox:
         # draw outer circle
         svg.add_circle(cx, cy, r).with_class('rotationDisc ' + self.title)
 
-        svg.add_circle_text(cx, cy, r + 30, title).with_class('rotationDiscText').with_angle(3 * math.pi / 2, math.pi/2)
+        svg.add_circle_text(cx, cy, r + 30, title).with_class('rotationDiscText').with_angle(3 * math.pi / 2, math.pi/2).align_middle()
 
     def _render_rectangle(self, svg):
         svg.add_rectangle(self.x + self.x_margin, self.y + self.y_margin, self.w - 2 * self.x_margin, self.h - 2 * self.y_margin).with_class('planetBox ' + self.title)

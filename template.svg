@@ -18,16 +18,16 @@
                 fill: transparent;
                 stroke-width: 1px;
             }
-            .moonOrbit.Jupiter, .planetRadiusFiller.Jupiter, .ringBoxRing.Jupiter, .eccentricityPath.Jupiter, .eccentricityMoon.Jupiter {
+            .moonOrbit.Jupiter, .planetRadiusFiller.Jupiter, .ringBoxRing.Jupiter, .eccentricityPath.Jupiter, .eccentricityMoon.Jupiter, .ringBoxPlanetDiscSurface.Jupiter {
                 stroke: #bb7900;
             }
-            .moonOrbit.Saturn, .planetRadiusFiller.Saturn, .ringBoxRing.Saturn, .eccentricityPath.Saturn, .eccentricityMoon.Saturn {
+            .moonOrbit.Saturn, .planetRadiusFiller.Saturn, .ringBoxRing.Saturn, .eccentricityPath.Saturn, .eccentricityMoon.Saturn, .ringBoxPlanetDiscSurface.Saturn {
                 stroke: #bda603;
             }
-            .moonOrbit.Uranus, .planetRadiusFiller.Uranus, .ringBoxRing.Uranus, .eccentricityPath.Uranus, .eccentricityMoon.Uranus {
+            .moonOrbit.Uranus, .planetRadiusFiller.Uranus, .ringBoxRing.Uranus, .eccentricityPath.Uranus, .eccentricityMoon.Uranus, .ringBoxPlanetDiscSurface.Uranus {
                 stroke: #129e37;
             }
-            .moonOrbit.Neptune, .planetRadiusFiller.Neptune, .ringBoxRing.Neptune, .eccentricityPath.Neptune, .eccentricityMoon.Neptune {
+            .moonOrbit.Neptune, .planetRadiusFiller.Neptune, .ringBoxRing.Neptune, .eccentricityPath.Neptune, .eccentricityMoon.Neptune, .ringBoxPlanetDiscSurface.Neptune {
                 stroke: #126a9e;
             }
             .moonOrbit.moonOrbitOuter {
@@ -134,21 +134,8 @@
             .eccentricityMoon {
                 fill: white;
             }
-            .ringBoxPlanetDisc {
-                fill-opacity: 0.5;
-                fill: url(#ringBoxPlanetGradient);
-            }
-            #ringBoxPlanetGradient.Jupiter stop {
-                stop-color: #bb7900;
-            }
-            #ringBoxPlanetGradient.Saturn stop {
-                stop-color: #bda603;
-            }
-            #ringBoxPlanetGradient.Uranus stop {
-                stop-color: #129e37;
-            }
-            #ringBoxPlanetGradient.Neptune stop {
-                stop-color: #126a9e;
+            .ringBoxPlanetDiscSurface {
+                fill: none;
             }
             .timelineBoxLine {
                 stroke: grey;

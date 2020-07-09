@@ -60,7 +60,7 @@ class RadiusBox:
                     self.x + self.w/2 - radius - TEXT_TO_DISC_SEPARATION,
                     cy + TEXT_CENTERING_OFFSET,
                     moon['name']
-                ).with_class('radiusBoxMoonName ' + self.title)
+                ).with_class('radiusBoxMoonName ' + self.title).align_end()
 
                 svg.add_line_text(
                     self.x + self.w/2 + radius + TEXT_TO_DISC_SEPARATION,
