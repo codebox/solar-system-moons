@@ -26,16 +26,12 @@
         ],
         "timeline" : [
             {
-                "year" : 0,
-                "event" : "Jupiter is clearly visible to the naked eye and has been known since antiquity"
-            },
-            {
                 "year" : 1610,
                 "event" : "Galileo Galilei discovers Jupiter's four largest moons"
             },
             {
                 "year" : 1973,
-                "event" : "Pioneer 10 is the first man-made probe to visit Jupiter"
+                "event" : "Pioneer 10 is the first spacecraft to visit Jupiter"
             },
             {
                 "year" : 1974,
@@ -43,15 +39,27 @@
             },
             {
                 "year" : 1979,
-                "event" : "Voyagers 1 and 2 arrive at Jupiter, observing the planets ring system for the first time"
+                "event" : "Voyagers 1 and 2 arrive at Jupiter, ring system is discovered"
+            },
+            {
+                "year" : 1992,
+                "event" : "Ulysses probe passes Jupiter, using it's gravity to enter polar orbit around the Sun"
+            },
+            {
+                "year" : 1994,
+                "event" : "Comet Shoemaker–Levy 9 collides with Jupiter"
             },
             {
                 "year" : 1995,
-                "event" : "Galileo orbiter arrives at Jupiter remaining in the Jovian system until 2003"
+                "event" : "Galileo orbiter arrives at Jupiter and remains in the Jovian system until 2003"
             },
             {
                 "year" : 2000,
                 "event" : "Cassini probe passes Jupiter en route to Saturn"
+            },
+            {
+                "year" : 2003,
+                "event" : "Galileo missions ends, orbiter descends into Jupiter's atmosphere"
             },
             {
                 "year" : 2007,
@@ -992,7 +1000,44 @@
                 "width": 2500
             }
         ],
-        "timeline" : [],
+        "timeline" : [
+            {
+                "year": 1655,
+                "event": "Saturn's largest moon Titan discovered by Christiaan Huygens"
+            },
+            {
+                "year": 1659,
+                "event": "Christiaan Huygens makes first observations of Saturn's rings"
+            },
+            {
+                "year": 1979,
+                "event": "Pioneer 11 is the first spacecraft to visit Saturn"
+            },
+            {
+                "year": 1980,
+                "event": "Voyager 1 reaches Saturn, taking the first high-resolution images of the planet"
+            },
+            {
+                "year": 1981,
+                "event": "Voyager 2 arrives at Saturn, en-route to the outer Solar System"
+            },
+            {
+                "year": 2004,
+                "event": "Cassini–Huygens spacecraft arrives at Saturn and remains in the system for 13 years"
+            },
+            {
+                "year": 2005,
+                "event": "Huygens probe parachutes through the atmosphere of Titan, lands on its surface"
+            },
+            {
+                "year": 2006,
+                "event": "Geysers of liquid water seen erupting from the surface of Enceladus"
+            },
+            {
+                "year": 2017,
+                "event" : "Cassini missions ends, orbiter descends into Saturn's atmosphere"
+            }
+        ],
         "moons": [
             {
                 "name": "S/2009 S 1",
@@ -1940,7 +1985,32 @@
                 "width": 17000
             }
         ],
-        "timeline" : [],
+        "timeline" : [
+            {
+                "year": 1781,
+                "event": "William Herschel discovers Uranus"
+            },
+            {
+                "year": 1787,
+                "event": "The moons Titania and Oberon discovered by William Herschel"
+            },
+            {
+                "year": 1851,
+                "event": "Willaim Lassell discovers the moons Ariel and Umbriel"
+            },
+            {
+                "year": 1948,
+                "event": "Gerard Kuiper discovers the moon Miranda"
+            },
+            {
+                "year": 1977,
+                "event": "Uranus' ring system discovered by Elliot, Dunham and Mink"
+            },
+            {
+                "year": 1986,
+                "event": "The Voyager 2 spacecraft arrives at Uranus"
+            }
+        ],
         "moons": [
             {
                 "name": "Cordelia",
@@ -2271,7 +2341,32 @@
                 "width": 15
             }
         ],
-        "timeline" : [],
+        "timeline" : [
+            {
+                "year": 1845,
+                "event": "Urbain Le Verrier calculates Neptune's position"
+            },
+            {
+                "year": 1846,
+                "event": "Johann Gottfried Galle first observes Neptune"
+            },
+            {
+                "year": 1846,
+                "event": "The moon Triton discovered by William Lassell"
+            },
+            {
+                "year": 1949,
+                "event": "The moon Nereid discovered by Gerard Kuiper"
+            },
+            {
+                "year": 1968,
+                "event": "Neptune's ring system discovered by Edward Guinan"
+            },
+            {
+                "year": 1989,
+                "event": "Voyager 2 arrives at Neptune"
+            }
+        ],
         "moons": [
             {
                 "name": "Naiad",
