@@ -4,7 +4,7 @@
         <style type="text/css">
             @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300');
         </style>
-        <style>
+        <style type="text/css">
             text {
                 font-family: 'Open Sans Condensed', sans-serif;
             }
@@ -145,7 +145,6 @@
                 fill: white;
             }
         </style>
-        <style type="text/css"><![CDATA[%style%]]></style>
         %defs%
     </defs>
 
