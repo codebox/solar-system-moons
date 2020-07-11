@@ -2,8 +2,3 @@
 .idea
 *.pyc
 ENV
-moons.svg
-jupiter.svg
-saturn.svg
-uranus.svg
-neptune.svg
