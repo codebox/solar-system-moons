@@ -61,13 +61,10 @@ class RingBox:
             outer_edge_radius = max(inner_edge_radius + 1, rescale(ring['radius'] + ring['width']))
             svg.add_circle_text(cx, cy, TEXT_OFFSET + (inner_edge_radius + outer_edge_radius)/2, ring['name'])\
                 .with_class('ringBoxRingName ' + self.title)\
-                .with_angle(angular_offset + 3 * math.pi / 2, angular_offset + math.pi / 2)\
-                .with_clip_path(clip_path_id)
+                .with_angle(angular_offset + math.pi, angular_offset + 2 * math.pi)\
+                .with_clip_path(clip_path_id).align_middle()
 
             angular_offset += 2 * (math.pi * 2 / len(self.rings))
-
-        # svg.add_radial_gradient('ringBoxPlanetGradient', self.title).add_stop(0.9, 1).add_stop(1, 0)
-        # svg.add_circle(cx, cy, rescale(self.planet_radius)).with_class('ringBoxPlanetDisc ' + self.title).with_clip_path(clip_path_id)
 
         scaled_radius = rescale(self.planet_radius)
         for r in range(int(scaled_radius * 0.9)):
